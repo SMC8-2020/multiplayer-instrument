@@ -3,24 +3,32 @@ import netP5.*;
 
 OscP5 oscP5;
 
-int[] noteReceived = {-1, -1, -1, -1};
-
-final int RW = 100;
-final int GAP = 20;
-
 PrintWriter output;
-int epoch, prevEvent, currentEvent;
+String filename;
+int epoch, prevEvent, currentEvent, eventCounter;
 final int INACTIVITY = 10000;
+
+PFont mono;
+
+String[] lines = new String[20];
 
 void setup() {
 
-  size(260, 260);
+  //String[] fontList = PFont.list();
+  //printArray(fontList);
+
+  size(560, 404);
   pixelDensity(2);
   strokeWeight(2);
-  textSize(60);
-  textAlign(CENTER, CENTER);
+  mono = createFont("Andale Mono", 14);
+  textFont(mono);
+  textAlign(LEFT, TOP);
 
   epoch = -1;
+
+  initBuffer();
+
+  filename="";
 
   oscP5 = new OscP5(this, 10000);
 }
@@ -30,27 +38,19 @@ void draw() {
 
   background(0);
 
-  for (int i=0; i<noteReceived.length; i++) {
-
-    int dx = GAP+(RW+GAP)*(i/2);
-    int dy = GAP+(i%2)*(RW+GAP);
-
-    fill(0);
-    stroke(#111177);
-    rect (dx, dy, RW, RW);
-
-    fill(255);
-    if (noteReceived[i]!=-1) {
-      text(noteReceived[i], dx+RW/2, dy+RW/2-5);
-    }
+  for (int f=0; f<lines.length; f++) {
+    fill(70, 255, 70, (int)map(f, 0, lines.length-1, 64, 255));
+    text(lines[f], 10, f*18+4);
   }
+
+  fill(70, 255, 70, 180);
+  text("File:                      Events:", 10, lines.length*18+22);
+  fill(70, 255, 70, 255);
+  text(filename, 52, lines.length*18+22);
+  text(eventCounter, 296, lines.length*18+22);
 }
 
 void oscEvent(OscMessage theOscMessage) {
-
-  if (!theOscMessage.checkTypetag("ii")) {
-    return;
-  }
 
   currentEvent = millis();
   if (currentEvent-prevEvent >= INACTIVITY) {
@@ -63,31 +63,53 @@ void oscEvent(OscMessage theOscMessage) {
   if (epoch < 0) {
     epoch = currentEvent;
     prevEvent = currentEvent;
-    output = createWriter(getFilename());
+    filename = getFilename();
+    output = createWriter(filename);
+    initBuffer();
   }
 
-  String log = String.format("%d,%s,%d,%d", 
+  String typetag = theOscMessage.typetag();
+
+  String log = String.format("%d,%s,%s", 
     currentEvent-epoch, 
-    theOscMessage.addrPattern(), 
-    theOscMessage.get(0).intValue(), 
-    theOscMessage.get(1).intValue());
+    theOscMessage.addrPattern(),
+    typetag);
+
+  //println(typetag);
+  for (int f=0; f<typetag.length(); f++) {
+    switch(typetag.charAt(f)) {
+    case 'i':
+      log += "," + theOscMessage.get(f).intValue();
+      break;
+    case 'c':
+      log += ",'" + theOscMessage.get(f).charValue()+"'";
+      break;
+    case 's':
+      log += ",'" + theOscMessage.get(f).stringValue()+"'";
+      break;
+    case 'f':
+      log += "," + theOscMessage.get(f).floatValue();
+      break;
+    case 'T':
+      log += ",true";
+      break;    
+    case 'F':
+      log += ",false";
+      break;
+    default:
+      println("Unknown element " + typetag.charAt(f));
+      break;
+    }
+  }
+
   output.println(log); 
   output.flush();
 
-  println(epoch + "     " + (currentEvent-prevEvent) + "     " + (currentEvent-epoch));
+  arrayCopy(lines, 1, lines, 0, lines.length-1);
+  lines[lines.length-1] = log;
+  eventCounter++;
+
   prevEvent = currentEvent;
-
-  if (theOscMessage.checkAddrPattern("/note/on")) {
-    int i = theOscMessage.get(0).intValue();
-    noteReceived[i] = theOscMessage.get(1).intValue();
-    return;
-  }
-
-  if (theOscMessage.checkAddrPattern("/note/off")) {
-    int i = theOscMessage.get(0).intValue();
-    noteReceived[i] = -1;
-    return;
-  }
 }
 
 
@@ -103,4 +125,12 @@ String getFilename() {
   return String.format("%02d%02d%02d_%02d%02d%02d.csv", 
     year(), month(), day(), hour(), minute(), second()
     );
+}
+
+
+void initBuffer() {
+  eventCounter = 0;
+  for (int f=0; f<lines.length; f++) {
+    lines[f]="";
+  }
 }
