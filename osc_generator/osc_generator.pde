@@ -4,7 +4,6 @@ import netP5.*;
 
 MidiBus bus; 
 
-//OscP5 oscP5;
 NetAddress oscServer;
 
 final int elements = 100;
@@ -34,8 +33,7 @@ void setup() {
   MidiBus.list();
   bus = new MidiBus(this, -1, "Bus IAC 1");
 
-  //oscP5 = new OscP5(this, 11111);
-  oscServer = new NetAddress("127.0.0.1", 12000);
+  oscServer = new NetAddress("127.0.0.1", 10000);
 }
 
 
@@ -97,8 +95,6 @@ void draw() {
     }
     strokeWeight(2);
 
-    //println(frameRate);
-    //println(minN, maxN);
     t[i] += dt[i];
   }
 
