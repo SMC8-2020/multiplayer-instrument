@@ -33,7 +33,7 @@ void setup() {
   MidiBus.list();
   bus = new MidiBus(this, -1, "Bus IAC 1");
 
-  oscServer = new NetAddress("127.0.0.1", 10000);
+  oscServer = new NetAddress("192.168.8.255", 10000);
 }
 
 

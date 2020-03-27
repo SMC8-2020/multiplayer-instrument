@@ -2,6 +2,7 @@ import oscP5.*;
 import netP5.*;
 
 OscP5 oscP5;
+NetAddress server;
 
 PrintWriter output;
 String filename;
@@ -30,7 +31,11 @@ void setup() {
 
   filename="";
 
+  server = new NetAddress("192.168.8.100",32000);
   oscP5 = new OscP5(this, 10000);
+  
+  OscMessage m = new OscMessage("/server/connect", new Object[0]);
+  OscP5.flush(m, server);
 }
 
 
@@ -72,7 +77,7 @@ void oscEvent(OscMessage theOscMessage) {
 
   String log = String.format("%d,%s,%s", 
     currentEvent-epoch, 
-    theOscMessage.addrPattern(),
+    theOscMessage.addrPattern(), 
     typetag);
 
   //println(typetag);
