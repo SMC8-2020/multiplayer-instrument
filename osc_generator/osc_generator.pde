@@ -5,6 +5,8 @@ import netP5.*;
 MidiBus bus; 
 
 NetAddress oscServer;
+int sendToPort = 11000;
+String serverIP = "192.168.8.100";
 
 final int elements = 100;
 final int threshold = 125;
@@ -33,7 +35,7 @@ void setup() {
   MidiBus.list();
   bus = new MidiBus(this, -1, "Bus IAC 1");
 
-  oscServer = new NetAddress("192.168.8.100", 11000);
+  oscServer = new NetAddress(serverIP, sendToPort);
 }
 
 

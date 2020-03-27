@@ -15,9 +15,6 @@ String[] lines = new String[20];
 
 void setup() {
 
-  //String[] fontList = PFont.list();
-  //printArray(fontList);
-
   size(560, 404);
   pixelDensity(2);
   strokeWeight(2);
