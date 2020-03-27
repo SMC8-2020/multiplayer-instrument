@@ -27,8 +27,6 @@ void draw() {
 
 void oscEvent(OscMessage msg) {
   
-  println(msg);
-  
   //Add one new IP to the list
   if (msg.addrPattern().equals(connectPattern)) {
     connect(msg.netAddress().address());
