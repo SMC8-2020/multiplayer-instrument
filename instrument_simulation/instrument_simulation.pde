@@ -14,11 +14,11 @@ void setup ()
   size(700, 600);
   smooth();
   
-  oscP5 = new OscP5(this,12000);
+  oscP5 = new OscP5(this, 12000);
   cp5   = new ControlP5(this);
-  myRemoteLocation = new NetAddress("127.0.0.1",12000);
+  myRemoteLocation = new NetAddress("192.168.8.100", 11000);
   
-  instr = new Instrument();
+  instr = new Instrument("smc8");
 
   instr.addSection("Melody", 1);
   
@@ -51,6 +51,7 @@ void setup ()
   ////
   
   instr.addSection("Rhytm", 1);
+    
   instr.fitModules();
 }
 
@@ -58,10 +59,6 @@ void draw()
 {
   background(255);
   instr.display();
-}
-
-void oscEvent(OscMessage theOscMessage) {
-  theOscMessage.print();
 }
 
 public static class Rect {

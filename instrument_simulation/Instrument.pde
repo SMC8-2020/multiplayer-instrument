@@ -92,7 +92,7 @@ public class Instrument {
     x = BOXIN;
     y = BOXIN;
     w = (width - (numSections + 1)*BOXIN) / numSections;
-    h = height - 2*BOXIN;
+    h = (height - height/4) - 2*BOXIN;
 
     for (int i = 0; i < numSections; i++) {
       sections.get(i).setRect((i + 1)*x + i*w, y, w, h, d + 1);
@@ -114,17 +114,7 @@ public class Instrument {
 
   public void onControllerChanged(CallbackEvent event) {
     if (event.getAction() == ControlP5.ACTION_BROADCAST) {
-      /*
-      Controller c = event.getController();
-       String ctag = c.getName();
-       ctag = ctag.substring(0, ctag.length() - 1);
-       int id  = c.getId();
-       int val = (int) c.getValue();
-       String cid  = str(id);
-       String cval = str(val);
-       String msg = instrumentName + ctag + "/" + cid + "/" + cval;
-       println(msg);*/
-       
+
       Controller c = event.getController();
       int id  = c.getId();
       if (id != prevId) {
@@ -137,16 +127,12 @@ public class Instrument {
         String ctag = c.getName();
         ctag = ctag.substring(0, ctag.length() - 1);
         String cid  = str(id);
-        String cval = str(val);
 
-        //String msg = instrumentName + ctag + "/" + cid + "/" + cval;
         String oscUrl = instrumentName + ctag + "/" + cid;
         OscMessage myMessage = new OscMessage(oscUrl);
 
         myMessage.add(val);
         oscP5.send(myMessage, myRemoteLocation);
-        //println(msg);
-
         prevVal = val;
       }
     }
