@@ -2,7 +2,7 @@ public class ControllerModule extends Module {
 
   private final int ANALOGMIN = 0;
   private final int ANALOGMAX = 1023;
-  private final int CTRIN = 5;
+  private final int CTRIN = 10;
 
   private ArrayList<Controller> controllers;
   private IntList types;
@@ -15,34 +15,16 @@ public class ControllerModule extends Module {
     nsliders = nknobs = nbuttons = ntoggles = 0;
   }
 
-  private String constructMsg() {
-
-    ArrayList<String> msg = new ArrayList<String>();
-    Module current = this.getParent();
-
-    while (current != null) {
-      String name = current.moduleName;
-      String id   = "" + current.moduleId;
-
-      msg.add(id);
-      msg.add(name);
-
-      current = current.getParent();
-    }
-
-    String[] msgArr = reverse(msg.toArray(new String[0]));
-    return "/" + join(msgArr, "/");
-  }
-
   public void addController(int type) {
 
-    int id     = controllers.size();
-    String msg = constructMsg();
+    int id = controllers.size();
+    String route = this.moduleName;
+    println(route);
     Controller ctr;
 
     switch(type) {
     case ControllerTags.SLIDERTAG:
-      ctr = cp5.addSlider(msg + "/Slider" + id)
+      ctr = cp5.addSlider(route + "Slider" + id)
         .setId(id)
         .setRange(ANALOGMIN, ANALOGMAX)
         .setValue((ANALOGMAX - ANALOGMIN) / 2)
@@ -53,7 +35,7 @@ public class ControllerModule extends Module {
       break;
 
     case ControllerTags.KNOBTAG:
-      ctr = cp5.addKnob(msg + "/Knob" + id)
+      ctr = cp5.addKnob(route + "Knob" + id)
         .setId(id)
         .setRange(ANALOGMIN, ANALOGMAX)
         .setValue((ANALOGMAX - ANALOGMIN) / 2)
@@ -66,7 +48,7 @@ public class ControllerModule extends Module {
       break;
 
     case ControllerTags.BUTTONTAG:
-      ctr = cp5.addButton(msg + "/Button" + id)
+      ctr = cp5.addButton(route + "Button" + id)
         .setId(id)
         .setValue((ANALOGMAX - ANALOGMIN) / 2)
         .setLabelVisible(false)
@@ -75,7 +57,7 @@ public class ControllerModule extends Module {
       break;
 
     case ControllerTags.TOGGLETAG:
-      ctr = cp5.addToggle(msg + "/Toggle" + id)
+      ctr = cp5.addToggle(route + "Toggle" + id)
         .setId(id)
         .setValue((ANALOGMAX - ANALOGMIN) / 2)
         .setLabelVisible(false)
@@ -163,35 +145,4 @@ public class ControllerModule extends Module {
     ctr.setPosition(x, y);
     ctr.setSize((int)s, (int)s);
   }
-  
-  /*
-  private void formatKnob(Knob knob, int idx, Rect container) {
-    float x, y, w, h, r;
-    
-    float alpha = (container.w > container.h) ? 1.0f : 0.0f ;
-    
-    w = (container.w - 3*CTRIN) / 2.0f;
-    h = (container.h - (nknobs + 1)*CTRIN) / nknobs;
-    
-    y = (idx + 1)*CTRIN + container.y + idx*h;
-  
-    r = (container.w < h) ? w : h/2;  
-    x = 1.5f*CTRIN + container.x + w - r;
-
-    knob.setPosition(x, y);
-    knob.setSize((int)r*2, (int)r*2);
-  }
-  
-  private void formatButton(Button button, int idx, Rect container) {
-    float x, y, s;
-    
-    s = (container.w - (nbuttons + 1)*CTRIN) / nbuttons;
-    
-    x = (idx + 1)*CTRIN + container.x + idx*s;
-    y = container.y + (container.h - 3*CTRIN) / 2.0f - s/3;
-    
-    button.setPosition(x, y);
-    button.setSize((int) s, (int) s);
-  }
-  */
 }

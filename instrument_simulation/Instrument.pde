@@ -31,54 +31,35 @@ public class Instrument {
     this();
     this.instrumentName = instrumentName;
   }
-
-  public void addSection(String sectionName, int sectionId) {
-    Module section = new Module(sectionName, sectionId, SECTION_BOXIN);
+  
+  public Module addSection(String sectionName) {
+    String prefix = "/" + instrumentName + "/";
+    Module section = new Module(prefix + sectionName, 1, SECTION_BOXIN);
     sections.add(section);
+    return section;
   }
-
-  public void addModuleGroupToSection(String groupName, int groupId, String sectionName) {
-    Module moduleGroup = new Module(groupName, groupId, MDGROUP_BOXIN);
-
-    Module parent = findModule(sectionName, sections);
-    if (parent != null) {
-      parent.assignSubModule(moduleGroup);
-      moduleGroups.add(moduleGroup);
-      return;
-    }
-
-    println("No section by that name available");
+  
+  public Module addGroupToSection(String groupName, Module section) {
+    String prefix = section.moduleName + section.moduleId + "/";
+    Module group = new Module(prefix + groupName, 1, MDGROUP_BOXIN);
+    section.assignSubModule(group);
+    moduleGroups.add(group);
+    return group;
   }
-
-  public void addModuleToModuleGroup(String moduleName, String groupName, float weight) {
-    ControllerModule ctrModule = new ControllerModule(moduleName);
-
-    Module parent = findModule(groupName, moduleGroups);
-    if (parent != null) {
-      parent.assignSubModule(ctrModule, weight);
-      controllerModules.add(ctrModule);
-      return;
-    }
-
-    println("No module group by that name available");
+  
+  public Module addModuleToGroup(Module group, float weight) {
+    String moduleName = group.moduleName + group.moduleId + "/";
+    ControllerModule module = new ControllerModule(moduleName); 
+    group.assignSubModule(module, weight);
+    controllerModules.add(module);
+    return module;
   }
-
-  public void addControllerToModule(int type, int num, String moduleName) {
-    ControllerModule cm = (ControllerModule) findModule(moduleName, controllerModules);
+  
+  public void addControllerToModule(int type, int num, Module module) {
+    ControllerModule cm = (ControllerModule) module;
     cm.addNumControllers(type, num);
   }
-
-  private Module findModule(String moduleName, ArrayList<Module> searchArray) {
-    for (int i = 0; i < searchArray.size(); i++) {
-      Module m = searchArray.get(i);
-      if (m.moduleName.equals(moduleName)) {
-        return m;
-      }
-    }
-
-    return null;
-  }
-
+  
   public void fitModules() {
     setModuleRects();
     fitControllerModules();
@@ -124,14 +105,11 @@ public class Instrument {
 
       int val = (int) c.getValue();
       if (val != prevVal) {
-        String ctag = c.getName();
-        ctag = ctag.substring(0, ctag.length() - 1);
-        String cid  = str(id);
-
-        String oscUrl = instrumentName + ctag + "/" + cid;
-        OscMessage myMessage = new OscMessage(oscUrl);
-
+        String oscUrl = c.getName();
+        OscMessage myMessage = new OscMessage(oscUrl);        
         myMessage.add(val);
+        
+        myMessage.print();
         oscP5.send(myMessage, myRemoteLocation);
         prevVal = val;
       }

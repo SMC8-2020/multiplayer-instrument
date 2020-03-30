@@ -12,6 +12,7 @@ Instrument instr;
 void setup ()
 {
   size(700, 600);
+  pixelDensity(2);
   smooth();
   
   oscP5 = new OscP5(this, 12000);
@@ -19,38 +20,30 @@ void setup ()
   myRemoteLocation = new NetAddress("192.168.8.100", 11000);
   
   instr = new Instrument("smc8");
-
-  instr.addSection("Melody", 1);
   
-  ////
-  instr.addModuleGroupToSection("Sequencer", 1, "Melody");
+  Module melodySection = instr.addSection("Melody");
   
-  instr.addModuleToModuleGroup("Sliders", "Sequencer", 0.7f);
-  instr.addControllerToModule(ControllerTags.SLIDERTAG, 8, "Sliders");
-
-  instr.addModuleToModuleGroup("Knobs", "Sequencer", 0.3f);
-  instr.addControllerToModule(ControllerTags.KNOBTAG, 2, "Knobs");
-  ////
+  Module g1 = instr.addGroupToSection("Sequencer", melodySection);
+  Module g2 = instr.addGroupToSection("LDR", melodySection);
+  Module g3 = instr.addGroupToSection("Mixed", melodySection);
   
-  ////
-  instr.addModuleGroupToSection("LDR", 1, "Melody");
+  Module sliders = instr.addModuleToGroup(g1, 0.66f);
+  instr.addControllerToModule(ControllerTags.SLIDERTAG, 8, sliders);
   
-  instr.addModuleToModuleGroup("Buttons", "LDR", 0.7f);
-  instr.addControllerToModule(ControllerTags.BUTTONTAG, 4, "Buttons");
+  Module knobs = instr.addModuleToGroup(g1, 0.34f);
+  instr.addControllerToModule(ControllerTags.KNOBTAG, 2, knobs);
   
-  instr.addModuleToModuleGroup("Knob", "LDR", 0.3f);
-  instr.addControllerToModule(ControllerTags.KNOBTAG, 1, "Knob");
-  ////
+  Module ldrs = instr.addModuleToGroup(g2, 0.66f);
+  instr.addControllerToModule(ControllerTags.BUTTONTAG, 4, ldrs);
   
-  ////
-  instr.addModuleGroupToSection("Mixed", 1, "Melody");
+  Module vol = instr.addModuleToGroup(g2, 0.34f);
+  instr.addControllerToModule(ControllerTags.KNOBTAG, 1, vol);
   
-  instr.addModuleToModuleGroup("Knobs/Toggles", "Mixed", 0.7f);
-  instr.addControllerToModule(ControllerTags.KNOBTAG, 2, "Knobs/Toggles");
-  instr.addControllerToModule(ControllerTags.TOGGLETAG, 2, "Knobs/Toggles");
-  ////
-  
-  instr.addSection("Rhytm", 1);
+  Module mixed = instr.addModuleToGroup(g3, 0.645f);
+  instr.addControllerToModule(ControllerTags.KNOBTAG, 2, mixed);
+  instr.addControllerToModule(ControllerTags.TOGGLETAG, 2, mixed);
+    
+  instr.addSection("Rhytm");
     
   instr.fitModules();
 }
