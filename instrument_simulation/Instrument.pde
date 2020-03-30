@@ -3,7 +3,7 @@ public class Instrument {
   private final int BOXIN = 20;
   private final int SECTION_BOXIN = 20;
   private final int MDGROUP_BOXIN = 7;
-  
+
   private ArrayList<Module> sections;
   private ArrayList<Module> moduleGroups;
   private ArrayList<Module> controllerModules;
@@ -23,7 +23,7 @@ public class Instrument {
         onControllerChanged(event);
       }
     };
-    
+
     cp5.addCallback(this.cb);
   }
 
@@ -114,9 +114,18 @@ public class Instrument {
 
   public void onControllerChanged(CallbackEvent event) {
     if (event.getAction() == ControlP5.ACTION_BROADCAST) {
-
+      /*
       Controller c = event.getController();
-
+       String ctag = c.getName();
+       ctag = ctag.substring(0, ctag.length() - 1);
+       int id  = c.getId();
+       int val = (int) c.getValue();
+       String cid  = str(id);
+       String cval = str(val);
+       String msg = instrumentName + ctag + "/" + cid + "/" + cval;
+       println(msg);*/
+       
+      Controller c = event.getController();
       int id  = c.getId();
       if (id != prevId) {
         prevVal = -1000;
@@ -129,11 +138,15 @@ public class Instrument {
         ctag = ctag.substring(0, ctag.length() - 1);
         String cid  = str(id);
         String cval = str(val);
-        
-        String msg = instrumentName + ctag + "/" + cid + "/" + cval;
-        
-        println(msg);
-        
+
+        //String msg = instrumentName + ctag + "/" + cid + "/" + cval;
+        String oscUrl = instrumentName + ctag + "/" + cid;
+        OscMessage myMessage = new OscMessage(oscUrl);
+
+        myMessage.add(val);
+        oscP5.send(myMessage, myRemoteLocation);
+        //println(msg);
+
         prevVal = val;
       }
     }

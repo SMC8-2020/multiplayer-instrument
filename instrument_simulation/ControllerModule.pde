@@ -36,7 +36,7 @@ public class ControllerModule extends Module {
 
   public void addController(int type) {
 
-    int id = controllers.size();
+    int id     = controllers.size();
     String msg = constructMsg();
     Controller ctr;
 
@@ -79,6 +79,7 @@ public class ControllerModule extends Module {
         .setId(id)
         .setValue((ANALOGMAX - ANALOGMIN) / 2)
         .setLabelVisible(false)
+        .setMode(ControlP5.SWITCH)
         ;
       ntoggles++;
       break;
@@ -115,14 +116,15 @@ public class ControllerModule extends Module {
       break;
 
     case ControllerTags.KNOBTAG:
-      formatKnob((Knob) ctr, idx, container);
-      break;
+      //formatKnob((Knob) ctr, idx, container);
+      //break;
 
     case ControllerTags.BUTTONTAG:
-      formatButton((Button) ctr, idx, container);
-      break;
+      //formatButton((Button) ctr, idx, container);
+      //break;
 
     case ControllerTags.TOGGLETAG:
+      formatFixedSizeCtr(ctr, idx, container);
       break;
     }
   }
@@ -137,7 +139,32 @@ public class ControllerModule extends Module {
     slider.setPosition(x, y);
     slider.setSize((int) w, (int) h);
   }
-
+  
+  private void formatFixedSizeCtr(Controller ctr, int idx, Rect container) {
+    float x, y, w, h, s;
+    float alpha  = (container.w > container.h) ? 0.0f : 1.0f ;
+    float ntotal = (float)(nknobs + nbuttons + ntoggles);
+    ntotal += ((ntotal == 1) ? 1 : 0);
+    
+    if (alpha == 0) {
+      w = (container.w - (ntotal + 1)*CTRIN) / ntotal;
+      h = (container.h - 2*CTRIN) / 2.0f;      
+      x = (idx + 1)*CTRIN + container.x + idx*w;
+      y = container.y + container.h/2 - w/2;
+    } else {
+      h = (container.h - (ntotal + 1)*CTRIN) / ntotal;
+      w = (container.w - 2*CTRIN) / 2.0f;
+      y = (idx + 1)*CTRIN + container.y + idx*h;
+      x = container.x + container.w/2 - h/2;
+    }
+    
+    s = (1.0f - alpha)*w + alpha*h;
+    
+    ctr.setPosition(x, y);
+    ctr.setSize((int)s, (int)s);
+  }
+  
+  /*
   private void formatKnob(Knob knob, int idx, Rect container) {
     float x, y, w, h, r;
     
@@ -152,7 +179,7 @@ public class ControllerModule extends Module {
     x = 1.5f*CTRIN + container.x + w - r;
 
     knob.setPosition(x, y);
-    knob.setRadius(r);
+    knob.setSize((int)r*2, (int)r*2);
   }
   
   private void formatButton(Button button, int idx, Rect container) {
@@ -166,6 +193,5 @@ public class ControllerModule extends Module {
     button.setPosition(x, y);
     button.setSize((int) s, (int) s);
   }
-  
-  
+  */
 }

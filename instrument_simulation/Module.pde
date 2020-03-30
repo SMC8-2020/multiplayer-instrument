@@ -89,7 +89,7 @@ public class Module {
 
   public void display() {
     if (moduleRect != null) { 
-      fill(100, 200, 30, 60);
+      fill(200, 60);
       rect(moduleRect.x, moduleRect.y, moduleRect.w, moduleRect.h);
     }
 

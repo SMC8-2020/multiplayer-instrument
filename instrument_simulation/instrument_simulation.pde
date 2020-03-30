@@ -1,4 +1,10 @@
+import oscP5.*;
+import netP5.*;
 import controlP5.*;
+
+OscP5 oscP5;
+NetAddress myRemoteLocation;
+
 ControlP5 cp5;
 
 Instrument instr;
@@ -7,9 +13,11 @@ void setup ()
 {
   size(700, 600);
   smooth();
-
-  cp5 = new ControlP5(this);
-
+  
+  oscP5 = new OscP5(this,12000);
+  cp5   = new ControlP5(this);
+  myRemoteLocation = new NetAddress("127.0.0.1",12000);
+  
   instr = new Instrument();
 
   instr.addSection("Melody", 1);
@@ -34,18 +42,26 @@ void setup ()
   instr.addControllerToModule(ControllerTags.KNOBTAG, 1, "Knob");
   ////
   
+  ////
   instr.addModuleGroupToSection("Mixed", 1, "Melody");
+  
   instr.addModuleToModuleGroup("Knobs/Toggles", "Mixed", 0.7f);
   instr.addControllerToModule(ControllerTags.KNOBTAG, 2, "Knobs/Toggles");
-
+  instr.addControllerToModule(ControllerTags.TOGGLETAG, 2, "Knobs/Toggles");
+  ////
+  
   instr.addSection("Rhytm", 1);
   instr.fitModules();
 }
 
 void draw() 
 {
-  background(200);
+  background(255);
   instr.display();
+}
+
+void oscEvent(OscMessage theOscMessage) {
+  theOscMessage.print();
 }
 
 public static class Rect {
