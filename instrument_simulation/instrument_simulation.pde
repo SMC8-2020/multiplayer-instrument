@@ -43,7 +43,8 @@ void setup ()
   
   Module mixed = instr.addModuleToGroup(g3, 0.645f);
   instr.addControllerToModule(mixed, ControllerTags.KNOBTAG, 2, "Mode", "Key");
-  instr.addControllerToModule(mixed, ControllerTags.TOGGLETAG, 2, "2nd Voice", "3rd Voice");
+  instr.addControllerToModule(mixed, ControllerTags.TOGGLETAG, 1, "2nd Voice");
+  instr.addControllerToModule(mixed, ControllerTags.KNOBTAG, 1, "Semitones");
     
   instr.addSection("Rhytm");
     

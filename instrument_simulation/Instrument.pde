@@ -10,9 +10,6 @@ public class Instrument {
 
   private String instrumentName = "name_of_instrument";
 
-  private int prevId = -1, prevVal = -1;
-  private CallbackListener cb;
-
   private InstrumentListener lst;
 
   public Instrument () {
@@ -54,17 +51,10 @@ public class Instrument {
   
   public void addControllerToModule(Module module, int type, int num, String...labels) {
     ControllerModule cm = (ControllerModule) module;
-    
-    String[] _labels = new String[num];
     for (int i = 0; i < num; i++) {
-      if (i < labels.length) {
-        _labels[i] = labels[i];
-        continue;
-      }
-      _labels[i] = "";
-    }
-    
-    cm.addNumControllers(type, num, _labels);
+      String label = i < labels.length ? labels[i] : "";
+      cm.addController(type, label);
+    }    
   }
   
   public void fitModules() {
