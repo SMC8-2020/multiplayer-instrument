@@ -19,7 +19,7 @@ void setup ()
   
   oscP5 = new OscP5(this, 12000);
   cp5   = new ControlP5(this);
-  myRemoteLocation = new NetAddress("192.168.8.100", 11000);
+  myRemoteLocation = new NetAddress("192.168.1.44", 11000);
   
   instr = new Instrument("smc8");
   
