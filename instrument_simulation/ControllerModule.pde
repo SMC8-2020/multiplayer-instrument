@@ -5,39 +5,42 @@ public class ControllerModule extends Module {
   private final int CTRIN = 12;
 
   private final class Label {
-    private final float defaultTextW = 24.0f;
+    private final float PIXELOS  = 1.0f;
+    private final float DEFAULTW = 12.0f;
     private String str;
     private float textH;
     private float x, y, size;
+    
     public Label (String label, float x, float y, float s) {
-      this.str = label.toUpperCase();
+      this.str = label.trim().toUpperCase();
       this.textH = (textDescent()+textAscent());
-      this.size = defaultTextW / this.textH * (s/4);
+      this.size = DEFAULTW / this.textH * (s/4);
       this.x = x + s/2.0f;
-      this.y = y + this.size;
+      this.y = y + PIXELOS + this.size - textDescent();
     }
 
     public void show() {
       fill(255);
-      textAlign(CENTER);
       textSize(this.size);
+      textAlign(CENTER, CENTER);
       text(this.str, this.x, this.y);
     }
   }
-
+  
   private ArrayList<Controller> controllers;
-  private IntList types;
-  private int nsliders, nknobs, nbuttons, ntoggles;
-
   private ArrayList<Label> labels;
+  private IntList types;
+  
+  private int nsliders, nknobs, nbuttons, ntoggles;
 
   public ControllerModule(String moduleName) {
     super(moduleName, -1);
+    
     controllers = new ArrayList<Controller>();
-    types = new IntList();
-    nsliders = nknobs = nbuttons = ntoggles = 0;
-
     labels = new ArrayList<Label>();
+    types = new IntList();
+    
+    nsliders = nknobs = nbuttons = ntoggles = 0;
   }
 
   public void addController(int type, String label) {
@@ -74,11 +77,12 @@ public class ControllerModule extends Module {
       break;
 
     case ControllerTags.BUTTONTAG:
-      ctr = cp5.addButton(route + "Button" + id)
+      ctr = new LDR(cp5, route + "Button" + id)//cp5.addButton(route + "Button" + id)
         .setId(id)
         .setLabel(label)
         .setValue((ANALOGMAX - ANALOGMIN) / 2)
         .setLabelVisible(false)
+        .setSwitch(true)
         ;
       nbuttons++;
       break;

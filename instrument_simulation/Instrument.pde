@@ -6,7 +6,7 @@ public class Instrument {
 
   private ArrayList<Module> sections;
   private ArrayList<Module> moduleGroups;
-  private ArrayList<Module> controllerModules;
+  private HashMap<String, Module> controllerModules;
 
   private String instrumentName = "name_of_instrument";
 
@@ -15,9 +15,9 @@ public class Instrument {
   public Instrument () {
     sections = new ArrayList<Module>();
     moduleGroups = new ArrayList<Module>();
-    controllerModules = new ArrayList<Module>();
+    controllerModules = new HashMap<String, Module>();
 
-    lst = new InstrumentListener();
+    lst = new InstrumentListener(controllerModules);
     cp5.addCallback(lst);
   }
 
@@ -41,11 +41,11 @@ public class Instrument {
     return group;
   }
 
-  public Module addModuleToGroup(Module group, float weight) {
-    String moduleName = group.moduleName + group.moduleId + "/";
+  public Module addModuleToGroup(Module group, String mapName, float weight) {
+    String moduleName = group.moduleName + group.moduleId + "/" + mapName + "/";
     ControllerModule module = new ControllerModule(moduleName); 
     group.assignSubModule(module, weight);
-    controllerModules.add(module);
+    controllerModules.put(moduleName, module);
     return module;
   }
   
@@ -58,10 +58,20 @@ public class Instrument {
   }
   
   public void fitModules() {
+    setConsoleRect();
     setModuleRects();
     fitControllerModules();
   }
-
+  
+  private void setConsoleRect() {
+    float x, y, w, h;
+    x = BOXIN;
+    y = height - height/4;
+    w = width - 2*BOXIN;
+    h = height/4 - BOXIN;
+    lst.setConsoleRect(new Rect(x, y, w, h));
+  }
+  
   private void setModuleRects() {
     int d = 0;
     int numSections = sections.size();
@@ -78,10 +88,11 @@ public class Instrument {
   }
 
   private void fitControllerModules() {
-    for (int i = 0; i < controllerModules.size(); i++) {
-      ControllerModule ctr = (ControllerModule) controllerModules.get(i);
+    for (Map.Entry entry : controllerModules.entrySet()) {
+      ControllerModule ctr = (ControllerModule) entry.getValue();
       ctr.fitControllersToContainer();
     }
+    
   }
 
   public void listenForBroadcastEvent() {
@@ -92,5 +103,7 @@ public class Instrument {
     for (int i = 0; i < sections.size(); i++) {
       sections.get(i).display();
     }
+    
+    lst.display();
   }
 }
