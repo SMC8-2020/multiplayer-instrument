@@ -2,6 +2,8 @@ import oscP5.*;
 import netP5.*;
 import controlP5.*;
 
+import java.util.Map;
+
 OscP5 oscP5;
 NetAddress myRemoteLocation;
 
@@ -23,25 +25,25 @@ void setup ()
   
   Module melodySection = instr.addSection("Melody");
   
-  Module g1 = instr.addGroupToSection("Sequencer", melodySection);
-  Module g2 = instr.addGroupToSection("LDR", melodySection);
-  Module g3 = instr.addGroupToSection("Mixed", melodySection);
+  Module g1 = instr.addGroupToSection(melodySection, "Sequencer");
+  Module g2 = instr.addGroupToSection(melodySection, "LDR");
+  Module g3 = instr.addGroupToSection(melodySection, "Mixed");
   
   Module sliders = instr.addModuleToGroup(g1, 0.66f);
-  instr.addControllerToModule(ControllerTags.SLIDERTAG, 8, sliders);
+  instr.addControllerToModule(sliders, ControllerTags.SLIDERTAG, 8);
   
   Module knobs = instr.addModuleToGroup(g1, 0.34f);
-  instr.addControllerToModule(ControllerTags.KNOBTAG, 2, knobs);
+  instr.addControllerToModule(knobs, ControllerTags.KNOBTAG, 2, "Steps", "Select Patch");
   
   Module ldrs = instr.addModuleToGroup(g2, 0.66f);
-  instr.addControllerToModule(ControllerTags.BUTTONTAG, 4, ldrs);
+  instr.addControllerToModule(ldrs, ControllerTags.BUTTONTAG, 4);
   
   Module vol = instr.addModuleToGroup(g2, 0.34f);
-  instr.addControllerToModule(ControllerTags.KNOBTAG, 1, vol);
+  instr.addControllerToModule(vol, ControllerTags.KNOBTAG, 1, "Volume");
   
   Module mixed = instr.addModuleToGroup(g3, 0.645f);
-  instr.addControllerToModule(ControllerTags.KNOBTAG, 2, mixed);
-  instr.addControllerToModule(ControllerTags.TOGGLETAG, 2, mixed);
+  instr.addControllerToModule(mixed, ControllerTags.KNOBTAG, 2, "Mode", "Key");
+  instr.addControllerToModule(mixed, ControllerTags.TOGGLETAG, 2, "2nd Voice", "3rd Voice");
     
   instr.addSection("Rhytm");
     
@@ -50,11 +52,12 @@ void setup ()
 
 void draw() 
 {
-  background(255);
+  background(250, 251, 245);
+  instr.listenForBroadcastEvent();
   instr.display();
 }
 
-public static class Rect {
+public class Rect {
   public float x, y, w, h;
   public Rect (float x, float y, float w, float h) {
     this.x = x; 
@@ -62,6 +65,11 @@ public static class Rect {
     this.w = w; 
     this.h = h;
   }
+  
+  public void show() {
+    rect(x, y, w, h);
+  }
+  
 }
 
 public static class ControllerTags {

@@ -15,7 +15,7 @@ public class Module {
     moduleId   = id;
     parent     = null;
     children   = new ArrayList<Module>();
-    weights = new float[0];
+    weights    = new float[0];
   }
 
   public Module(String name, int id, int wspace) {
@@ -90,8 +90,8 @@ public class Module {
   public void display() {
     if (moduleRect != null) { 
       noStroke();
-      fill(150, 100);
-      rect(moduleRect.x, moduleRect.y, moduleRect.w, moduleRect.h);
+      fill(114, 133, 165, 100);
+      moduleRect.show();
     }
 
     if (children.size() != 0) {
