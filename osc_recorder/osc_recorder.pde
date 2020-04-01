@@ -28,7 +28,7 @@ void setup() {
 
   filename="";
 
-  server = new NetAddress("192.168.8.100",11000);
+  server = new NetAddress("192.168.1.44",11000);
   oscP5 = new OscP5(this, 10000);
   
   OscMessage m = new OscMessage("/smc8/connect", new Object[0]);
