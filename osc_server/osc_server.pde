@@ -43,7 +43,6 @@ void draw() {
   textAlign(CENTER, TOP);
   text(IP, width/2, 4);
 
-
   textFont(mono);
   if (currentDecay>0) {
     fill(70, 255, 70, map(currentDecay, 1, DECAY, 0, 180));
@@ -56,8 +55,8 @@ void draw() {
   fill(70, 255, 70, 180);
   textFont(monoMini);
   textAlign(LEFT, TOP);
-  for (int f=0; f<min(clients.size(), 20); f++) {
-    int dx = 18+198*(f/10);
+  for (int f=0; f<min(clients.size(), 10); f++) {
+    int dx = 18;
     int dy = 110+(f%10)*14;
     text(clients.get(f), dx, dy);
   }
@@ -73,7 +72,7 @@ void oscEvent(OscMessage msg) {
 
   //Add one new IP to the list
   if (msg.addrPattern().equals(connectPattern)) {
-    connect(msg.netAddress().address());
+    connect(msg.netAddress().address(), msg.get(0).stringValue());
     return;
   }
 
@@ -90,10 +89,10 @@ void oscEvent(OscMessage msg) {
 
 
 
-private void connect(String ip) {
+private void connect(String ip, String name) {
   if (!sendTo.contains(ip, broadcastPort)) {
     sendTo.add(new NetAddress(ip, broadcastPort));
-    clients.append(ip + ":" + broadcastPort);
+    clients.append(ip + ":" + broadcastPort + " " + name);
     println("### adding "+ip+" to the list.");
   } else {
     println("### "+ip+" is already connected.");
