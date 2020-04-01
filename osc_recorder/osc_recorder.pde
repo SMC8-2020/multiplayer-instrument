@@ -4,6 +4,16 @@ import netP5.*;
 OscP5 oscP5;
 NetAddress server;
 
+int sendPort = 11000;
+int receivePort = 10000;
+String serverIP = "192.168.8.100";
+//String serverIP = "192.168.1.44";
+
+
+String connectPattern = "/smc8/connect";
+String disconnectPattern = "/smc8/disconnect";
+String name = "recorder";
+
 PrintWriter output;
 String filename;
 int epoch, prevEvent, currentEvent, eventCounter;
@@ -12,6 +22,8 @@ final int INACTIVITY = 10000;
 PFont mono;
 
 String[] lines = new String[20];
+
+
 
 void setup() {
 
@@ -28,12 +40,12 @@ void setup() {
 
   filename="";
 
-  server = new NetAddress("192.168.1.44",11000);
-  oscP5 = new OscP5(this, 10000);
-  
-  OscMessage m = new OscMessage("/smc8/connect", new Object[0]);
-  OscP5.flush(m, server);
+  server = new NetAddress(serverIP, sendPort);
+  oscP5 = new OscP5(this, receivePort);
+
+  connectToServer();
 }
+
 
 
 void draw() {
@@ -51,6 +63,8 @@ void draw() {
   text(filename, 52, lines.length*18+22);
   text(eventCounter, 296, lines.length*18+22);
 }
+
+
 
 void oscEvent(OscMessage theOscMessage) {
 
@@ -114,6 +128,17 @@ void oscEvent(OscMessage theOscMessage) {
   prevEvent = currentEvent;
 }
 
+void connectToServer() {
+  OscMessage m = new OscMessage(connectPattern, new Object[0]);
+  m.add(name);
+  OscP5.flush(m, server);
+}
+
+void disconnectFromServer() {
+  OscMessage m = new OscMessage(disconnectPattern, new Object[0]);
+  OscP5.flush(m, server);
+}
+
 
 
 void stop() {
@@ -129,10 +154,19 @@ String getFilename() {
     );
 }
 
-
 void initBuffer() {
   eventCounter = 0;
   for (int f=0; f<lines.length; f++) {
     lines[f]="";
   }
+}
+
+void keyPressed() {
+  if (key=='c' ||key=='C') {
+    connectToServer();
+  } else if (key=='d' ||key=='D') {
+    disconnectFromServer();
+  }
+    
+    
 }
