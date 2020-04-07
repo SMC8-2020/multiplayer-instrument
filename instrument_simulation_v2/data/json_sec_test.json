@@ -1,0 +1,83 @@
+{
+	"section": 
+	{
+		"weight": 1,
+		"name": "Melody",
+		"id": 1,
+		"controllers": [],
+		"children": [
+			{
+				"weight": 0.3333,
+				"name": "Sequencer",
+				"id": 1,
+				"controllers": [],
+				"children": [
+					{
+						"weight": 0.66,
+						"name": "Sliders",
+						"id": 1,
+						"children": [],
+						"controllers": [
+							{"type": 1, "num": 8, "labels": []}
+						]
+					},
+					{
+						"weight": 0.34,
+						"name": "ModulationKnobs",
+						"id": 1,
+						"children": [],
+						"controllers": [
+							{"type": 2, "num": 2, "labels": ["Steps", "Select Patch"]}
+						]
+					}
+				]
+			},
+			{
+				"weight": 0.3333,
+				"name": "LDR",
+				"id": 1,
+				"controllers": [],
+				"children": [
+					{
+						"weight": 0.66,
+						"name": "LDRs",
+						"id": 1,
+						"children": [],
+						"controllers": [
+							{"type": 3, "num": 4, "labels": []}
+						]
+					},
+					{
+						"weight": 0.34,
+						"name": "Volume",
+						"id": 1,
+						"children": [],
+						"controllers": [
+							{"type": 2, "num": 1, "labels": ["Volume"]}
+						]
+					}				
+				]				
+			},
+			{
+				"weight": 0.3333,
+				"name": "Mixed",
+				"id": 1,
+				"controllers": [],
+				"children": [
+					{
+						"weight": 0.66,
+						"name": "Pitchers",
+						"id": 1,
+						"children": [],
+						"controllers": [
+							{"type": 2, "num": 2, "labels": ["Mode", "Key"]},
+							{"type": 4, "num": 1, "labels": ["2nd Voice"]},
+							{"type": 2, "num": 1, "labels": ["Semitones"]}
+						]
+					}				
+				]			
+			}
+		]
+	}
+}
+

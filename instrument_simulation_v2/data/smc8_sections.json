@@ -1,0 +1,70 @@
+{
+	"sections": [
+		{
+			"name": "Melody", 
+			"id": 1, 
+			"groups": [
+				{
+					"name": "Sequencer",
+					"id": 1,
+					"modules": [
+						{
+							"name": "Sliders",
+							"weight": 0.66,
+							"controllers": [
+								{"type": 0, "num": 8, "labels": []}
+							]
+						},
+						{
+							"name": "ModulationKnobs",
+							"weight": 0.34,
+							"controllers": [
+								{"type": 1, "num": 2, "labels": ["Steps", "Select Patch"]}
+							]
+						}
+					] 
+				},
+				{
+					"name": "LDR",
+					"id": 1,
+					"modules": [
+						{
+							"name": "LDRs",
+							"weight": 0.66,
+							"controllers": [
+								{"type": 2, "num": 4, "labels": []}
+							]
+						},
+						{
+							"name": "VolumeKnob",
+							"weight": 0.34,
+							"controllers": [
+								{"type": 1, "num": 1, "labels": ["Volume"]}
+							]
+						}
+					]
+				},
+				{
+					"name": "Mixed",
+					"id": 1,
+					"modules": [
+						{
+							"name": "PitchModulation",
+							"weight": 0.645,
+							"controllers": [
+								{"type": 1, "num": 2, "labels": ["Mode", "Key"]},
+								{"type": 3, "num": 1, "labels": ["2nd Voice"]},
+								{"type": 1, "num": 1, "labels": ["Semitones"]}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Rhythm",
+			"id": 1,
+			"groups": []
+		}
+	]
+}
