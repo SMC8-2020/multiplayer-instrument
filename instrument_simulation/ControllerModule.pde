@@ -4,7 +4,7 @@ public class ControllerModule extends Module {
   private final int ANALOGMAX = 1023;
   private final int CTRIN = 12;
 
-  private final class Label {
+  public final class Label {
     private final float PIXELOS  = 1.0f;
     private final float DEFAULTW = 12.0f;
     private String str;

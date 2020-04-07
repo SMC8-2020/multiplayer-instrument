@@ -9,15 +9,24 @@ public class Module {
 
   private float[] weights;
   private Rect moduleRect = null;
-
+  
+  private InstrumentGUI.ModuleWindow win;
+  
   public Module(String name, int id) {
     moduleName = name;
     moduleId   = id;
-    parent     = null;
     children   = new ArrayList<Module>();
     weights    = new float[0];
   }
-
+  
+  public Module(String name, int id, Module parent, InstrumentGUI.ModuleWindow win) {
+    this(name, id);
+    this.win = win;
+    
+    this.parent = parent;
+    parent.children.add(this);
+  }
+  
   public Module(String name, int id, int wspace) {
     this(name, id);
     BOXIN = wspace;
@@ -41,6 +50,9 @@ public class Module {
     for (int i = 0; i < children.size(); i++) {
       weights[i] = 1.0f / (float) children.size();
     } 
+    
+    // fit to parent container
+    // 
     
     module.setParent(this);
   }

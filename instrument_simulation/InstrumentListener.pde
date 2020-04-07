@@ -44,7 +44,7 @@ public class InstrumentListener implements CallbackListener {
     w = rect.w / 3;
     h = rect.h - 2*BOXIN;
     callbackRect = new Rect(x, y, w, h);
-    continousRect = new Rect(BOXIN + x + w, y, w, h); 
+    continousRect = new Rect(BOXIN + x + w, y, w, h);
   }
 
   public void controlEvent(CallbackEvent event) {
@@ -125,23 +125,22 @@ public class InstrumentListener implements CallbackListener {
     if (consoleRect == null) {
       return;
     }
-    
+
     noStroke();
     fill(color(114, 133, 165, 100));
     consoleRect.show();
     callbackRect.show();
     continousRect.show();
-    
+
     String bcinfo = isBroadcastable ? "ON" : "OFF";
-    
+
     textAlign(LEFT, TOP);
-    
+
     fill(255);
     textSize(12);
     text("CONTROLLER BROADCAST:", callbackRect.x + 2, callbackRect.y);
-    
+
     fill(isBroadcastable ? color(0, 255, 0) : color(255, 0, 0));
     text(bcinfo, callbackRect.x + textWidth("CONTROLLER BROADCAST:") + 10, callbackRect.y);
-    
   }
 }

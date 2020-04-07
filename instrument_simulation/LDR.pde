@@ -12,6 +12,10 @@ public class LDR extends Button {
     return getBooleanValue() ? getNext() : 0.0f;
   }
   
+  @Override public void draw(PGraphics p) {
+    super.draw(p);
+  }
+  
   private float getNext() {
     return random(0, 1023);
   }
