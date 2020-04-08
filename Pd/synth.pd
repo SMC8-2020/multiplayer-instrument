@@ -1,4 +1,4 @@
-#N canvas 106 23 1019 637 12;
+#N canvas 298 79 1019 799 12;
 #X obj 332 240 mtof;
 #X obj 615 395 *~;
 #X obj 656 361 adsr 1 400 100 100 20;
@@ -68,7 +68,7 @@
 #X text 734 157 D;
 #X text 761 157 S;
 #X text 791 156 R;
-#X obj 325 201 inlet;
+#X obj 323 155 inlet;
 #X obj 616 468 outlet~;
 #X obj 439 186 inlet;
 #X obj 658 324 inlet;
