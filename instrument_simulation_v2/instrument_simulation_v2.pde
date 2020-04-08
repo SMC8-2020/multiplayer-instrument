@@ -28,6 +28,7 @@ void setup()
   // SETUP OSC
   oscP5 = new OscP5(this, 12000);
   myRemoteLocation = new NetAddress("192.168.1.44", 11000);
+  //myRemoteLocation = new NetAddress("192.168.8.100", 11000);
   
   // SETUP VIRTUAL INSTRUMENT
   Instrument instr = new Instrument(this, cp5);
