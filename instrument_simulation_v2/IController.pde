@@ -1,5 +1,5 @@
 public static class IController { 
-  private static final float[] MARGINS_ROOT = {0, 0, 300, 0};
+  private static final float[] MARGINS_ROOT = {0, 0, 0, 0};
   private static final float[] MARGINS_GRP  = {8, 15};
   private static final float[] MARGINS_CTR  = {5, 10};
   private static final int ANALOGMIN = 0;
@@ -191,10 +191,6 @@ public static class IController {
       return oscAddress;
     }
 
-    @Override public int getHeight() {
-      return getBackgroundHeight();
-    }
-
     public float getAbsoluteWidth() {
       return getWidth() + 2*MARGINS_GRP[0];
     }
@@ -205,6 +201,10 @@ public static class IController {
 
     public ControllerList getChildren() {
       return this.controllers;
+    }
+
+    @Override public int getHeight() {
+      return getBackgroundHeight();
     }
 
     @Override public IGroup addListener(final ControlListener theListener) {
@@ -238,7 +238,7 @@ public static class IController {
       return this;
     }
   }
-
+  
   public class ISlider extends Slider implements IControllerInterface<Slider> {
 
     private String oscAddress;
@@ -349,9 +349,9 @@ public static class IController {
       float[] crect = fitToContainer(this, MARGINS_CTR, weight);
 
       float s;
-      if (crect[2] < crect[3]) {
+      if (crect[4] > crect[5]) {
         s = crect[2];
-        crect[1] += crect[5]/2 - s/2 - 2*MARGINS_CTR[1];
+        crect[1] += crect[5]/2 - s/2 - MARGINS_CTR[1];
       } else {
         s = crect[3];
         crect[0] += crect[4]/2 - s/2 - MARGINS_CTR[0];
@@ -366,7 +366,7 @@ public static class IController {
   public class IButton extends Button implements IControllerInterface<Button> {
 
     private String oscAddress;
-
+    
     public IButton(ControlP5 cp5, ControllerGroup<?> parent, String name, String label) {
       super(cp5, name);
       setValue((ANALOGMAX - ANALOGMIN) / 2);
@@ -382,6 +382,7 @@ public static class IController {
         getCaptionLabel().getStyle().setPaddingTop(-5);
         getCaptionLabel().setSize((int)MARGINS_CTR[1]-2);
       }
+            
     }
 
     public IGroup get() {
@@ -413,12 +414,12 @@ public static class IController {
       float[] crect = fitToContainer(this, MARGINS_CTR, weight);
 
       float s;
-      if (crect[2] < crect[3]) {
+      if (crect[4] > crect[5]) {
         s = crect[2];
-        crect[1] += crect[5]/2 - s/2 - 2*MARGINS_CTR[1];
+        crect[1] += crect[5]/2 - s/2 - MARGINS_CTR[1];
       } else {
         s = crect[3];
-        crect[0] += crect[4]/2 - s/2 - 2*MARGINS_CTR[0];
+        crect[0] += crect[4]/2 - s/2 - MARGINS_CTR[0];
       }
 
       setPosition(crect[0], crect[1]);
@@ -476,12 +477,12 @@ public static class IController {
       float[] crect = fitToContainer(this, MARGINS_CTR, weight);
 
       float s;
-      if (crect[2] < crect[3]) {
+      if (crect[4] > crect[5]) {
         s = crect[2];
-        crect[1] += crect[5]/2 - s/2 - 2*MARGINS_CTR[1];
+        crect[1] += crect[5]/2 - s/2 - MARGINS_CTR[1];
       } else {
         s = crect[3];
-        crect[0] += crect[4]/2 - s/2 - 2*MARGINS_CTR[0];
+        crect[0] += crect[4]/2 - s/2 - MARGINS_CTR[0];
       }
 
       setPosition(crect[0], crect[1]);

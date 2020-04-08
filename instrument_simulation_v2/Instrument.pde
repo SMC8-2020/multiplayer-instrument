@@ -9,19 +9,29 @@ public class Instrument
   public Instrument(PApplet pa, ControlP5 cp5) {
     ict = new IController(pa, cp5);
     root = ict.getRootIGroup();
-    createFromJson("json_sec_test.json");
     
+    createSectionFromJson("melodySection.json", 0.5f);
+    createSectionFromJson("rhythmSection.json", 0.5f);
+
     listener = new InstrumentListener();
-    currentSection.addListener(listener);
+    root.addListener(listener);
+        
   }
 
-  public void createFromJson(String jsonPath) {
+  public void createSectionFromJson(String jsonPath, float weight) {
+    
+    if (currentSection != null) {
+      //root.remove(currentSection);
+    }
+    
     JSONObject jsonRoot = loadJSONObject(jsonPath);
     JSONObject section = jsonRoot.getJSONObject("section");
 
     String name = section.getString("name");
+    int id = section.getInt("id");
+    
     IController.IControllerInterface<?> topGroup = 
-      ict.addIController(IController.IGROUP, root, name).fit();
+      ict.addIController(IController.IGROUP, root, name + id).fit(weight);
         
     JSONArray children = section.getJSONArray("children");    
     for (int i = 0; i < children.size(); i++) {
@@ -57,10 +67,11 @@ public class Instrument
   private void createFromJson(JSONObject obj, ControllerGroup<?> parent) {
 
     String name  = obj.getString("name");
+    int id = obj.getInt("id");
     float weight = obj.getFloat("weight");
 
     IController.IControllerInterface<?> group = 
-      ict.addIController(IController.IGROUP, parent, name).fit(weight);
+      ict.addIController(IController.IGROUP, parent, name + id).fit(weight);
 
     JSONArray children = obj.getJSONArray("children");    
     for (int i = 0; i < children.size(); i++) {

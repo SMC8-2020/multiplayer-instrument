@@ -1,13 +1,19 @@
 import java.util.List;
 import java.util.Map;
 import controlP5.*;
+import oscP5.*;
+import netP5.*;
 
-final int ZINWALDBROWN = color(43,0,0);
-final int BURLYWOOD    = color(158,131,96);
-final int PLATINUM     = color(229,234,218);
-final int ONYX         = color(0,26,13);
+final boolean LEGACYSUPPORT = true;
+
+final int ZINWALDBROWN = color(43, 0, 0);
+final int BURLYWOOD    = color(158, 131, 96);
+final int PLATINUM     = color(229, 234, 218);
+final int ONYX         = color(0, 26, 13);
 
 ControlP5 cp5;
+OscP5 oscP5;
+NetAddress myRemoteLocation;
 
 void setup() 
 {
@@ -18,10 +24,13 @@ void setup()
   cp5 = new ControlP5(this);
   setFont();
   setColor();
-
+  
+  // SETUP OSC
+  oscP5 = new OscP5(this, 12000);
+  myRemoteLocation = new NetAddress("192.168.1.44", 11000);
+  
   // SETUP VIRTUAL INSTRUMENT
   Instrument instr = new Instrument(this, cp5);
-    
 }
 
 void draw() 
