@@ -1,9 +1,11 @@
 public static class IController { 
-  private static final float[] MARGINS_ROOT = {0, 0, 0, 0};
+  private static final float[] MARGINS_ROOT = {0, 0, 250, 0};
   private static final float[] MARGINS_GRP  = {8, 15};
-  private static final float[] MARGINS_CTR  = {5, 10};
-  private static final int ANALOGMIN = 0;
-  private static final int ANALOGMAX = 1023;
+  private static final float[] MARGINS_CTR  = {10, 10};
+
+  private static final int ANALOGMIN     = 0;
+  private static final int ANALOGMAX     = 1023;
+  private static final int ANALOGDEFAULT = 0;
 
   private static final int IGROUP  = 0;
   private static final int ISLIDER = 1;
@@ -43,12 +45,15 @@ public static class IController {
     float[] prect = getRect(parent);
 
     if (idx > 0) {
-      IControllerInterface<?> s = (IControllerInterface<?>)siblings.get(idx - 1);
-      prect[0] = s.getAbsoluteWidth();
-      prect[1] = s.getAbsoluteHeight();
+      IControllerInterface<?> s;
+      for (int i = idx; i > 0; i--) {
+        s = (IControllerInterface<?>)siblings.get(idx - i);
+        prect[0] += s.getAbsoluteWidth();
+        prect[1] += s.getAbsoluteHeight();
+      }
     }
 
-    return stack(prect, margins, weight, idx);
+    return stack(prect, margins, weight);
   }
 
   public static int getIdx(IControllerInterface<?> parent, IControllerInterface<?> caller) {
@@ -62,22 +67,21 @@ public static class IController {
     return new float[] {0, 0, w, h};
   }
 
-  public static float[] stack(float[] rect, float[] margins, float weight, float idx) {
+  public static float[] stack(float[] rect, float[] margins, float weight) {
     float x, y, w, h;
-
     if (rect[2] > rect[3]) {
       w = rect[2] * weight - 2*margins[0];
       h = rect[3] - 2*margins[1];
-      x = margins[0] + idx*rect[0];
+      x = margins[0] + rect[0];
       y = margins[1];
     } else {
       h = rect[3] * weight - 2*margins[1];
       w = rect[2] - 2*margins[0];
-      y = margins[1] + idx*rect[1];
+      y = margins[1] + rect[1];
       x = margins[0];
     }
-
-    return new float[] {x, y, w, h, rect[2], rect[3]};
+    
+    return new float[] {x, y, w, h, rect[2], rect[3]};    
   }
 
   public interface IControllerInterface<T> extends ControllerInterface<T> {    
@@ -90,17 +94,28 @@ public static class IController {
     public IControllerInterface<?> fit(float weight);
   }
 
-  public IGroup getRootIGroup() {
-    if (rootIGroup == null) {
-      int px = (int)MARGINS_ROOT[0];
-      int py = (int)MARGINS_ROOT[1];
-      int pw = (int)MARGINS_ROOT[2];
-      int ph = (int)MARGINS_ROOT[3];
-      rootIGroup = new IGroup(cp5, ROOTNAME, px, py, pa.width - px-pw, pa.height - py-ph);
-    }
-    return rootIGroup;
+  public IGroup[] getRootIGroups() {
+    int px = (int)MARGINS_ROOT[0];
+    int py = (int)MARGINS_ROOT[1];
+    int pw = (int)MARGINS_ROOT[2];
+    int ph = (int)MARGINS_ROOT[3];
+    IGroup gRoot = new IGroup(cp5, ROOTNAME, px, py, pa.width - px-pw, pa.height - py-ph);
+    IGroup gConsole = new IGroup(cp5, ROOTNAME+"_console", pa.width - px-pw, py, pw, pa.height - py-ph);
+    return new IGroup[] {gRoot, gConsole};
   }
-
+  /*
+  public IGroup getRootIGroup() {
+   if (rootIGroup == null) {
+   int px = (int)MARGINS_ROOT[0];
+   int py = (int)MARGINS_ROOT[1];
+   int pw = (int)MARGINS_ROOT[2];
+   int ph = (int)MARGINS_ROOT[3];
+   rootIGroup = new IGroup(cp5, ROOTNAME, px, py, pa.width - px-pw, pa.height - py-ph);
+   
+   }
+   return rootIGroup;
+   }
+   */
   private String getTag(String tag) {
     int id = uniqueIds.get(tag);
     uniqueIds.put(tag, id + 1);
@@ -165,6 +180,7 @@ public static class IController {
       setBackgroundHeight(h);
       setBackgroundColor(ROOT_BACKGROUND);
       setColorBackground(BARCOLOR);
+      setColorForeground(BARCOLOR);
       setColorActive(BARCOLOR);
       disableCollapse();
 
@@ -238,16 +254,20 @@ public static class IController {
       return this;
     }
   }
-  
+
   public class ISlider extends Slider implements IControllerInterface<Slider> {
 
+    private final int NTICKS = 13;
     private String oscAddress;
 
     public ISlider(ControlP5 cp5, ControllerGroup<?> parent, String name, String label) {
       super(cp5, name);
       setRange(ANALOGMIN, ANALOGMAX);
-      setValue((ANALOGMAX - ANALOGMIN) / 2);
+      setValue(ANALOGDEFAULT);
       setSliderMode(Slider.FLEXIBLE);
+      setNumberOfTickMarks(NTICKS);
+      snapToTickMarks(true);
+
       setGroup(parent);
 
       setLabel(label);
@@ -289,7 +309,7 @@ public static class IController {
 
     public IControllerInterface<?> fit(float weight) {
       float[] crect = fitToContainer(this, MARGINS_CTR, weight);
-      setPosition(crect[0], crect[1]);
+      setPosition(MARGINS_CTR[0]/2 + crect[0], crect[1]);
       setSize((int)crect[2], (int)crect[3]);
       return this;
     }
@@ -302,7 +322,7 @@ public static class IController {
     public IKnob(ControlP5 cp5, ControllerGroup<?> parent, String name, String label) {
       super(cp5, name);
       setRange(ANALOGMIN, ANALOGMAX);
-      setValue((ANALOGMAX - ANALOGMIN) / 2);
+      setValue(ANALOGDEFAULT);
       showTickMarks();
       snapToTickMarks(true);
       setViewStyle(Knob.ELLIPSE);
@@ -366,10 +386,10 @@ public static class IController {
   public class IButton extends Button implements IControllerInterface<Button> {
 
     private String oscAddress;
-    
+
     public IButton(ControlP5 cp5, ControllerGroup<?> parent, String name, String label) {
       super(cp5, name);
-      setValue((ANALOGMAX - ANALOGMIN) / 2);
+      setValue(ANALOGDEFAULT);
       setSwitch(true);
       setGroup(parent);
 
@@ -382,7 +402,6 @@ public static class IController {
         getCaptionLabel().getStyle().setPaddingTop(-5);
         getCaptionLabel().setSize((int)MARGINS_CTR[1]-2);
       }
-            
     }
 
     public IGroup get() {
