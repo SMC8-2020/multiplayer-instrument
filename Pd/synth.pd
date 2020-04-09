@@ -1,7 +1,7 @@
-#N canvas 298 79 1019 799 12;
-#X obj 332 240 mtof;
-#X obj 615 395 *~;
-#X obj 656 361 adsr 1 400 100 100 20;
+#N canvas 718 341 1019 799 12;
+#X obj 320 134 mtof;
+#X obj 442 573 *~;
+#X obj 483 539 adsr 1 400 100 100 20;
 #N canvas 0 23 450 300 cosine 0;
 #X obj 219 140 inlet~;
 #X obj 225 260 outlet~;
@@ -17,7 +17,7 @@
 #X connect 5 0 2 0;
 #X connect 6 0 2 0;
 #X connect 7 0 5 0;
-#X restore 268 340 pd cosine;
+#X restore 344 246 pd cosine;
 #N canvas 0 22 450 300 sawtooth 0;
 #X obj 212 191 phasor~;
 #X obj 209 130 inlet~;
@@ -33,7 +33,7 @@
 #X connect 5 0 3 0;
 #X connect 6 0 3 0;
 #X connect 7 0 5 0;
-#X restore 357 340 pd sawtooth;
+#X restore 433 246 pd sawtooth;
 #N canvas 0 23 450 300 square 0;
 #X obj 201 169 expr~ $v1 > 0.5;
 #X obj 241 136 phasor~;
@@ -51,29 +51,28 @@
 #X connect 6 0 4 0;
 #X connect 7 0 4 0;
 #X connect 8 0 6 0;
-#X restore 449 339 pd square;
-#X obj 446 246 t f b;
-#X obj 439 276 sel 0 1 2;
-#X obj 487 246 s stopAll;
-#X text 547 362 Env. Generator;
-#X obj 707 181 vsl 15 128 0 400 0 0 empty empty empty 0 -9 0 10 -261682
+#X restore 525 245 pd square;
+#X obj 131 113 t f b;
+#X obj 124 143 sel 0 1 2;
+#X obj 172 113 s stopAll;
+#X text 374 540 Env. Generator;
+#X obj 534 359 vsl 15 128 0 400 0 0 empty empty empty 0 -9 0 10 -261682
 -1 -1 0 1;
-#X obj 734 181 vsl 15 128 0 400 0 0 empty empty empty 0 -9 0 10 -261682
+#X obj 561 359 vsl 15 128 0 400 0 0 empty empty empty 0 -9 0 10 -261682
 -1 -1 0 1;
-#X obj 761 181 vsl 15 128 0 400 0 0 empty empty empty 0 -9 0 10 -261682
+#X obj 588 359 vsl 15 128 0 400 0 0 empty empty empty 0 -9 0 10 -261682
 -1 -1 0 1;
-#X obj 790 182 vsl 15 128 0 400 0 0 empty empty empty 0 -9 0 10 -261682
+#X obj 617 360 vsl 15 128 0 400 0 0 empty empty empty 0 -9 0 10 -261682
 -1 -1 0 1;
-#X text 708 157 A;
-#X text 734 157 D;
-#X text 761 157 S;
-#X text 791 156 R;
-#X obj 323 155 inlet;
-#X obj 616 468 outlet~;
-#X obj 439 186 inlet;
-#X obj 658 324 inlet;
-#X obj 465 452 +~;
-#X obj 67 241 mtof;
+#X text 535 335 A;
+#X text 561 335 D;
+#X text 588 335 S;
+#X text 618 334 R;
+#X obj 320 53 inlet;
+#X obj 443 646 outlet~;
+#X obj 124 53 inlet;
+#X obj 485 502 inlet;
+#X obj 289 380 +~;
 #N canvas 0 23 450 300 cosine 0;
 #X obj 219 140 inlet~;
 #X obj 225 260 outlet~;
@@ -89,7 +88,7 @@
 #X connect 5 0 2 0;
 #X connect 6 0 2 0;
 #X connect 7 0 5 0;
-#X restore 3 341 pd cosine;
+#X restore 79 247 pd cosine;
 #N canvas 0 22 450 300 sawtooth 0;
 #X obj 212 191 phasor~;
 #X obj 209 130 inlet~;
@@ -105,7 +104,7 @@
 #X connect 5 0 3 0;
 #X connect 6 0 3 0;
 #X connect 7 0 5 0;
-#X restore 92 341 pd sawtooth;
+#X restore 168 247 pd sawtooth;
 #N canvas 0 23 450 300 square 0;
 #X obj 201 169 expr~ $v1 > 0.5;
 #X obj 241 136 phasor~;
@@ -123,9 +122,10 @@
 #X connect 6 0 4 0;
 #X connect 7 0 4 0;
 #X connect 8 0 6 0;
-#X restore 184 340 pd square;
-#X obj 66 210 +;
-#X obj 87 157 inlet;
+#X restore 260 246 pd square;
+#X obj 386 135 mtof;
+#X obj 386 107 +;
+#X obj 404 54 inlet;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 0 0 5 0;
@@ -137,11 +137,11 @@
 #X connect 6 0 7 0;
 #X connect 6 1 8 0;
 #X connect 7 0 3 1;
-#X connect 7 0 24 1;
+#X connect 7 0 23 1;
 #X connect 7 1 4 1;
-#X connect 7 1 25 1;
+#X connect 7 1 24 1;
 #X connect 7 2 5 1;
-#X connect 7 2 26 1;
+#X connect 7 2 25 1;
 #X connect 10 0 2 2;
 #X connect 11 0 2 3;
 #X connect 12 0 2 4;
@@ -151,11 +151,11 @@
 #X connect 20 0 6 0;
 #X connect 21 0 2 0;
 #X connect 22 0 1 0;
-#X connect 23 0 24 0;
-#X connect 23 0 25 0;
-#X connect 23 0 26 0;
+#X connect 23 0 22 0;
 #X connect 24 0 22 0;
 #X connect 25 0 22 0;
-#X connect 26 0 22 0;
-#X connect 27 0 23 0;
+#X connect 26 0 23 0;
+#X connect 26 0 24 0;
+#X connect 26 0 25 0;
+#X connect 27 0 26 0;
 #X connect 28 0 27 1;
