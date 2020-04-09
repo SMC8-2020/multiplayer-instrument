@@ -4,16 +4,21 @@ import controlP5.*;
 import oscP5.*;
 import netP5.*;
 
-final boolean LEGACYSUPPORT = true;
+final boolean DEBUG = true;
+final boolean LEGACYSUPPORT = false;
+
+//final String HOST = "192.168.1.44";
+//final String HOST = "192.168.8.100";
+final String HOST = "127.0.0.1";
+final int    PORT = 11000;
 
 final int ZINWALDBROWN = color(43, 0, 0);
 final int BURLYWOOD    = color(158, 131, 96);
 final int PLATINUM     = color(229, 234, 218);
 final int ONYX         = color(0, 26, 13);
 
-ControlP5 cp5;
-OscP5 oscP5;
-NetAddress myRemoteLocation;
+InstrumentSection instrSec;
+InstrumentConsole instrCns;
 
 void setup() 
 {
@@ -21,25 +26,41 @@ void setup()
   pixelDensity(2);
 
   // SETUP CP5 
-  cp5 = new ControlP5(this);
-  setFont();
-  setColor();
+  ControlP5 cp5 = new ControlP5(this);
+  setFont(cp5);
+  setColor(cp5);
   
-  // SETUP OSC
-  oscP5 = new OscP5(this, 12000);
-  myRemoteLocation = new NetAddress("192.168.1.44", 11000);
-  //myRemoteLocation = new NetAddress("192.168.8.100", 11000);
+  // SETUP CUSTOM CONTROLLERS
+  IController.setInstance(this, cp5);
   
+  // SETUP OSCP5
+  OscP5 oscP5 = new OscP5(this, 12000);
+  NetAddress remoteLocation = new NetAddress(HOST, PORT);
+
   // SETUP VIRTUAL INSTRUMENT
-  Instrument instr = new Instrument(this, cp5);
+  instrSec = new InstrumentSection(oscP5, remoteLocation);
+  instrCns = new InstrumentConsole(oscP5, remoteLocation, instrSec);
 }
+
+void keyPressed() {
+  
+  if (key == 'q') {
+    instrCns.setSection("sections/presets/melodySection.json");
+  }
+  
+  if (key == 'w') {
+    instrCns.setSection("sections/presets/rhythmSection.json");
+  }
+  
+}
+
 
 void draw() 
 {
   background(212);
 }
 
-public void setFont() {
+public void setFont(ControlP5 cp5) {
   String fontName = "";
   String os = System.getProperty("os.name");
   if (os.contains("Windows")) {
@@ -56,7 +77,7 @@ public void setFont() {
   }
 }
 
-public void setColor() {
+public void setColor(ControlP5 cp5) {
   CColor col = new CColor();
   col.setBackground(ZINWALDBROWN);
   col.setForeground(BURLYWOOD);
