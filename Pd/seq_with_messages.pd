@@ -1,8 +1,8 @@
-#N canvas 798 0 1122 815 12;
-#X obj -37 971 mod 8;
-#X obj -40 1025 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+#N canvas 844 62 536 343 12;
+#X obj -37 967 mod 8;
+#X obj -37 1025 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
 -1 -1 2;
-#X obj -42 1051 select 0 1 2 3 4 5 6 7;
+#X obj -37 1051 select 0 1 2 3 4 5 6 7;
 #X obj 782 1208 f;
 #X obj 809 1208 f;
 #X obj 781 1022 vsl 15 128 60 84 0 0 empty empty empty 0 -9 0 10 -4034
@@ -45,9 +45,9 @@
 #X msg 1424 1364 \$1 100;
 #X obj 1422 1403 line~;
 #X text 1446 1167 Volume;
-#X text -64 692 BPM;
-#X obj -106 687 nbx 3 20 0 400 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 126 256;
+#X text -65 692 BPM;
+#X obj -107 687 nbx 3 20 0 400 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 91 256;
 #X obj 39 698 hsl 128 15 0 0.33 0 0 feel empty 16th-note-feel 20 8
 0 10 -262144 -260097 -1 0 0;
 #N canvas 526 170 191 127 time-signature 0;
@@ -65,12 +65,12 @@
 #X floatatom -107 779 5 0 0 0 - - -;
 #X floatatom -50 779 5 0 0 0 - - -;
 #X obj -107 808 s ticks;
-#N canvas 472 450 176 103 sixteenths 0;
+#N canvas 472 450 176 55 sixteenths 0;
 #X obj 20 24 r ticks;
 #X obj 20 57 outlet;
 #X connect 0 0 1 0;
 #X restore 41 844 pd sixteenths;
-#X obj 41 868 bng 15 50 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 41 870 bng 15 50 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #N canvas 472 450 140 141 eighths 0;
 #X obj 20 24 r ticks;
@@ -81,7 +81,7 @@
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X restore -36 844 pd eighths;
-#X obj -37 876 bng 15 50 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj -36 870 bng 15 50 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #N canvas 472 450 140 141 quarts 0;
 #X obj 20 24 r ticks;
@@ -275,16 +275,16 @@
 #X obj -37 937 float;
 #X obj 37 935 + 1;
 #X msg 1708 59 listen 10000;
-#X obj 1707 88 netreceive -u -b 10000;
+#X obj 1708 88 netreceive -u -b 10000;
 #X floatatom 1483 1100 5 0 0 0 - - -;
-#X msg 2105 33 connect 192.168.1.44 11000;
+#X msg 2107 33 connect 192.168.1.44 11000;
 #X obj 2107 178 netsend -u -b;
-#X obj 2181 143 list trim;
+#X obj 2182 143 list trim;
 #X obj 2182 116 list prepend send;
 #X obj 2182 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1709 177 route smc8;
-#X obj 1709 200 route Melody1;
+#X obj 1708 175 route smc8;
+#X obj 1708 204 route Melody1;
 #X obj 744 289 route Sequencer1;
 #X obj 515 483 route Slider0;
 #X obj 515 698 *;
@@ -333,7 +333,7 @@
 #X obj 242 686 i;
 #X obj 211 483 route Knob1;
 #X floatatom 242 723 5 0 0 0 - - -;
-#X obj 1717 329 route Mixed1;
+#X obj 1708 331 route Mixed1;
 #X obj 1449 483 route Knob1;
 #X obj 2628 353 route LDR1;
 #X obj 2619 483 route Knob0;
@@ -383,19 +383,19 @@
 #X msg 2281 785 3;
 #X msg 2317 786 7;
 #X msg 2354 786 12;
-#X obj 1689 483 route Knob0;
-#X obj 1716 506 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1708 483 route Knob0;
+#X obj 1735 506 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1752 579 t b f;
-#X obj 1722 579 f;
-#X obj 1741 607 /;
-#X obj 1689 645 *;
-#X floatatom 1689 712 5 0 0 0 - - -;
-#X obj 1716 544 nbx 4 20 0 1023 0 1 empty empty empty 0 -8 0 10 -262144
+#X obj 1771 579 t b f;
+#X obj 1741 579 f;
+#X obj 1760 607 /;
+#X obj 1708 645 *;
+#X floatatom 1708 712 5 0 0 0 - - -;
+#X obj 1735 544 nbx 4 20 0 1023 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 3 256;
-#X obj 1774 544 nbx 4 20 0 1023 0 1 empty empty empty 0 -8 0 10 -262144
+#X obj 1793 544 nbx 4 20 0 1023 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 1023 256;
-#X obj 1689 675 i;
+#X obj 1708 675 i;
 #X msg 2022 110 disconnect;
 #N canvas 649 160 450 300 mode 0;
 #X obj 278 78 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
@@ -829,7 +829,7 @@
 #X connect 20 0 18 0;
 #X connect 20 0 19 0;
 #X restore 920 801 pd mode;
-#X obj 2182 90 oscformat /smc8/connect puredata;
+#X obj 2182 90 oscformat /smc8/connec/puredata;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
