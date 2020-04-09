@@ -7,7 +7,7 @@
 		"controllers": [],
 		"children": [
 			{
-				"weight": 0.3333,
+				"weight": 0.45,
 				"name": "Sequencer",
 				"id": 1,
 				"controllers": [],
@@ -33,7 +33,7 @@
 				]
 			},
 			{
-				"weight": 0.3333,
+				"weight": 0.275,
 				"name": "LDR",
 				"id": 1,
 				"controllers": [],
@@ -59,7 +59,7 @@
 				]				
 			},
 			{
-				"weight": 0.3333,
+				"weight": 0.275,
 				"name": "Mixed",
 				"id": 1,
 				"controllers": [],

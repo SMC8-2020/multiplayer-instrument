@@ -2,16 +2,21 @@ public class Instrument
 {
   private IController ict;
   private IController.IGroup root;
+  private IController.IGroup console;
   private IController.IGroup currentSection;
   
   private InstrumentListener listener;
   
   public Instrument(PApplet pa, ControlP5 cp5) {
     ict = new IController(pa, cp5);
-    root = ict.getRootIGroup();
+    IController.IGroup[] g = ict.getRootIGroups();
+    //root = ict.getRootIGroup();
+    root = g[0];
+    console = g[1];
     
-    createSectionFromJson("melodySection.json", 0.5f);
-    createSectionFromJson("rhythmSection.json", 0.5f);
+    ict.addIController(IController.IGROUP, console, "Inspector").fit();
+    
+    createSectionFromJson("melodySection.json", 1f);
 
     listener = new InstrumentListener();
     root.addListener(listener);
