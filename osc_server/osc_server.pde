@@ -69,10 +69,14 @@ void draw() {
 
 
 void oscEvent(OscMessage msg) {
-
+  
   //Add one new IP to the list
   if (msg.addrPattern().equals(connectPattern)) {
-    connect(msg.netAddress().address(), msg.get(0).stringValue());
+    String deviceName = "";
+    if (msg.typetag()=="s") {
+      deviceName = msg.get(0).stringValue();
+    }
+    connect(msg.netAddress().address(), deviceName);
     return;
   }
 
