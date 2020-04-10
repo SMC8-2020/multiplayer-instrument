@@ -1,4 +1,4 @@
-public class InstrumentConsole extends Instrument  {
+public class InstrumentConsole extends Instrument {
   
   private final String CONSOLE_PATH   = "sections/consoleSection.json";
   private final float  CONSOLE_WEIGHT = 0.35f;  
