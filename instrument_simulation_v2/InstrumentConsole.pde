@@ -1,7 +1,9 @@
 public class InstrumentConsole extends Instrument  {
-
+  
   private final String CONSOLE_PATH   = "sections/consoleSection.json";
   private final float  CONSOLE_WEIGHT = 0.35f;  
+
+  private final String CONSOLE_BROADCAST_GRP = "Broadcast (0)";
 
   private final int PREVRESET = -1;
 
@@ -14,7 +16,10 @@ public class InstrumentConsole extends Instrument  {
   public InstrumentConsole(OscP5 osc, NetAddress remoteLocation, InstrumentSection instrumentSection) {
     super(osc, remoteLocation);
     this.instrumentSection = instrumentSection;
-    this.activeSection = createSectionFromJson(CONSOLE_PATH, CONSOLE_WEIGHT);
+    createSectionFromJson(CONSOLE_PATH, CONSOLE_WEIGHT);
+    this.activeSection = IController.getGroup(CONSOLE_BROADCAST_GRP);
+    
+    
   } 
 
   @Override public void controlEvent(ControlEvent event) {
@@ -46,4 +51,19 @@ public class InstrumentConsole extends Instrument  {
     instrumentSection.setSection(name);
     root.add(activeSection);
   }
+  
+  public void reset() {
+    IController.IGroup sec 
+      = instrumentSection.getActiveSection();
+    
+    if (sec != null) {
+      sec.reset();
+    }
+    
+    if (activeSection != null) {
+      activeSection.reset();
+    }
+    
+  }
+  
 }

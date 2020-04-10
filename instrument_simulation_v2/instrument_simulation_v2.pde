@@ -5,7 +5,7 @@ import oscP5.*;
 import netP5.*;
 
 final boolean DEBUG = true;
-final boolean LEGACYSUPPORT = false;
+final boolean LEGACYSUPPORT = true;
 
 //final String HOST = "192.168.1.44";
 //final String HOST = "192.168.8.100";
@@ -23,6 +23,7 @@ InstrumentConsole instrCns;
 void setup() 
 {
   size(700, 600);
+  //size(600, 600);
   pixelDensity(2);
 
   // SETUP CP5 
@@ -50,6 +51,10 @@ void keyPressed() {
   
   if (key == 'w') {
     instrCns.setSection("sections/presets/rhythmSection.json");
+  }
+  
+  if (key == 'r') {
+    instrCns.reset();
   }
   
 }

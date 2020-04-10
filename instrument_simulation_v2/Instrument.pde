@@ -29,7 +29,11 @@ public class Instrument implements ControlListener {
   public void setIpAddress(String ip) {
     this.remoteLocation = new NetAddress(ip, PORT);
   }
-
+  
+  public IController.IGroup getActiveSection() {
+    return activeSection;
+  }
+  
   public void setBroadcastable(boolean toggle) {
     isBroadcastable = toggle;
   }
@@ -86,11 +90,17 @@ public class Instrument implements ControlListener {
     if (!isControllerIType(ctr)) {
       return false;
     }
-
-    IController.IControllerInterface<?> topSection 
+    
+    IController.IControllerInterface<?> c 
+      = (IController.IControllerInterface<?>) ctr;
+    
+    return IController.isControllerChildOf(c, sectionTag);
+    
+    /*IController.IControllerInterface<?> topSection 
       = IController.getTopFor((IController.IControllerInterface<?>)ctr);
 
     return topSection.getName().equals(sectionTag);
+    */
   }
 
   public IController.IGroup createSectionFromJson(String jsonPath, float weight) {

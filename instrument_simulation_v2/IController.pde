@@ -49,13 +49,28 @@ public static class IController {
     this.uniqueIds.put(BUTTONTAG, 0);
     this.uniqueIds.put(TOGGLETAG, 0);
   }
-    
+
   public static IControllerInterface<?> getTopFor(IControllerInterface<?> ctr) {
     ControllerInterface<?> cur = ctr.getParent();
     while (!cur.getParent().getParent().equals(instance.cp5.getDefaultTab())) {
       cur = cur.getParent();
     }
     return (IControllerInterface<?>)cur;
+  }
+  
+  public static boolean isControllerChildOf(IControllerInterface<?> ctr, String name) {
+    ControllerInterface<?> cur = ctr.getParent();
+    while (!cur.getParent().equals(instance.cp5.getDefaultTab())) {
+      if (cur.getName().equals(name)) {
+        return true;
+      }
+      cur = cur.getParent();
+    }
+    return false;
+  }
+  
+  public static IGroup getGroup(String name) {
+    return (IGroup) instance.cp5.getGroup(name);
   }
   
   public static float[] getRect(IControllerInterface<?> ctr) {
@@ -96,7 +111,7 @@ public static class IController {
 
     return stack(prect, margins, weight);
   }
-    
+
   public IGroup getRootIGroup() {
     if (rootIGroup == null) {
       rootIGroup = new IGroup(cp5, ROOTNAME, 0, 0, pa.width, pa.height);
@@ -171,6 +186,7 @@ public static class IController {
     public float getAbsoluteWidth();
     public float getAbsoluteHeight();
     public String getOscAddress();
+    public IControllerInterface<?> reset();
     public IControllerInterface<?> fit();
     public IControllerInterface<?> fit(float weight);
   }
@@ -214,6 +230,18 @@ public static class IController {
       oscAddress = ((IGroup)parent).getOscAddress() + "/" + name;
     }
 
+    public IControllerInterface<?> reset() {
+      setValue(ANALOGDEFAULT);
+
+      ControllerList children = getChildren();
+      for (int i = 0; i < children.size(); i++) {
+        ControllerInterface<?> c = children.get(i);
+        ((IControllerInterface<?>)c).reset();
+      }
+
+      return this;
+    } 
+
     public IGroup get() {
       return this;
     }
@@ -237,7 +265,7 @@ public static class IController {
     public ControllerList getChildren() {
       return controllers;
     }
-        
+
     @Override public int getHeight() {
       return getBackgroundHeight();
     }
@@ -246,11 +274,9 @@ public static class IController {
       super.addListener(theListener);
       ControllerList children = getChildren();
 
-      if (children != null) {
-        for (int i = 0; i < children.size(); i++) {
-          ControllerInterface<?> c = children.get(i);
-          c.addListener(theListener);
-        }
+      for (int i = 0; i < children.size(); i++) {
+        ControllerInterface<?> c = children.get(i);
+        c.addListener(theListener);
       }
 
       return this;
@@ -303,6 +329,11 @@ public static class IController {
         getCaptionLabel().getStyle().setPaddingTop(-5);
         getCaptionLabel().setSize((int)MARGINS_CTR[1]-2);
       }
+    }
+
+    public IControllerInterface<?> reset() {
+      setValue(ANALOGDEFAULT);
+      return this;
     }
 
     public IGroup get() {
@@ -366,6 +397,11 @@ public static class IController {
         getCaptionLabel().getStyle().setPaddingTop(-5);
         getCaptionLabel().setSize((int)MARGINS_CTR[1]-2);
       }
+    }
+
+    public IControllerInterface<?> reset() {
+      setValue(ANALOGDEFAULT);
+      return this;
     }
 
     public IGroup get() {
@@ -437,6 +473,12 @@ public static class IController {
       }
     }
 
+    public IControllerInterface<?> reset() {
+      setValue(ANALOGDEFAULT);
+      setOff();
+      return this;
+    }
+
     public IGroup get() {
       IControllerInterface<?> p = (IControllerInterface<?>) getParent();
       return (IGroup)p.get();
@@ -503,6 +545,11 @@ public static class IController {
         getCaptionLabel().getStyle().setPaddingTop(-5);
         getCaptionLabel().setSize((int)MARGINS_CTR[1]-2);
       }
+    }
+
+    public IControllerInterface<?> reset() {
+      setValue(ANALOGDEFAULT);
+      return this;
     }
 
     public IGroup get() {
