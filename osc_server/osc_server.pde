@@ -23,7 +23,7 @@ String IP;
 
 StringList clients = new StringList();
 int lastMessage, currentDecay = 0;
-final int DECAY = 10;
+final int DECAY = 8;
 
 Panel pServer, pIP, pPorts, pClients, pRecorder, pLog, pInfo;
 
@@ -59,7 +59,6 @@ void setup() {
   pInfo = new Panel(pLog.x, pLog.nextBelow(), pLog.w, 100, BACK4, "INFO");
   pInfo.adjustHeightToParent(pRecorder);
 
-  println(pInfo.h);
 }
 
 
@@ -87,7 +86,7 @@ void draw() {
   text(listeningPort + "->" + broadcastPort, center.x, center.y-4);
 
   if (currentDecay>0) {
-    fill(0, 26, 13, map(DECAY, 1, DECAY, 0, 180));
+    fill(0, 26, 13, map(currentDecay, 1, DECAY, 0, 255));
     text("+             +", center.x, center.y-4);
   } 
 
