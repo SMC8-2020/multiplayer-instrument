@@ -1,5 +1,5 @@
 public static class IController { 
-  private static final float[] MARGINS_ROOT = {0, 0, 250, 0};
+  //private static final float[] MARGINS_ROOT = {0, 0, 250, 0};
   private static final float[] MARGINS_GRP  = {8, 15};
   private static final float[] MARGINS_CTR  = {10, 10};
 
@@ -18,17 +18,29 @@ public static class IController {
   private static final String BUTTONTAG = "Button";
   private static final String TOGGLETAG = "Toggle";
 
-  private static String ROOTNAME = "smc8";
-  private static IGroup rootIGroup = null;
-
   private static String FONTTYPE = "default";
+  private static IController instance = null;
 
-  private PApplet pa;
-  private ControlP5 cp5;
+  private String ROOTNAME = "smc8";
+  private IGroup rootIGroup = null;
 
-  private HashMap<String, Integer> uniqueIds;
+  public PApplet pa;
+  public ControlP5 cp5;
 
-  public IController (PApplet pa, ControlP5 cp5) {
+  public HashMap<String, Integer> uniqueIds;
+
+  public static IController setInstance(PApplet pa, ControlP5 cp5) {
+    if (instance == null) {
+      instance = new IController(pa, cp5);
+    }
+    return instance;
+  }
+
+  public static IController getInstance() {
+    return instance;
+  }
+
+  private IController (PApplet pa, ControlP5 cp5) {
     this.pa = pa;
     this.cp5 = cp5;
     this.uniqueIds = new HashMap<String, Integer>();
@@ -37,30 +49,15 @@ public static class IController {
     this.uniqueIds.put(BUTTONTAG, 0);
     this.uniqueIds.put(TOGGLETAG, 0);
   }
-
-  public static float[] fitToContainer(IControllerInterface<?> caller, float[] margins, float weight) {
-    IControllerInterface<?> parent = (IControllerInterface<?>) caller.getParent();
-    ControllerList siblings = parent.getChildren();
-    int idx = getIdx(parent, caller);
-    float[] prect = getRect(parent);
-
-    if (idx > 0) {
-      IControllerInterface<?> s;
-      for (int i = idx; i > 0; i--) {
-        s = (IControllerInterface<?>)siblings.get(idx - i);
-        prect[0] += s.getAbsoluteWidth();
-        prect[1] += s.getAbsoluteHeight();
-      }
+    
+  public static IControllerInterface<?> getTopFor(IControllerInterface<?> ctr) {
+    ControllerInterface<?> cur = ctr.getParent();
+    while (!cur.getParent().getParent().equals(instance.cp5.getDefaultTab())) {
+      cur = cur.getParent();
     }
-
-    return stack(prect, margins, weight);
+    return (IControllerInterface<?>)cur;
   }
-
-  public static int getIdx(IControllerInterface<?> parent, IControllerInterface<?> caller) {
-    ControllerList children = parent.getChildren();
-    return children.get().indexOf(caller);
-  }
-
+  
   public static float[] getRect(IControllerInterface<?> ctr) {
     float w = ctr.getWidth();
     float h = ctr.getHeight();
@@ -80,42 +77,33 @@ public static class IController {
       y = margins[1] + rect[1];
       x = margins[0];
     }
+
+    return new float[] {x, y, w, h, rect[2], rect[3]};
+  }
+
+  public static float[] fitToContainer(IControllerInterface<?> caller, float[] margins, float weight) {
+    IControllerInterface<?> parent = (IControllerInterface<?>) caller.getParent();
+    ControllerList siblings = parent.getChildren();
+    int idx = siblings.get().indexOf(caller);
+    float[] prect = getRect(parent);
+
+    IControllerInterface<?> s;
+    for (int i = idx; i > 0; i--) {
+      s = (IControllerInterface<?>)siblings.get(idx - i);
+      prect[0] += s.getAbsoluteWidth();
+      prect[1] += s.getAbsoluteHeight();
+    }
+
+    return stack(prect, margins, weight);
+  }
     
-    return new float[] {x, y, w, h, rect[2], rect[3]};    
-  }
-
-  public interface IControllerInterface<T> extends ControllerInterface<T> {    
-    public ControllerList getChildren();
-    public ControllerGroup<?> get();
-    public float getAbsoluteWidth();
-    public float getAbsoluteHeight();
-    public String getOscAddress();
-    public IControllerInterface<?> fit();
-    public IControllerInterface<?> fit(float weight);
-  }
-
-  public IGroup[] getRootIGroups() {
-    int px = (int)MARGINS_ROOT[0];
-    int py = (int)MARGINS_ROOT[1];
-    int pw = (int)MARGINS_ROOT[2];
-    int ph = (int)MARGINS_ROOT[3];
-    IGroup gRoot = new IGroup(cp5, ROOTNAME, px, py, pa.width - px-pw, pa.height - py-ph);
-    IGroup gConsole = new IGroup(cp5, ROOTNAME+"_console", pa.width - px-pw, py, pw, pa.height - py-ph);
-    return new IGroup[] {gRoot, gConsole};
-  }
-  /*
   public IGroup getRootIGroup() {
-   if (rootIGroup == null) {
-   int px = (int)MARGINS_ROOT[0];
-   int py = (int)MARGINS_ROOT[1];
-   int pw = (int)MARGINS_ROOT[2];
-   int ph = (int)MARGINS_ROOT[3];
-   rootIGroup = new IGroup(cp5, ROOTNAME, px, py, pa.width - px-pw, pa.height - py-ph);
-   
-   }
-   return rootIGroup;
-   }
-   */
+    if (rootIGroup == null) {
+      rootIGroup = new IGroup(cp5, ROOTNAME, 0, 0, pa.width, pa.height);
+    }
+    return rootIGroup;
+  }
+
   private String getTag(String tag) {
     int id = uniqueIds.get(tag);
     uniqueIds.put(tag, id + 1);
@@ -165,6 +153,29 @@ public static class IController {
     }
   }
 
+
+
+
+  ///////////////////////////////////////////
+  //                                       //
+  //            NESTED CLASSES             //
+  //                                       //
+  ///////////////////////////////////////////
+
+
+
+
+  public interface IControllerInterface<T> extends ControllerInterface<T> {    
+    public ControllerList getChildren();
+    public ControllerGroup<?> get();
+    public float getAbsoluteWidth();
+    public float getAbsoluteHeight();
+    public String getOscAddress();
+    public IControllerInterface<?> fit();
+    public IControllerInterface<?> fit(float weight);
+  }
+
+
   public class IGroup extends Group implements IControllerInterface<Group> {
 
     private final int ROOT_BACKGROUND = -13959168;
@@ -195,12 +206,20 @@ public static class IController {
       this(cp5, name, 0, 0, parent.getWidth(), parent.getHeight());
       setBackgroundColor(BACKGROUND);
 
+      for (int i = 0; i < parent.listenerSize(); i++) {
+        super.addListener(((IGroup)parent).getListenerAt(i));
+      }
+
       setGroup(parent);
       oscAddress = ((IGroup)parent).getOscAddress() + "/" + name;
     }
 
     public IGroup get() {
       return this;
+    }
+
+    public ControlListener getListenerAt(int idx) {
+      return _myControlListener.get(idx);
     }
 
     public String getOscAddress() {
@@ -216,9 +235,9 @@ public static class IController {
     }    
 
     public ControllerList getChildren() {
-      return this.controllers;
+      return controllers;
     }
-
+        
     @Override public int getHeight() {
       return getBackgroundHeight();
     }
@@ -267,6 +286,10 @@ public static class IController {
       setSliderMode(Slider.FLEXIBLE);
       setNumberOfTickMarks(NTICKS);
       snapToTickMarks(true);
+
+      for (int i = 0; i < parent.listenerSize(); i++) {
+        super.addListener(((IGroup)parent).getListenerAt(i));
+      }
 
       setGroup(parent);
 
@@ -326,6 +349,11 @@ public static class IController {
       showTickMarks();
       snapToTickMarks(true);
       setViewStyle(Knob.ELLIPSE);
+
+      for (int i = 0; i < parent.listenerSize(); i++) {
+        super.addListener(((IGroup)parent).getListenerAt(i));
+      }
+
       setGroup(parent);
 
       setLabel(label);
@@ -391,6 +419,11 @@ public static class IController {
       super(cp5, name);
       setValue(ANALOGDEFAULT);
       setSwitch(true);
+
+      for (int i = 0; i < parent.listenerSize(); i++) {
+        super.addListener(((IGroup)parent).getListenerAt(i));
+      }
+
       setGroup(parent);
 
       setLabel(label);
@@ -454,6 +487,11 @@ public static class IController {
     public IToggle(ControlP5 cp5, ControllerGroup<?> parent, String name, String label) {
       super(cp5, name);
       setMode(ControlP5.SWITCH);
+
+      for (int i = 0; i < parent.listenerSize(); i++) {
+        super.addListener(((IGroup)parent).getListenerAt(i));
+      }
+
       setGroup(parent);
 
       setLabel(label);
