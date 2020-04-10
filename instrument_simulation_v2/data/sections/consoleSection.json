@@ -6,32 +6,48 @@
 		"id": 0,
 		"controllers": [],
 		"children": [
-			{
-				"weight": 0.275,
-				"name": "Network",
-				"id": 0,
-				"children": [],
-				"controllers": [
-					{"type": 4, "num": 1, "labels": ["Broadcast I/O"]}
-				]
-			},
-			{
-				"weight": 0.275,
-				"name": "Section Picker",
-				"id": 0,
-				"children": [],
-				"controllers": []
-			},
-			{
-				"weight": 0.45,
-				"name": "Main Controllers",
-				"id": 0,
-				"children": [],
-				"controllers": [
-					{"type": 2, "num": 3, "labels": ["Volume", "Tempo", "Swing"]},
-					{"type": 3, "num": 1, "labels": ["Reset"]}
-				]
-			}			
+            {
+                "weight": 0.5,
+                "name": "Local",
+                "id": 0,
+                "controllers": [],
+                "children": [
+                    {
+                        "weight": 0.5,
+                        "name": "Section Picker",
+                        "id": 0,
+                        "children": [],
+                        "controllers": []
+                    },  
+                    {
+                        "weight": 0.5,
+                        "name": "Network",
+                        "id": 0,
+                        "children": [],
+                        "controllers": [
+                            {"type": 4, "num": 1, "labels": ["Broadcast I/O"]}
+                        ]
+                    }                   
+                ]
+            },
+            {
+                "weight": 0.5,
+                "name": "Broadcast",
+                "id": 0,
+                "controllers": [],
+                "children": [
+                    {
+                        "weight": 1,
+                        "name": "Main Controllers",
+                        "id": 0,
+                        "children": [],
+                        "controllers": [
+                            {"type": 2, "num": 3, "labels": ["Volume", "Tempo", "Swing"]},
+                            {"type": 3, "num": 1, "labels": ["Reset"]}
+                        ]
+                    }                  
+                ]               
+            }		
 		]	
 	}
 }
