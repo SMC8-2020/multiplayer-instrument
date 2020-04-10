@@ -67,7 +67,8 @@ public class Panel {
     rect(x, y+headerh+1, w, h-headerh-1);
 
     fill(TITLE);
-    textFont(monoMini);
+    textAlign(LEFT, TOP);
+    textFont(monoHeader);
     text(this.title, x+3, y-1);
   }
 }

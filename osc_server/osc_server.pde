@@ -17,7 +17,7 @@ int broadcastPort = 10000;
 String connectPattern = "/smc8/connect";
 String disconnectPattern = "/smc8/disconnect";
 
-PFont monoMini, mono, monoBig, monoExtra;
+PFont monoHeader, mono, monoBig, monoExtra;
 
 String IP;
 
@@ -27,18 +27,33 @@ final int DECAY = 8;
 
 Panel pServer, pIP, pPorts, pClients, pRecorder, pLog, pInfo;
 
+// Recorder
+
+final int INACTIVITY = 10000;
+final int LOGLINES = 25;
+
+PrintWriter output;
+String filename;
+int epoch, prevEvent, currentEvent, eventCounter;
+String[] lines = new String[LOGLINES];
+
+
 void setup() {
 
-  size(800, 400);
+  size(800, 408);
   pixelDensity(2);
   noStroke();
-  monoMini = createFont("Andale Mono", 9);
-  mono = createFont("Andale Mono", 18);
+  monoHeader = createFont("Andale Mono", 9);
+  mono = createFont("Andale Mono", 12);
   monoBig = createFont("Andale Mono", 27);
   monoExtra = createFont("Andale Mono", 36);
 
   oscP5 = new OscP5(this, listeningPort);
   IP = oscP5.ip();
+
+  epoch = -1;
+  initBuffer();
+  filename="";
 
   pServer = new Panel(Panel.marginhor, Panel.marginver, width/2-Panel.marginhor*2, 155, BACK3, "SERVER");
   pServer.toScreenBottom();
@@ -54,11 +69,10 @@ void setup() {
   pRecorder.toScreenBottom();
   pRecorder.toScreenRight();
 
-  pLog = new Panel(pRecorder, 296, BACK4, "LOG");
+  pLog = new Panel(pRecorder, 296+12+12, BACK4, "LOG");
 
   pInfo = new Panel(pLog.x, pLog.nextBelow(), pLog.w, 100, BACK4, "INFO");
   pInfo.adjustHeightToParent(pRecorder);
-
 }
 
 
@@ -94,11 +108,20 @@ void draw() {
   textFont(mono);
   textAlign(LEFT, TOP);
   PVector origin = pClients.canvasOrigin();
-  for (int f=0; f<min(clients.size(),10); f++) {
-    float dx = origin.x;
+  for (int f=0; f<min(clients.size(), 10); f++) {
     float dy = origin.y+f*20-2;
-    text(clients.get(f), dx, dy);
+    text(clients.get(f), origin.x, dy);
   }
+
+  textFont(mono);  
+  origin = pLog.canvasOrigin();
+  for (int f=0; f<lines.length; f++) {
+    float dy = origin.y+f*12-5;
+    text(lines[f], origin.x, dy);
+  }
+  
+  origin = pInfo.canvasOrigin();
+  text("File: " + filename + "   Events: " + eventCounter, origin.x, origin.y-4);
 
   if (currentDecay > 0) {
     currentDecay--;
@@ -128,6 +151,66 @@ void oscEvent(OscMessage msg) {
   //Broadcast the message
   oscP5.send(msg, sendTo);
   currentDecay = DECAY;
+
+  //Record the message
+  currentEvent = millis();
+  if (currentEvent-prevEvent >= INACTIVITY) {
+    if (epoch >= 0) {
+      output.close();
+    }
+    epoch = -1;
+  }
+
+  if (epoch < 0) {
+    epoch = currentEvent;
+    prevEvent = currentEvent;
+    filename = getFilename();
+    output = createWriter(filename);
+    initBuffer();
+  }
+
+  String typetag = msg.typetag();
+
+  String log = String.format("%d,%s,%s", 
+    currentEvent-epoch, 
+    msg.addrPattern(), 
+    typetag);
+
+  //println(typetag);
+  for (int f=0; f<typetag.length(); f++) {
+    switch(typetag.charAt(f)) {
+    case 'i':
+      log += "," + msg.get(f).intValue();
+      break;
+    case 'c':
+      log += ",'" + msg.get(f).charValue()+"'";
+      break;
+    case 's':
+      log += ",'" + msg.get(f).stringValue()+"'";
+      break;
+    case 'f':
+      log += "," + msg.get(f).floatValue();
+      break;
+    case 'T':
+      log += ",true";
+      break;    
+    case 'F':
+      log += ",false";
+      break;
+    default:
+      println("Unknown element " + typetag.charAt(f));
+      break;
+    }
+  }
+
+  output.println(log); 
+  output.flush();
+
+  arrayCopy(lines, 1, lines, 0, LOGLINES-1);
+  lines[lines.length-1] = log;
+  eventCounter++;
+
+  prevEvent = currentEvent;
 }
 
 
@@ -157,4 +240,19 @@ private void disconnect(String ip) {
     println("### "+ip+" is not connected.");
   }
   println("### currently there are "+sendTo.list().size()+" remote locations connected.");
+}
+
+
+
+String getFilename() {
+  return String.format("%02d%02d%02d_%02d%02d%02d.csv", 
+    year(), month(), day(), hour(), minute(), second()
+    );
+}
+
+void initBuffer() {
+  eventCounter = 0;
+  for (int f=0; f<LOGLINES; f++) {
+    lines[f]="";
+  }
 }
