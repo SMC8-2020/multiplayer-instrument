@@ -29,7 +29,7 @@ Panel pServer, pIP, pPorts, pClients, pRecorder, pLog, pInfo;
 
 // Recorder
 
-final int INACTIVITY = 10000;
+final int INACTIVITY = 60000;
 final int LOGLINES = 25;
 
 PrintWriter output;
@@ -119,7 +119,7 @@ void draw() {
     float dy = origin.y+f*12-5;
     text(lines[f], origin.x, dy);
   }
-  
+
   origin = pInfo.canvasOrigin();
   text("File: " + filename + "   Events: " + eventCounter, origin.x, origin.y-4);
 
@@ -164,7 +164,7 @@ void oscEvent(OscMessage msg) {
   if (epoch < 0) {
     epoch = currentEvent;
     prevEvent = currentEvent;
-    filename = getFilename();
+    filename = "data/" + getFilename();
     output = createWriter(filename);
     initBuffer();
   }
@@ -254,5 +254,11 @@ void initBuffer() {
   eventCounter = 0;
   for (int f=0; f<LOGLINES; f++) {
     lines[f]="";
+  }
+}
+
+void keyPressed() {
+  if (key=='R' ) {
+    prevEvent = -INACTIVITY;
   }
 }

@@ -26,11 +26,11 @@ public class Panel {
     this.title = title;
   }
 
-  public int nextBelow() {
+  int nextBelow() {
     return y + h + marginver;
   }
 
-  public int nextLeft() {
+  int nextLeft() {
     return x + w + marginhor;
   }
 
@@ -50,16 +50,15 @@ public class Panel {
     w = width - marginhor - x;
   }
 
-  public PVector canvasOrigin() {
+  PVector canvasOrigin() {
     return new PVector(x+marginhor, y+headerh+1+marginver);
   }
 
-  public PVector canvasCenter() {
+  PVector canvasCenter() {
     return new PVector(x+w/2, y+headerh+2+(h-headerh-1)/2);
   }
 
-
-  public void draw() {
+  void draw() {
     noStroke();
     fill(HEADER);
     rect(x, y, w, headerh);
