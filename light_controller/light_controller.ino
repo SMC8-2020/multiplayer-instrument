@@ -1,6 +1,20 @@
+#include <ESP8266WiFi.h>
+#include <WiFiUdp.h>
+#include <OSCMessage.h>
+
 #include <FastLED.h>
 #include <Bounce2.h>
 #include <Adafruit_NeoPixel.h>
+
+OSCMessage msg("/smc8/Melody1/Sequencer1/LDR1/");
+const unsigned int outPort = 11000;          // remote port
+const unsigned int localPort = 12000;        // local port
+
+const char ssid[] = "";
+const char pass[] = "";
+const IPAddress outIp(192, 168, 8, 100);
+
+WiFiUDP Udp;
 
 
 
@@ -32,10 +46,12 @@ void setup() {
   strip.show();
   strip.setBrightness(255);
 
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   state = 0;
   buttonPressed = false;
+
+  initWiFi();
 
 }
 
@@ -82,15 +98,46 @@ void loop() {
         break;
       case 6: color = inoise8(millis());
         break;
-      case 7: color = inoise8(millis()/2);
-        break;        
+      case 7: color = inoise8(millis() / 2);
+        break;
     }
     strip.fill(strip.Color(0, 0, 0, color));
+    msg.add(0x3FF & (color<<2));
   }
 
   strip.show();
 
-
+  Udp.beginPacket(outIp, outPort);
+  msg.send(Udp);
+  Udp.endPacket();
+  msg.empty();
 
   delay(25);
+}
+
+void initWiFi() {
+
+  byte ledStatus = LOW;
+
+  Serial.println();
+  Serial.println();
+  Serial.print("Connecting to ");
+  Serial.print(ssid);
+  WiFi.begin(ssid, pass);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    digitalWrite(LED_BUILTIN, ledStatus); // Write LED high/low
+    ledStatus = !ledStatus;
+    delay(200);
+  }
+  digitalWrite(LED_BUILTIN, HIGH);
+
+  Serial.println();
+  Serial.print("Local IP: ");
+  Serial.println(WiFi.localIP());
+  Serial.println("Starting UDP");
+  Udp.begin(localPort);
+  Serial.print("Local port: ");
+  Serial.println(Udp.localPort());
+
 }
