@@ -57,7 +57,7 @@ public static class IController {
     }
     return (IControllerInterface<?>)cur;
   }
-  
+
   public static boolean isControllerChildOf(IControllerInterface<?> ctr, String name) {
     ControllerInterface<?> cur = ctr.getParent();
     while (!cur.getParent().equals(instance.cp5.getDefaultTab())) {
@@ -68,11 +68,11 @@ public static class IController {
     }
     return false;
   }
-  
+
   public static IGroup getGroup(String name) {
     return (IGroup) instance.cp5.getGroup(name);
   }
-  
+
   public static float[] getRect(IControllerInterface<?> ctr) {
     float w = ctr.getWidth();
     float h = ctr.getHeight();
@@ -453,7 +453,7 @@ public static class IController {
 
     public IButton(ControlP5 cp5, ControllerGroup<?> parent, String name, String label) {
       super(cp5, name);
-      setValue(ANALOGDEFAULT);
+      //setValue(ANALOGDEFAULT);
       setSwitch(true);
 
       for (int i = 0; i < parent.listenerSize(); i++) {
@@ -468,14 +468,16 @@ public static class IController {
       oscAddress = ((IGroup)parent).getOscAddress() + "/" + name;
 
       if (!FONTTYPE.equals("default")) {
-        getCaptionLabel().getStyle().setPaddingTop(-5);
+        getCaptionLabel().getStyle().setPaddingTop(getHeight() + 3);
         getCaptionLabel().setSize((int)MARGINS_CTR[1]-2);
       }
     }
 
     public IControllerInterface<?> reset() {
-      setValue(ANALOGDEFAULT);
-      setOff();
+      //setValue(ANALOGDEFAULT);
+      if (isOn()) {
+        setOff();
+      }
       return this;
     }
 

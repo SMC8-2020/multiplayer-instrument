@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.Map;
+import java.util.Arrays;
 import controlP5.*;
 import oscP5.*;
 import netP5.*;
@@ -8,8 +9,8 @@ final boolean DEBUG = true;
 final boolean LEGACYSUPPORT = true;
 
 //final String HOST = "192.168.1.44";
-//final String HOST = "192.168.8.100";
-final String HOST = "127.0.0.1";
+final String HOST = "192.168.8.100";
+//final String HOST = "127.0.0.1";
 final int    PORT = 11000;
 
 final int ZINWALDBROWN = color(43, 0, 0);
@@ -40,7 +41,7 @@ void setup()
 
   // SETUP VIRTUAL INSTRUMENT
   instrSec = new InstrumentSection(oscP5, remoteLocation);
-  instrCns = new InstrumentConsole(oscP5, remoteLocation, instrSec);
+  instrCns = new InstrumentConsole(oscP5, remoteLocation, instrSec);  
 }
 
 void keyPressed() {
@@ -54,7 +55,7 @@ void keyPressed() {
   }
   
   if (key == 'r') {
-    instrCns.reset();
+    instrCns.resetAll();
   }
   
 }

@@ -1,4 +1,4 @@
-public class Instrument implements ControlListener {
+public abstract class Instrument implements ControlListener {
 
   private final String testAddr = "/instrument/section/module/group/controller";
 
@@ -6,10 +6,15 @@ public class Instrument implements ControlListener {
   protected OscMessage broadcastRoute;
   protected NetAddress remoteLocation; 
 
-  protected boolean isBroadcastable = true;
+  protected boolean isBroadcastable = false;
 
   protected IController.IGroup root;
   protected IController.IGroup activeSection;
+  protected IController.IControllerInterface<?> activeController;
+
+  private final int[] PREVRESET = {-1};
+  private int[] prevValue = PREVRESET;
+  private IController.IControllerInterface<?> prevController;
 
   public Instrument() {
     this.root = IController.getInstance().getRootIGroup();
@@ -19,21 +24,57 @@ public class Instrument implements ControlListener {
   public Instrument(OscP5 osc, NetAddress remoteLocation) {
     this();
     this.osc = osc;
-    this.remoteLocation = remoteLocation; //new NetAddress(LOCALHOST, PORT);
+    this.remoteLocation = remoteLocation;
+  }
+
+  protected abstract boolean handleLocalEvent(IController.IControllerInterface<?> ctr);
+  protected abstract int[] broadcastDiscrete(IController.IControllerInterface<?> ctr);
+
+  public boolean isControllerIType(Controller ctr) {
+    return (ctr instanceof IController.IControllerInterface);
   }
 
   public void controlEvent(ControlEvent event) {
-    broadcastOsc(testAddr, -1, -1, -1, -1);
+    if (activeSection == null) {
+      return;
+    }
+
+    Controller ctr = event.getController();
+    if (!isControllerIType(ctr)) {
+      return;
+    }
+
+    activeController 
+      = (IController.IControllerInterface<?>)ctr;
+    
+    if (!IController.isControllerChildOf(activeController, activeSection.getName())) {
+      return;
+    }
+    
+    if (handleLocalEvent(activeController)) {
+      return;
+    }
+
+    if (!activeController.equals(prevController)) {
+      prevValue = PREVRESET;
+      prevController = activeController;
+    }
+
+    int[] currentValue = broadcastDiscrete(activeController);
+    if (!Arrays.equals(currentValue, prevValue)) {
+      broadcastOsc(activeController.getOscAddress(), currentValue);
+      prevValue = currentValue;
+    }
   }
 
   public void setIpAddress(String ip) {
     this.remoteLocation = new NetAddress(ip, PORT);
   }
-  
+
   public IController.IGroup getActiveSection() {
     return activeSection;
   }
-  
+
   public void setBroadcastable(boolean toggle) {
     isBroadcastable = toggle;
   }
@@ -51,7 +92,7 @@ public class Instrument implements ControlListener {
         tokens[1], tokens[2], tokens[3], tokens[5]
         );
     }
-    
+
     addr = addr.replaceAll("[\\s\\(\\)]", "");
     broadcastRoute = new OscMessage(addr);
 
@@ -78,29 +119,6 @@ public class Instrument implements ControlListener {
     }
 
     osc.send(broadcastRoute, remoteLocation);
-  }
-
-
-  public boolean isControllerIType(Controller ctr) {
-    return (ctr instanceof IController.IControllerInterface);
-  }
-
-  public boolean isCtrInSection(Controller ctr, String sectionTag) {
-
-    if (!isControllerIType(ctr)) {
-      return false;
-    }
-    
-    IController.IControllerInterface<?> c 
-      = (IController.IControllerInterface<?>) ctr;
-    
-    return IController.isControllerChildOf(c, sectionTag);
-    
-    /*IController.IControllerInterface<?> topSection 
-      = IController.getTopFor((IController.IControllerInterface<?>)ctr);
-
-    return topSection.getName().equals(sectionTag);
-    */
   }
 
   public IController.IGroup createSectionFromJson(String jsonPath, float weight) {
@@ -169,4 +187,11 @@ public class Instrument implements ControlListener {
     info.labels = labels.array();
     return info;
   }
+  
+  public void resetAll() {
+    if (this.root != null) {
+      this.root.reset();
+    }
+  }
+  
 }
