@@ -6,16 +6,7 @@
 #include <Bounce2.h>
 #include <Adafruit_NeoPixel.h>
 
-OSCMessage msg("/smc8/Melody1/Sequencer1/LDR1/");
-const unsigned int outPort = 11000;          // remote port
-const unsigned int localPort = 12000;        // local port
-
-const char ssid[] = "";
-const char pass[] = "";
-const IPAddress outIp(192, 168, 8, 100);
-
-WiFiUDP Udp;
-
+#include "WiFiCredentials.h"
 
 
 //Defs
@@ -23,8 +14,14 @@ WiFiUDP Udp;
 #define LED_PIN    D1
 
 #define LED_COUNT   1
-#define MAX_STATE   8
+#define MAX_STATE   9
 
+
+//Network things
+OSCMessage msg("/smc8/Melody1/LDR1/LDRS1");
+const unsigned int outPort = 11000;          // remote port
+const unsigned int localPort = 12000;        // local port
+WiFiUDP Udp;
 
 
 //Hardware
@@ -32,7 +29,7 @@ Bounce button = Bounce(BUTTON_PIN, 15);
 Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRBW + NEO_KHZ800);
 
 
-
+//Internal states
 int state;
 boolean buttonPressed;
 
@@ -56,64 +53,68 @@ void setup() {
 }
 
 
-
 void loop() {
 
   button.update();
 
+  //Button pressed
   if (button.fallingEdge()) {
-
     buttonPressed = true;
-
     digitalWrite(LED_BUILTIN, LOW);
     strip.fill(strip.Color(0, 0, 255, 0));
   }
 
+  //Button released
   if (button.risingEdge()) {
-
     buttonPressed = false;
     state++;
     if (state >= MAX_STATE) {
       state = 0;
     }
-
     digitalWrite(LED_BUILTIN, HIGH);
     strip.fill(strip.Color(0, 0, 0, 0));
   }
 
   if (!buttonPressed) {
-    int color = 0;
+    int value = 0;
     switch (state) {
-      case 0: color = (millis() % 512) >> 1;
+      case 0: value = (millis() % 512) >> 1;
         break;
-      case 1: color = (millis() % 1024) >> 2;
+      case 1: value = (millis() % 1024) >> 2;
         break;
-      case 2: color = sin8((millis() % 512) >> 1);
+      case 2: value = sin8((millis() % 512) >> 1);
         break;
-      case 3: color = sin8((millis() % 1024) >> 2);
+      case 3: value = sin8((millis() % 1024) >> 2);
         break;
-      case 4: color = ((millis() % 512) >> 1) > 128 ? 255 : 0;
+      case 4: value = ((millis() % 512) >> 1) > 128 ? 255 : 0;
         break;
-      case 5: color = ((millis() % 1024) >> 2) > 128 ? 255 : 0;
+      case 5: value = ((millis() % 1024) >> 2) > 128 ? 255 : 0;
         break;
-      case 6: color = inoise8(millis());
+      case 6: value = inoise8(millis());
         break;
-      case 7: color = inoise8(millis() / 2);
+      case 7: value = inoise8(millis() / 2);
+        break;
+      case 8: value = 0;
         break;
     }
-    strip.fill(strip.Color(0, 0, 0, color));
-    msg.add(0x3FF & (color<<2));
+    strip.fill(strip.Color(0, 0, 0, value));
+
+    if (state != 8) {
+      msg.add(0x3FF & (value << 2));
+      msg.add(0);
+      msg.add(0);
+      msg.add(0);
+      Udp.beginPacket(outIp, outPort);
+      msg.send(Udp);
+      Udp.endPacket();
+      msg.empty();
+    }
   }
 
   strip.show();
-
-  Udp.beginPacket(outIp, outPort);
-  msg.send(Udp);
-  Udp.endPacket();
-  msg.empty();
-
-  delay(25);
+  delay(100);
 }
+
 
 void initWiFi() {
 

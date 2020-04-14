@@ -2,3 +2,4 @@
 osc_server/data/*.csv
 osc_server/*.csv
 osc_recorder/*.csv
+WiFiCredentials.h
