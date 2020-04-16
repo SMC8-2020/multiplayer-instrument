@@ -431,7 +431,7 @@ public static class IController {
 
     public IControllerInterface<?> fit(float weight) {
       float[] crect = fitToContainer(this, MARGINS_CTR, weight);
-
+      
       float s;
       if (crect[4] > crect[5]) {
         s = crect[2];
@@ -443,6 +443,7 @@ public static class IController {
 
       setPosition(crect[0], crect[1]);
       setSize((int)s, (int)s);
+            
       return this;
     }
   }

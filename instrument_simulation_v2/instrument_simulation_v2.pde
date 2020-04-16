@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.Map;
 import java.util.Arrays;
+import java.util.Objects;
 import controlP5.*;
 import oscP5.*;
 import netP5.*;
@@ -18,8 +19,9 @@ final int BURLYWOOD    = color(158, 131, 96);
 final int PLATINUM     = color(229, 234, 218);
 final int ONYX         = color(0, 26, 13);
 
-InstrumentSection instrSec;
-InstrumentConsole instrCns;
+InstrumentModel model;
+ControllerHandler handler;
+InstrumentSectionView view;
 
 void setup() 
 {
@@ -29,33 +31,31 @@ void setup()
 
   // SETUP CP5 
   ControlP5 cp5 = new ControlP5(this);
-  setFont(cp5);
+  //setFont(cp5);
   setColor(cp5);
-  
-  // SETUP CUSTOM CONTROLLERS
-  IController.setInstance(this, cp5);
-  
+
   // SETUP OSCP5
   OscP5 oscP5 = new OscP5(this, 12000);
   NetAddress remoteLocation = new NetAddress(HOST, PORT);
 
   // SETUP VIRTUAL INSTRUMENT
-  instrSec = new InstrumentSection(oscP5, remoteLocation);
-  instrCns = new InstrumentConsole(oscP5, remoteLocation, instrSec);  
+  model   = new InstrumentModel(oscP5, remoteLocation);
+  handler = new ControllerHandler();
+  view    = new InstrumentSectionView(cp5);
+  
+  model.setView(view);
+  handler.setModel(model);
+  view.setHandler(handler);
+  
+  model.initView();
 }
 
 void keyPressed() {
-  
+
   if (key == 'q') {
-    instrCns.setSection("sections/presets/melodySection.json");
   }
-  
+
   if (key == 'w') {
-    instrCns.setSection("sections/presets/rhythmSection.json");
-  }
-  
-  if (key == 'r') {
-    instrCns.resetAll();
   }
   
 }
