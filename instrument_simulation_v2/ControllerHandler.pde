@@ -1,7 +1,9 @@
 public class ControllerHandler {
-
+  
+  private final int RNGVALUE = 1;
+  
   private InstrumentModel model;
-
+  
   private int prevBroadcastValue = -1;
   private Controller prevBroadcastController;
   
@@ -44,7 +46,12 @@ public class ControllerHandler {
 
   public void ldrActivated(ControlEvent event) {
     println("activated an LDR");
-    currentLdr = (Toggle)event.getController();
+    //currentLdr = (Toggle)event.getController();
+  }
+  
+  public void rng(ControlEvent event) {
+    println("randomizing a beat!");
+    model.broadcastOsc(event.getController().getName(), RNGVALUE);
   }
   
   public void updateContinousEvents() {
