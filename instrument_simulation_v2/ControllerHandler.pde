@@ -4,7 +4,10 @@ public class ControllerHandler {
 
   private int prevBroadcastValue = -1;
   private Controller prevBroadcastController;
-
+  
+  private Toggle currentLdr;
+  private int ldrCount = 0;
+  
   public ControllerHandler() {
     prevBroadcastController = null;
   }
@@ -23,10 +26,7 @@ public class ControllerHandler {
 
     int currentValue = (int) ctr.getValue();
     if (currentValue != prevBroadcastValue) {
-
-      // call model to transmit OSC
       model.broadcastOsc(ctr.getName(), currentValue);
-
       prevBroadcastValue = currentValue;
     }
   }
@@ -39,10 +39,28 @@ public class ControllerHandler {
 
   public void reset(ControlEvent event) {
     println("resetting controllers");
-    model.reset();
+    model.resetOnlineControllers();
   } 
 
   public void ldrActivated(ControlEvent event) {
     println("activated an LDR");
+    currentLdr = (Toggle)event.getController();
   }
+  
+  public void updateContinousEvents() {
+    
+    if (currentLdr != null) {
+      if (currentLdr.getBooleanValue()) {
+        println("ping" + ldrCount);
+        ldrCount++;
+      } else {
+        println("released LDR");
+        currentLdr = null;
+        ldrCount = 0;
+      }
+     
+    }
+    
+  }
+  
 }

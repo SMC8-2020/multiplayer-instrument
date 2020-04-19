@@ -5,14 +5,6 @@ public class InstrumentModel {
   final String DEFAULTSECTIONPATH = "sections/presets/rhythmSection.json";
   final String DEFAULTCONSOLEPATH = "sections/consoleSection.json"; 
 
-  final String BASENAME = "/smc8";
-
-  private OscP5 osc;
-  private OscMessage broadcastRoute;
-  private NetAddress remoteLocation; 
-
-  private boolean isBroadcastable = false;
-
   private int secX, secY, secW, secH;
   private int conX, conY, conW, conH;
   private float sectionAlpha = 0.65;
@@ -21,12 +13,10 @@ public class InstrumentModel {
   private IGroup consoleRoot;
 
   private InstrumentSectionView view;
-
-  private int formatDepth = 2;
-
+  private InstrumentOscHandler oscHandler;
+  
   public InstrumentModel(OscP5 osc, NetAddress remoteLocation)  {
-    this.osc = osc;
-    this.remoteLocation = remoteLocation;
+    oscHandler = new InstrumentOscHandler(osc, remoteLocation);
   }
 
   public void setView(InstrumentSectionView view) {
@@ -49,18 +39,40 @@ public class InstrumentModel {
     view.parse(DEFAULTCONSOLEPATH, consoleRoot);
   }
 
-  public void setBroadcast(boolean toggle) {
-    isBroadcastable = toggle;
-  }
-
-  public void reset() {
+  public void resetOnlineControllers() {
     for (ControllerInterface<?> ctr : view.onlineControllers.get()) {
       ((InstrumentControllerInterface<?>)ctr).reset();
     }
   }
+
+  public void setBroadcast(boolean toggle) {
+    oscHandler.setBroadcast(toggle);
+  }
+
+  public void broadcastOsc(String addr, int...values) {
+    oscHandler.broadcastOsc(addr, values);
+  }
   
+}
+
+public class InstrumentOscHandler {
+
+  final String BASEURL = "/smc8";
+
+  private OscP5 osc;
+  private OscMessage broadcastRoute;
+  private NetAddress remoteLocation;
+
+  private int formatDepth = 2;
+  private boolean isBroadcastable = false;
+
+  public InstrumentOscHandler(OscP5 osc, NetAddress remoteLocation) {
+    this.osc = osc;
+    this.remoteLocation = remoteLocation;
+  }
+
   private String formatAddr(String addr) {
-    String newAddr = BASENAME;
+    String newAddr = BASEURL;
     String[] tokens = addr.split("/");
     for (int i = 0; i < formatDepth; i++) {
       newAddr += "/" + tokens[i];
@@ -86,6 +98,10 @@ public class InstrumentModel {
     }
     return str;
   } 
+
+  public void setBroadcast(boolean toggle) {
+    isBroadcastable = toggle;
+  }
 
   public void broadcastOsc(String addr, int...values) {
 

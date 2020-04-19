@@ -64,6 +64,7 @@ void keyPressed() {
 void draw() 
 {
   background(212);
+  handler.updateContinousEvents();
 }
 
 public void setFont(ControlP5 cp5) {
