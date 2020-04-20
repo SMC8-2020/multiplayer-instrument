@@ -1,8 +1,8 @@
 public class InstrumentModel {  
   final String SECTIONROOTNAME = "SECTIONROOT";
   final String CONSOLEROOTNAME = "CONSOLEROOT";
-  //final String DEFAULTSECTIONPATH = "sections/presets/melodySection.json";
-  final String DEFAULTSECTIONPATH = "sections/presets/rhythmSection.json";
+  final String DEFAULTSECTIONPATH = "sections/presets/melodySection.json";
+  //final String DEFAULTSECTIONPATH = "sections/presets/rhythmSection.json";
   final String DEFAULTCONSOLEPATH = "sections/consoleSection.json"; 
 
   private int secX, secY, secW, secH;
