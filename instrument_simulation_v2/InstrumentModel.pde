@@ -15,7 +15,7 @@ public class InstrumentModel {
   private InstrumentSectionView view;
   private InstrumentOscHandler oscHandler;
   
-  public InstrumentModel(OscP5 osc, NetAddress remoteLocation)  {
+  public InstrumentModel(OscP5 osc, NetAddress remoteLocation) {
     oscHandler = new InstrumentOscHandler(osc, remoteLocation);
   }
 

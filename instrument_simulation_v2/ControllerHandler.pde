@@ -7,7 +7,9 @@ public class ControllerHandler {
   private int prevBroadcastValue = -1;
   private Controller prevBroadcastController;
   
-  private Toggle currentLdr;
+  private Button currentLdr;
+  private color fgc;
+  private color atc;
   private int ldrCount = 0;
   
   public ControllerHandler() {
@@ -47,6 +49,7 @@ public class ControllerHandler {
   public void ldrActivated(ControlEvent event) {
     println("activated an LDR");
     //currentLdr = (Toggle)event.getController();
+    Button b = (Button)event.getController();
   }
   
   public void rng(ControlEvent event) {
