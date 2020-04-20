@@ -26,11 +26,10 @@
 #define BUTTON_PIN D3
 #define LED_PIN    D1
 
-#define LED_COUNT   1
 #define MAX_STATE   9
 
 #define MIN_HZ      0.1
-#define MAX_HZ      3.0
+#define MAX_HZ      9.0
 
 
 //Network things
@@ -42,7 +41,15 @@ WiFiUDP Udp;
 
 //Hardware
 Bounce button;
+
+#ifdef ROTARY_MODEL
+#define LED_COUNT   6
+Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
+#else
+#define LED_COUNT   1
 Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRBW + NEO_KHZ800);
+#endif
+
 
 
 //Internal states
@@ -78,7 +85,7 @@ void loop() {
   if (button.fallingEdge()) {
     buttonPressed = true;
     digitalWrite(LED_BUILTIN, LOW);
-    strip.fill(strip.Color(0, 0, 255, 0));
+    strip.fill(strip.Color(0, 0, 255));
   }
 
   //Button released
@@ -97,7 +104,7 @@ void loop() {
     Serial.println(current_hz);
 #endif
     digitalWrite(LED_BUILTIN, HIGH);
-    strip.fill(strip.Color(0, 0, 0, 0));
+    strip.fill(strip.Color(0, 0, 0));
   }
 
 #ifdef ROTARY_MODEL
@@ -121,7 +128,7 @@ void loop() {
       }
 
       current_hz = mapfloat(rot_value, 0, ROT_MAX, MIN_HZ, MAX_HZ);
-      Serial.println(current_hz);
+      //Serial.println(current_hz);
     }
     pin_a_last = pin_a_curr;
   }
@@ -164,8 +171,8 @@ void loop() {
     //Just in case, clamp the value between 0 and 1023
     value = 0x3FF & value;
 
-    Serial.println(value);
-    strip.fill(strip.Color(0, 0, 0, value >> 2));
+    //Serial.println(value);
+    strip.fill(strip.Color(value >> 2, value >> 2, value >> 2));
 
     if (state != 8) {
       msg.add(value);
@@ -182,7 +189,7 @@ void loop() {
 
   strip.show();
 
-  delay(10);
+  delay(50);
 }
 
 
