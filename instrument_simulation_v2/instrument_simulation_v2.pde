@@ -10,7 +10,7 @@ final boolean DEBUG = true;
 final boolean LEGACYSUPPORT = true;
 
 //final String HOST = "192.168.1.44";
-final String HOST = "192.168.8.100";
+final String HOST = "192.168.1.81";
 //final String HOST = "127.0.0.1";
 final int    PORT = 11000;
 
