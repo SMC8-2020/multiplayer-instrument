@@ -1,25 +1,25 @@
 #N canvas 4 0 1080 966 12;
-#X obj 369 440 drum_machine;
-#X obj 415 597 dac~;
-#X obj 467 255 oscparse;
-#X obj 467 284 list trim;
-#X msg 467 197 listen 10000;
-#X obj 467 226 netreceive -u -b 10000;
-#X obj 866 316 netsend -u -b;
-#X obj 941 281 list trim;
-#X obj 941 254 list prepend send;
-#X obj 941 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 169 512 drum_machine;
+#X obj 324 724 dac~;
+#X obj 321 330 oscparse;
+#X obj 321 359 list trim;
+#X msg 321 272 listen 10000;
+#X obj 321 301 netreceive -u -b 10000;
+#X obj 507 246 netsend -u -b;
+#X obj 582 211 list trim;
+#X obj 582 184 list prepend send;
+#X obj 582 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 781 248 disconnect;
-#X obj 941 228 oscformat /smc8/connect;
-#X obj 694 49 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X msg 430 173 disconnect;
+#X obj 582 158 oscformat /smc8/connect;
+#X obj 321 49 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 694 117 delay 100;
-#X obj 694 141 delay 100;
-#X text 508 64 TURN ON AND CONNECT PATCH;
-#X obj 1118 229 oscformat /smc8/disconnect;
-#X obj 473 441 seq_with_messages;
-#X msg 867 171 connect 192.168.1.44 11000;
+#X obj 321 117 delay 100;
+#X obj 321 141 delay 100;
+#X text 135 64 TURN ON AND CONNECT PATCH;
+#X obj 759 159 oscformat /smc8/disconnect;
+#X obj 273 513 seq_with_messages;
+#X msg 508 99 connect 192.168.1.44 11000;
 #N canvas -85 92 1524 817 tempo_and_swing 0;
 #X obj 458 60 route smc8;
 #X obj 485 177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -42,10 +42,10 @@
 #X obj 458 149 route Knob1;
 #X obj 529 733 mod 8;
 #X obj 529 791 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 5;
+-1 -1 0;
 #X text 500 458 BPM;
 #X obj 458 456 nbx 3 20 0 400 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 124 256;
+-1 -1 108 256;
 #X obj 604 464 hsl 128 15 0 0.33 0 0 feel empty 16th-note-feel 20 8
 0 10 -262144 -260097 -1 0 0;
 #N canvas 526 170 191 127 time-signature 0;
@@ -301,8 +301,8 @@
 #X connect 35 0 36 0;
 #X connect 36 0 35 1;
 #X connect 37 0 0 0;
-#X restore 241 352 pd tempo_and_swing;
-#N canvas 0 50 1284 880 master_volume 1;
+#X restore 95 427 pd tempo_and_swing;
+#N canvas 0 50 1284 880 master_volume 0;
 #X obj 258 279 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 250 350 t b f;
@@ -338,12 +338,17 @@
 #X connect 12 0 9 0;
 #X connect 13 0 0 0;
 #X connect 13 0 4 0;
-#X restore 682 593 pd master_volume;
-#X obj 637 650 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
+#X restore 482 411 pd master_volume;
+#X obj 482 446 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
 -1 -1 0 1;
-#X msg 637 796 \$1 100;
-#X obj 637 828 line~;
-#X text 580 652 Volume;
+#X msg 482 592 \$1 100;
+#X obj 482 624 line~;
+#X text 425 448 Volume;
+#X obj 359 682 *~;
+#X obj 302 682 *~;
+#X obj 759 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 26 0;
 #X connect 2 0 3 0;
 #X connect 3 0 17 1;
 #X connect 3 0 0 1;
@@ -362,9 +367,17 @@
 #X connect 13 0 14 0;
 #X connect 14 0 4 0;
 #X connect 16 0 8 0;
-#X connect 17 0 1 1;
+#X connect 17 0 25 0;
 #X connect 18 0 6 0;
 #X connect 19 0 0 0;
 #X connect 19 0 17 0;
+#X connect 20 0 21 0;
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
+#X connect 23 0 25 1;
+#X connect 23 0 26 1;
+#X connect 25 0 1 0;
+#X connect 25 0 1 1;
+#X connect 26 0 1 0;
+#X connect 26 0 1 1;
+#X connect 27 0 16 0;
