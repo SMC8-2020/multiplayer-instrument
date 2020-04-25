@@ -1,4 +1,4 @@
-#N canvas 303 79 1472 928 12;
+#N canvas 315 127 1472 928 12;
 #X obj 549 -17 metro;
 #X obj 1131 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -10,11 +10,11 @@
 #X obj 608 494 phasor~;
 #X obj 531 624 vcf~;
 #X obj 531 772 dac~;
-#X obj 895 494 hsl 128 32 15 127 0 0 empty empty Cut_off -2 -8 0 10
--204786 -1 -1 7600 1;
+#X obj 895 494 hsl 128 32 15 127 0 0 empty empty Cutoff -2 -8 0 10
+-204786 -1 -1 9900 1;
 #X obj 627 559 mtof~;
 #X obj 895 552 hsl 128 32 0 6 0 0 empty empty Resonance -2 -8 0 10
--204786 -1 -1 7000 1;
+-204786 -1 -1 2400 1;
 #X msg 549 155 36;
 #X obj 531 491 phasor~;
 #X obj 531 544 +~;
@@ -54,6 +54,7 @@
 #X msg 788 155 35;
 #X text 564 86 Our sliders \, set to 8 notes;
 #X text 175 155 The 'key' knob moves once every 8 notes;
+#X obj 700 -60 loadbang;
 #X connect 0 0 1 0;
 #X connect 0 0 3 0;
 #X connect 0 0 23 0;
@@ -65,7 +66,7 @@
 #X connect 5 0 20 0;
 #X connect 5 0 15 0;
 #X connect 6 0 14 1;
-#X connect 7 0 21 0;
+#X connect 7 1 21 0;
 #X connect 9 0 10 0;
 #X connect 10 0 7 1;
 #X connect 11 0 7 2;
@@ -115,3 +116,4 @@
 #X connect 44 0 26 1;
 #X connect 45 0 26 1;
 #X connect 46 0 26 1;
+#X connect 49 0 33 0;
