@@ -1,0 +1,57 @@
+#N canvas 129 207 1248 615 12;
+#X obj 772 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 176 175 mtof;
+#X obj 253 256 phasor~;
+#X obj 176 386 vcf~;
+#X obj 540 256 hsl 128 32 15 127 0 0 empty empty Cutoff -2 -8 0 10
+-204786 -1 -1 0 1;
+#X obj 272 321 mtof~;
+#X obj 540 314 hsl 128 32 0 6 0 0 empty empty Resonance -2 -8 0 10
+-204786 -1 -1 0 1;
+#X obj 176 253 phasor~;
+#X obj 176 306 +~;
+#X obj 176 222 * 2.01;
+#X obj 540 143 hsl 128 32 0 1000 0 0 empty empty LFO_gain -2 -8 0 10
+-204786 -1 -1 0 1;
+#X obj 540 86 hsl 128 32 0.1 1200 0 0 empty empty LFO_freq -2 -8 0
+10 -204786 -1 -1 0 1;
+#X obj 448 129 osc~;
+#X obj 448 184 *~;
+#X obj 253 225 +~;
+#X obj 176 493 *~;
+#X obj 271 454 vline~;
+#X msg 776 373 1 15 \, 0 60 80;
+#X obj 177 132 inlet;
+#X obj 773 15 inlet;
+#X obj 174 539 outlet~;
+#X obj 1046 199 switch~;
+#X obj 1054 114 inlet;
+#X msg 984 85 0;
+#X msg 1052 151 1;
+#X obj 983 42 r stopAll;
+#X connect 0 0 17 0;
+#X connect 1 0 14 0;
+#X connect 1 0 9 0;
+#X connect 2 0 8 1;
+#X connect 3 1 15 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 1;
+#X connect 6 0 3 2;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X connect 9 0 7 0;
+#X connect 10 0 13 1;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 1;
+#X connect 14 0 2 0;
+#X connect 15 0 20 0;
+#X connect 16 0 15 1;
+#X connect 17 0 16 0;
+#X connect 18 0 1 0;
+#X connect 19 0 0 0;
+#X connect 22 0 24 0;
+#X connect 23 0 21 0;
+#X connect 24 0 21 0;
+#X connect 25 0 23 0;
