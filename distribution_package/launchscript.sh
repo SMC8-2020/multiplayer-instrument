@@ -1,4 +1,6 @@
 #!/bin/bash
 path="$(pwd)/applications"
 dependency="examplePd"
-java -jar ./launcher/applauncher.jar "${path}" "${dependency}"
+javajdk="$(pwd)/javaruntime/adoptopenjdk-8.jdk/Contents/Home"
+javart="${javajdk}/jre/bin/java"
+"${javart}" -jar ./launcher/applauncher.jar "${path}" "${dependency}"
