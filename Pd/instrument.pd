@@ -42,10 +42,10 @@
 #X obj 458 149 route Knob1;
 #X obj 529 733 mod 8;
 #X obj 529 791 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 6;
 #X text 500 458 BPM;
 #X obj 458 456 nbx 3 20 0 400 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 151 256;
+-1 -1 80 256;
 #X obj 604 464 hsl 128 15 0 0.33 0 0 feel empty 16th-note-feel 20 8
 0 10 -262144 -260097 -1 0 0;
 #N canvas 526 170 191 127 time-signature 0;
@@ -340,7 +340,7 @@
 #X connect 13 0 4 0;
 #X restore 482 411 pd master_volume;
 #X obj 482 446 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
--1 -1 0 1;
+-1 -1 12700 1;
 #X msg 482 592 \$1 100;
 #X obj 482 624 line~;
 #X text 425 448 Volume;
