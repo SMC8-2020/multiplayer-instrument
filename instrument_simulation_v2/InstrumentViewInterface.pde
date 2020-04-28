@@ -83,6 +83,7 @@ public abstract class InstrumentView implements InstrumentViewInterface {
     group.setBackgroundHeight(h);
     setGroupGlobals(group);
     group.setBackgroundColor(ZINWALDBROWN);
+    group.hideBar();
     return group;
   }
 

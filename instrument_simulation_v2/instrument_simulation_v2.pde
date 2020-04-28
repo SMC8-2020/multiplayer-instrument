@@ -25,9 +25,10 @@ InstrumentSectionView view;
 
 void setup() 
 {
-  size(700, 600);
+  size(1020, 595);
+  //size(1200, 700);
   //size(600, 600);
-  pixelDensity(2);
+  //pixelDensity(2);
 
   // SETUP CP5 
   ControlP5 cp5 = new ControlP5(this);
@@ -50,21 +51,10 @@ void setup()
   model.initView();
 }
 
-void keyPressed() {
-
-  if (key == 'q') {
-  }
-
-  if (key == 'w') {
-  }
-  
-}
-
-
 void draw() 
 {
-  background(212);
-  handler.updateContinousEvents();
+  background(ZINWALDBROWN);
+  //handler.updateContinousEvents();
 }
 
 public void setFont(ControlP5 cp5) {

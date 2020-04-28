@@ -1,7 +1,8 @@
 public class InstrumentModel {  
   final String SECTIONROOTNAME = "SECTIONROOT";
   final String CONSOLEROOTNAME = "CONSOLEROOT";
-  final String DEFAULTSECTIONPATH = "sections/presets/melodySection.json";
+  final String DEFAULTSECTIONPATH = "sections/presets/melodySection_wide.json";
+  //final String DEFAULTSECTIONPATH = "sections/presets/melodySection.json";
   //final String DEFAULTSECTIONPATH = "sections/presets/rhythmSection.json";
   final String DEFAULTCONSOLEPATH = "sections/consoleSection.json"; 
 
@@ -26,15 +27,15 @@ public class InstrumentModel {
   public void initView() {
     secX = 0;
     secY = 0;
-    secH = height;
-    secW = (int) (width * sectionAlpha);
+    secH = (int) (height * sectionAlpha);
+    secW = width;
     sectionRoot = view.createRootGroup(SECTIONROOTNAME, secX, secY, secW, secH);
     view.parse(DEFAULTSECTIONPATH, sectionRoot);
 
-    conX = secW;
-    conY = secY;
-    conH =  secH;
-    conW = (int) (width * (1.0 - sectionAlpha));
+    conX = secX;
+    conY = secH;
+    conH = (int) (height * (1.0 - sectionAlpha));
+    conW = secW;
     consoleRoot = view.createRootGroup(CONSOLEROOTNAME, conX, conY, conW, conH);
     view.parse(DEFAULTCONSOLEPATH, consoleRoot);
   }
@@ -78,7 +79,7 @@ public class InstrumentOscHandler {
       newAddr += "/" + tokens[i];
     }
     newAddr += "/" + tokens[tokens.length - 1];
-    return newAddr;
+    return newAddr.replaceAll("\\s+", "");
   }
 
   private void assignValues(OscMessage route, int[] values) {

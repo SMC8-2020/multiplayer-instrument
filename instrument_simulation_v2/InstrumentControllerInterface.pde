@@ -283,14 +283,14 @@ public class IKnob extends Knob implements ViewFitInterface, ViewSetupInterface,
     int x = col * size + (layout.pwidth/2  - (layout.cols*size)/2);
     int y = row * size + (layout.pheight/2 - (layout.rows*size)/2);
 
-    setPosition(x + margins[0], y + margins[1]);
+    setPosition(x + margins[0], y + margins[1]/2);
     setSize(size - 2*margins[0], size - 2*margins[1]);
   }
 }
 
 public class IButton extends Button implements ViewFitInterface, ViewSetupInterface, InstrumentControllerInterface<Button> {
 
-  private final int MAXSIZE = 75;
+  private final int MAXSIZE = 115;
   private final int[] margins = {10, 10};
 
   private String oscAddress;

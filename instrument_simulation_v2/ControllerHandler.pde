@@ -8,8 +8,6 @@ public class ControllerHandler {
   private Controller prevBroadcastController;
   
   private Button currentLdr;
-  private color fgc;
-  private color atc;
   private int ldrCount = 0;
   
   public ControllerHandler() {
