@@ -25,10 +25,10 @@
 #X msg 770 123 0;
 #X msg 838 189 1;
 #X obj 769 80 r stopAll;
-#X obj 122 336 r~ cutoff;
-#X obj 143 368 r~ resonance;
 #X floatatom 214 143 5 0 0 0 - - -;
 #X floatatom 293 163 5 0 0 0 - - -;
+#X obj 122 336 r cutoff;
+#X obj 143 368 r resonance;
 #X connect 0 0 15 0;
 #X connect 0 0 17 0;
 #X connect 1 0 9 0;
@@ -58,7 +58,7 @@
 #X connect 22 0 20 0;
 #X connect 23 0 20 0;
 #X connect 24 0 22 0;
-#X connect 25 0 3 1;
-#X connect 26 0 3 2;
-#X connect 27 0 7 0;
-#X connect 28 0 8 1;
+#X connect 25 0 7 0;
+#X connect 26 0 8 1;
+#X connect 27 0 3 1;
+#X connect 28 0 3 2;

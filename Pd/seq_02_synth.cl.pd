@@ -23,8 +23,8 @@
 #X msg 723 80 0;
 #X msg 791 146 1;
 #X obj 722 37 r stopAll;
-#X obj 285 295 r~ cutoff;
-#X obj 285 324 r~ resonance;
+#X obj 285 295 r cutoff;
+#X obj 285 324 r resonance;
 #X connect 1 0 13 0;
 #X connect 2 0 13 0;
 #X connect 3 0 15 0;
