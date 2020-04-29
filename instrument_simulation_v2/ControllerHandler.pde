@@ -1,5 +1,6 @@
 public class ControllerHandler {
   
+  private final int LDRVALUE = 1;
   private final int RNGVALUE = 1;
   
   private InstrumentModel model;
@@ -45,9 +46,10 @@ public class ControllerHandler {
   } 
 
   public void ldrActivated(ControlEvent event) {
-    println("activated an LDR");
+    //println("activated an LDR");
     //currentLdr = (Toggle)event.getController();
-    Button b = (Button)event.getController();
+    Toggle t = (Toggle)event.getController();
+    model.broadcastOsc(t.getName(), (int)t.getValue());
   }
   
   public void rng(ControlEvent event) {

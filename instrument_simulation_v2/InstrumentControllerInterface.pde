@@ -257,7 +257,7 @@ public class IKnob extends Knob implements ViewFitInterface, ViewSetupInterface,
       return;
     }
 
-    setNumberOfTickMarks(ticks);
+    setNumberOfTickMarks(ticks - 1);
     snapToTickMarks(true);
   }
 
@@ -290,7 +290,7 @@ public class IKnob extends Knob implements ViewFitInterface, ViewSetupInterface,
 
 public class IButton extends Button implements ViewFitInterface, ViewSetupInterface, InstrumentControllerInterface<Button> {
 
-  private final int MAXSIZE = 115;
+  private final int MAXSIZE = 75;
   private final int[] margins = {10, 10};
 
   private String oscAddress;
@@ -361,7 +361,7 @@ public class IButton extends Button implements ViewFitInterface, ViewSetupInterf
 
 public class IToggle extends Toggle implements ViewFitInterface, ViewSetupInterface, InstrumentControllerInterface<Toggle> {
 
-  private final int MAXSIZE = 75;
+  private final int MAXSIZE = 115;
   private final int[] margins = {10, 10};
 
   private String oscAddress;
@@ -369,7 +369,7 @@ public class IToggle extends Toggle implements ViewFitInterface, ViewSetupInterf
 
   public IToggle(ControlP5 cp5, String name) {
     super(cp5, name);
-    setMode(ControlP5.SWITCH);
+    //setMode(ControlP5.SWITCH);
   }
 
   public List<ControllerInterface<?>> getChildren() {
