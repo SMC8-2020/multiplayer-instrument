@@ -19,39 +19,17 @@
 						"id": 2,
                         "fitAlgo": "SquareFill",
 						"controllers": [
-                              {
-                                "type": "Knob",
-                                "quantity": 1,
-                                "callback": "broadcast",
-                                "status": "online",
-                                "range": [0, 1023],
-                                "default": 300,
-                                "label": ["Mode"],
-                                "ticks": 4,
-                                "color": []
-                            },
                             {
-                                "type": "Knob",
+                                "type": "Button",
                                 "quantity": 1,
-                                "callback": "broadcast",
-                                "status": "online",
-                                "range": [0, 1023],
+                                "callback": "rng",
+                                "status": "local",
+                                "range": [],
                                 "default": 0,
-                                "label": ["Key"],
-                                "ticks": 12,
-                                "color": []
-                            },
-                            {
-                                "type": "Knob",
-                                "quantity": 1,
-                                "callback": "broadcast",
-                                "status": "online",
-                                "range": [0, 1023],
-                                "default": 512,
-                                "label": ["2nd Voice"],
-                                "ticks": 7,
-                                "color": []
-                            },   
+                                "label": ["Randomize"],
+                                "ticks": 0,
+                                "color": [205, 92, 92]
+                            },  
                             {
                                 "type": "Knob",
                                 "quantity": 1,
@@ -193,7 +171,7 @@
                                 "range": [0, 1023],
                                 "default": 0,
                                 "label": ["Select Patch"],
-                                "ticks": 4,
+                                "ticks": 3,
                                 "color": []
                             },
                             {
