@@ -36,7 +36,7 @@
 #X obj 527 46 loadbang;
 #X obj 439 601 loadbang;
 #X obj 778 346 hsl 128 32 25 6000 0 0 empty empty Cutoff 6 -8 0 10
--204786 -1 -1 3374 1;
+-204786 -1 -1 4100 1;
 #X obj 775 258 loadbang;
 #X obj 775 408 s cutoff;
 #X msg 22 360 0;
@@ -44,16 +44,16 @@
 #X msg 90 360 7;
 #X msg 124 360 12;
 #X obj 938 346 hsl 128 32 1 8 0 0 empty empty Resonance 6 -8 0 10 -204786
--1 -1 4300 1;
+-1 -1 1200 1;
 #X obj 935 258 loadbang;
 #X obj 935 408 s resonance;
 #X msg 935 297 1;
 #X floatatom 87 531 5 0 0 0 - - -;
 #X msg 775 297 5000;
 #X msg 439 640 0.5;
-#N canvas 930 92 574 693 seq_04_synth 0;
+#N canvas 929 92 932 699 seq_04_synth 1;
 #X obj 318 61 inlet;
-#X obj 289 508 outlet~;
+#X obj 371 587 outlet~;
 #X obj 234 456 vcf~ 1;
 #X obj 320 371 r cutoff;
 #X obj 320 406 r resonance;
@@ -73,10 +73,22 @@
 #X obj 94 508 delwrite~ dly 500;
 #X obj 145 374 lop~ 5000;
 #X obj 189 298 *~ 0.99;
-#X obj 125 170 del 40;
+#X obj 520 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 519 362 line~;
+#X obj 583 272 pack 0 500;
+#X obj 519 411 *~;
+#X obj 519 460 *~;
+#X obj 583 211 del 25;
+#X obj 650 134 r release;
+#X msg 519 272 1 15;
+#X obj 371 505 *~;
+#X obj 125 169 del 20;
 #X connect 0 0 5 0;
 #X connect 0 0 11 0;
-#X connect 2 0 1 0;
+#X connect 0 0 19 0;
+#X connect 2 0 27 0;
+#X connect 2 1 27 0;
 #X connect 3 0 2 1;
 #X connect 4 0 2 2;
 #X connect 5 0 6 0;
@@ -84,7 +96,7 @@
 #X connect 7 0 8 0;
 #X connect 8 0 16 0;
 #X connect 9 0 8 1;
-#X connect 10 0 19 0;
+#X connect 10 0 28 0;
 #X connect 10 1 13 0;
 #X connect 11 0 10 0;
 #X connect 12 0 9 0;
@@ -94,8 +106,25 @@
 #X connect 17 0 2 0;
 #X connect 17 0 16 0;
 #X connect 18 0 17 0;
-#X connect 19 0 12 0;
+#X connect 19 0 26 0;
+#X connect 19 0 24 0;
+#X connect 20 0 22 0;
+#X connect 20 0 22 1;
+#X connect 21 0 20 0;
+#X connect 22 0 23 0;
+#X connect 22 0 23 1;
+#X connect 23 0 27 1;
+#X connect 24 0 21 0;
+#X connect 25 0 21 1;
+#X connect 26 0 20 0;
+#X connect 27 0 1 0;
+#X connect 28 0 12 0;
 #X restore 391 507 pd seq_04_synth;
+#X obj 778 137 hsl 128 32 25 3000 0 0 empty empty Release 6 -8 0 10
+-204786 -1 -1 11097 1;
+#X obj 775 49 loadbang;
+#X obj 775 199 s release;
+#X msg 775 88 1500;
 #X connect 0 0 2 0;
 #X connect 0 0 7 0;
 #X connect 1 0 0 0;
@@ -150,3 +179,6 @@
 #X connect 47 0 35 0;
 #X connect 48 0 25 0;
 #X connect 49 0 6 0;
+#X connect 50 0 52 0;
+#X connect 51 0 53 0;
+#X connect 53 0 50 0;
