@@ -7,7 +7,7 @@ import oscP5.*;
 import netP5.*;
 
 final boolean DEBUG = true;
-final boolean LEGACYSUPPORT = true;
+final boolean SECTIONLOCK = false;
 
 //final String HOST = "192.168.1.44";
 final String HOST = "192.168.1.81";
@@ -67,7 +67,6 @@ public void setFont(ControlP5 cp5) {
   }
 
   if (!fontName.equals("")) {
-    IController.FONTTYPE = fontName;
     PFont p = createFont(fontName, 9);
     ControlFont cf = new ControlFont(p, 9);
     cp5.setFont(cf);

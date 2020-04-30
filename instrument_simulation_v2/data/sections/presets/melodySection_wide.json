@@ -4,19 +4,19 @@
 		"weight": 1,
         "grouptype": "ContainerGroup",
 		"name": "Melody",
-		"id": 2,
+		"id": 1,
 		"children": [
 			{
 				"weight": 0.15,
                 "grouptype": "ContainerGroup",
 				"name": "Performance Modifiers",
-				"id": 2,
+				"id": 1,
 				"children": [
 					{
 						"weight": 1.0,
                         "grouptype": "ControllerGroup", 
 						"name": "Knobs",
-						"id": 2,
+						"id": 1,
                         "fitAlgo": "SquareFill",
 						"controllers": [
                               {
@@ -82,13 +82,13 @@
 				"weight": 0.55,
                 "grouptype": "ContainerGroup",
 				"name": "Sequencer",
-				"id": 2,
+				"id": 1,
 				"children": [
 					{
 						"weight": 1.0,
                         "grouptype": "ControllerGroup",
 						"name": "Sliders",
-						"id": 2,
+						"id": 1,
                         "fitAlgo": "RectFill",
 						"controllers": [
  							{
@@ -187,13 +187,13 @@
 				"weight": 0.30,
                 "grouptype": "ContainerGroup",
 				"name": "Sound Modifiers",
-				"id": 2,
+				"id": 1,
 				"children": [
 					{
 						"weight": 0.33,
                         "grouptype": "ControllerGroup",
 						"name": "General",
-						"id": 2,
+						"id": 1,
                         "fitAlgo": "SquareFill",
 						"controllers": [
 							{
@@ -235,7 +235,7 @@
 						"weight": 0.67,
                         "grouptype": "ControllerGroup",
 						"name": "LDRs",
-						"id": 2,
+						"id": 1,
                         "fitAlgo": "SquareFill",
 						"controllers": [
 				            {

@@ -108,8 +108,9 @@ public abstract class InstrumentView implements InstrumentViewInterface {
     }
     
     ctr.plugTo(controllerHandler, info.callback);
+    controllerHandler.addControllerToCallbackMap(info.callback, ctr);
   }
-
+  
   protected IGroup createGroup(ControllerGroup<?> parent, String name) {
     IGroup group = new IGroup(cp5, parent, name);    
     setGroupGlobals(group);
@@ -288,7 +289,8 @@ public class InstrumentViewLayoutParser extends InstrumentView {
     int id = section.getInt("id");
     float weight = section.getFloat("weight");
 
-    IGroup group = createGroup(root, name + id);    
+    IGroup group = createGroup(root, name + id);
+    group.setLabel(name);
     group.setWeight(weight);
     group.fit(null);
 
@@ -346,7 +348,6 @@ public class InstrumentSectionView {
 
   private InstrumentViewLayoutParser parser;
   
-  public IGroup currentSection;
   public ControllerList onlineControllers;
   public ControllerList localControllers;
 
@@ -364,8 +365,8 @@ public class InstrumentSectionView {
     return parser.initGroup(name, x, y, w, h);
   }
 
-  public void parse(String path, IGroup root) {
-    currentSection = parser.parseHierarchy(path, root);
+  public IGroup parse(String path, IGroup root) {
+    return parser.parseHierarchy(path, root);
   }
   
 }

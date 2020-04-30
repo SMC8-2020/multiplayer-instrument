@@ -1,21 +1,43 @@
 public class InstrumentModel {  
   final String SECTIONROOTNAME = "SECTIONROOT";
   final String CONSOLEROOTNAME = "CONSOLEROOT";
-  final String DEFAULTSECTIONPATH = "sections/presets/melodySection_wide.json";
-  //final String DEFAULTSECTIONPATH = "sections/presets/rhythmSection_wide.json";
-  final String DEFAULTCONSOLEPATH = "sections/consoleSection.json"; 
+  final String MELODYTAG = "Melody";
+  final String RHYTHMTAG = "Rhythm";
+  final String MELODYPATH = "sections/presets/melodySection_wide.json";
+  final String RHYTHMPATH = "sections/presets/rhythmSection_wide.json";
+  final String CONSOLEPATH = "sections/consoleSection.json"; 
 
   private int secX, secY, secW, secH;
   private int conX, conY, conW, conH;
   private float sectionAlpha = 0.65;
+
+  private IGroup currentSection;
+  private Map<String, IGroup> sections;
+  private Map<String, String> sectionFilePaths;
+
+  public String[] sectionTags;
 
   private IGroup sectionRoot;
   private IGroup consoleRoot;
 
   private InstrumentSectionView view;
   private InstrumentOscHandler oscHandler;
-  
+
   public InstrumentModel(OscP5 osc, NetAddress remoteLocation) {
+    sections = new HashMap<String, IGroup>();
+
+    sectionTags = new String[] {
+      MELODYTAG, 
+      RHYTHMTAG
+    };
+
+    sectionFilePaths = new HashMap<String, String>() {
+      {
+        put(MELODYTAG, MELODYPATH);
+        put(RHYTHMTAG, RHYTHMPATH);
+      }
+    };
+
     oscHandler = new InstrumentOscHandler(osc, remoteLocation);
   }
 
@@ -29,20 +51,52 @@ public class InstrumentModel {
     secH = (int) (height * sectionAlpha);
     secW = width;
     sectionRoot = view.createRootGroup(SECTIONROOTNAME, secX, secY, secW, secH);
-    view.parse(DEFAULTSECTIONPATH, sectionRoot);
+    currentSection = view.parse(MELODYPATH, sectionRoot);
+    sections.put(MELODYTAG, currentSection);
 
     conX = secX;
     conY = secH;
     conH = (int) (height * (1.0 - sectionAlpha));
     conW = secW;
     consoleRoot = view.createRootGroup(CONSOLEROOTNAME, conX, conY, conW, conH);
-    view.parse(DEFAULTCONSOLEPATH, consoleRoot);
+    view.parse(CONSOLEPATH, consoleRoot);
   }
 
   public void resetOnlineControllers() {
     for (ControllerInterface<?> ctr : view.onlineControllers.get()) {
       ((InstrumentControllerInterface<?>)ctr).reset();
     }
+  }
+
+  public void setSection(String tag) {
+    if (SECTIONLOCK) {
+      if (DEBUG) println("Section switching is disabled");
+      return;
+    }
+    
+    if (!sections.containsKey(tag)) {
+
+      if (!sectionFilePaths.containsKey(tag)) {
+        println("No data available for section with tag: " + tag);
+        return;
+      }
+
+      String path = sectionFilePaths.get(tag);
+      sectionRoot.remove(currentSection);
+      currentSection = view.parse(path, sectionRoot);
+      sections.put(tag, currentSection);
+      return;
+    } 
+
+    IGroup potSection = sections.get(tag);
+
+    if (currentSection.equals(potSection)) {
+      return;
+    }
+
+    sectionRoot.remove(currentSection);
+    currentSection = potSection;
+    sectionRoot.add(potSection);
   }
 
   public void setBroadcast(boolean toggle) {
@@ -52,7 +106,6 @@ public class InstrumentModel {
   public void broadcastOsc(String addr, int...values) {
     oscHandler.broadcastOsc(addr, values);
   }
-  
 }
 
 public class InstrumentOscHandler {
@@ -106,7 +159,7 @@ public class InstrumentOscHandler {
   public void broadcastOsc(String addr, int...values) {
 
     if (!isBroadcastable) {
-      println("broadcast is disabled");
+      if (DEBUG) println("broadcast is disabled");
       return;
     }
 
@@ -114,13 +167,15 @@ public class InstrumentOscHandler {
     broadcastRoute = new OscMessage(oscAddr);
     assignValues(broadcastRoute, values);
 
-    String dbg = String.format("%s   %s   %s", 
-      broadcastRoute.addrPattern(), 
-      arr2str(values), 
-      broadcastRoute.typetag()
-      );
-    println(dbg);
-
+    if (DEBUG) {
+      String dbg = String.format("%s   %s   %s", 
+        broadcastRoute.addrPattern(), 
+        arr2str(values), 
+        broadcastRoute.typetag()
+        );
+      println(dbg);
+    }
+    
     osc.send(broadcastRoute, remoteLocation);
   }
 }
