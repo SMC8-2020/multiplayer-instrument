@@ -180,11 +180,22 @@
                                 "callback": "broadcast",
                                 "status": "online",
                                 "range": [0, 1023],
+                                "default": 0,
+                                "label": ["Delay"],
+                                "ticks": 3,
+                                "color": []
+                            },
+                            {
+                                "type": "Knob",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
                                 "default": 512,
                                 "label": ["Volume"],
                                 "ticks": 0,
                                 "color": []
-                            }                 
+                            }
 						]
 					},
                     {
