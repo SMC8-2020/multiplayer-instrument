@@ -21,9 +21,9 @@ public class InstrumentModel {
   private IGroup consoleRoot;
 
   private InstrumentSectionView view;
-  private InstrumentOscHandler oscHandler;
+  private InstrumentBroadcastHandler broadcastHandler;
 
-  public InstrumentModel(OscP5 osc, NetAddress remoteLocation) {
+  public InstrumentModel() {
     sections = new HashMap<String, IGroup>();
 
     sectionTags = new String[] {
@@ -37,8 +37,16 @@ public class InstrumentModel {
         put(RHYTHMTAG, RHYTHMPATH);
       }
     };
+  }
 
-    oscHandler = new InstrumentOscHandler(osc, remoteLocation);
+  public InstrumentModel(OscP5 osc, NetAddress remoteLocation) {
+    this();
+    broadcastHandler = new InstrumentOscHandler(osc, remoteLocation);
+  }
+
+  public InstrumentModel(PureDataProcessing pd, String recv) {
+    this();
+    broadcastHandler = new InstrumentPdHandler(pd, recv);
   }
 
   public void setView(InstrumentSectionView view) {
@@ -73,7 +81,7 @@ public class InstrumentModel {
       if (DEBUG) println("Section switching is disabled");
       return;
     }
-    
+
     if (!sections.containsKey(tag)) {
 
       if (!sectionFilePaths.containsKey(tag)) {
@@ -100,31 +108,27 @@ public class InstrumentModel {
   }
 
   public void setBroadcast(boolean toggle) {
-    oscHandler.setBroadcast(toggle);
+    broadcastHandler.setBroadcast(toggle);
   }
 
   public void broadcastOsc(String addr, int...values) {
-    oscHandler.broadcastOsc(addr, values);
+    broadcastHandler.broadcast(addr, values);
   }
 }
 
-public class InstrumentOscHandler {
+public abstract class InstrumentBroadcastHandler {
 
-  final String BASEURL = "/smc8";
+  protected final String BASEURL = "/smc8";
+  protected OscMessage broadcastRoute;
+  protected boolean isBroadcastable = false;
+  protected int formatDepth = 2;
 
-  private OscP5 osc;
-  private OscMessage broadcastRoute;
-  private NetAddress remoteLocation;
-
-  private int formatDepth = 2;
-  private boolean isBroadcastable = false;
-
-  public InstrumentOscHandler(OscP5 osc, NetAddress remoteLocation) {
-    this.osc = osc;
-    this.remoteLocation = remoteLocation;
+  public InstrumentBroadcastHandler() {
   }
 
-  private String formatAddr(String addr) {
+  public abstract void broadcast(String addr, int...values);
+
+  protected String formatAddr(String addr) {
     String newAddr = BASEURL;
     String[] tokens = addr.split("/");
     for (int i = 0; i < formatDepth; i++) {
@@ -134,7 +138,7 @@ public class InstrumentOscHandler {
     return newAddr.replaceAll("\\s+", "");
   }
 
-  private void assignValues(OscMessage route, int[] values) {
+  protected void assignValues(OscMessage route, int[] values) {
     if (values.length == 0) {
       route.add(0);
     } else if (values.length == 1) {
@@ -144,7 +148,7 @@ public class InstrumentOscHandler {
     }
   }
 
-  private String arr2str(int[] arr) {
+  protected String arr2str(int[] arr) {
     String str = "" + arr[0];
     for (int i = 1; i < arr.length; i++) {
       str += "," + arr[i];
@@ -155,8 +159,20 @@ public class InstrumentOscHandler {
   public void setBroadcast(boolean toggle) {
     isBroadcastable = toggle;
   }
+}
 
-  public void broadcastOsc(String addr, int...values) {
+public class InstrumentOscHandler extends InstrumentBroadcastHandler {
+
+  private OscP5 osc;
+  private NetAddress remoteLocation;
+
+  public InstrumentOscHandler(OscP5 osc, NetAddress remoteLocation) {
+    super();
+    this.osc = osc;
+    this.remoteLocation = remoteLocation;
+  }
+
+  @Override public void broadcast(String addr, int...values) {
 
     if (!isBroadcastable) {
       if (DEBUG) println("broadcast is disabled");
@@ -175,7 +191,39 @@ public class InstrumentOscHandler {
         );
       println(dbg);
     }
-    
+
     osc.send(broadcastRoute, remoteLocation);
+  }
+}
+
+public class InstrumentPdHandler extends InstrumentBroadcastHandler {
+
+  private String recv;
+  private PureDataProcessing pd;
+
+  public InstrumentPdHandler(PureDataProcessing pd, final String recv) {
+    super();
+    this.pd = pd;
+    this.recv = recv;
+  }
+
+  @Override public void broadcast(String addr, int...values) {
+
+    if (!isBroadcastable) {
+      if (DEBUG) println("broadcast is disabled");
+      return;
+    }
+
+    String oscAddr = formatAddr(addr);
+    broadcastRoute = new OscMessage(oscAddr);
+    assignValues(broadcastRoute, values);
+
+    byte[] oscbytes = broadcastRoute.getBytes();
+    Object[] oscfloats = new Object[oscbytes.length];
+    for (int i = 0; i < oscfloats.length; i++) {
+      oscfloats[i] = (float)oscbytes[i];
+    }
+
+    pd.sendList(recv, oscfloats);
   }
 }

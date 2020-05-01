@@ -1,0 +1,123 @@
+{
+	"section" :
+	{
+		"weight": 1,
+        "grouptype": "ContainerGroup",
+		"name": "Console",
+		"id": 0,
+		"children": [
+            {
+                "weight": 0.25,
+                "grouptype": "ControllerGroup",
+                "name": "Section Picker",
+                "id": 0,
+                "fitAlgo": "SquareFill",
+                "controllers": [
+                    {
+                        "type": "Toggle",
+                        "quantity": 1,
+                        "callback": "setSection",
+                        "status": "local",
+                        "range": [],
+                        "default": 1,
+                        "label": ["Melody"],
+                        "ticks": 0,
+                        "color": []
+                    },
+                    {
+                        "type": "Toggle",
+                        "quantity": 1,
+                        "callback": "setSection",
+                        "status": "local",
+                        "range": [],
+                        "default": 0,
+                        "label": ["Rhythm"],
+                        "ticks": 0,
+                        "color": []
+                    }
+                ]
+            },  
+            {
+                "weight": 0.25,
+                "grouptype": "ControllerGroup",
+                "name": "Network",
+                "id": 0,
+                "fitAlgo": "SquareFill",
+                "controllers": [
+                    {
+                        "type": "Toggle",
+                        "quantity": 1,
+                        "callback": "setBroadcast",
+                        "status": "local",
+                        "range": [],
+                        "default": 0,
+                        "label": ["Broadcast I/O"],
+                        "ticks": 0,
+                        "color": []
+                    }
+                ]
+            },                   
+            {
+                "weight": 0.5,
+                "grouptype": "ContainerGroup",
+                "name": "Broadcast",
+                "id": 0,
+                "children": [
+                    {
+                        "weight": 1,
+                        "grouptype": "ControllerGroup",
+                        "name": "Main Controllers",
+                        "id": 0,
+                        "fitAlgo": "SquareFill",
+                        "controllers": [
+                            {
+                                "type": "Knob",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 512,
+                                "label": ["Volume"],
+                                "ticks": 0,
+                                "color": []
+                            },
+                            {
+                                "type": "Knob",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 512,
+                                "label": ["Tempo"],
+                                "ticks": 0,
+                                "color": []
+                            },
+                            {
+                                "type": "Knob",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 0,
+                                "label": ["Swing"],
+                                "ticks": 0,
+                                "color": []
+                            },
+                            {
+                                "type": "Button",
+                                "quantity": 1,
+                                "callback": "reset",
+                                "status": "local",
+                                "range": [],
+                                "default": 0,
+                                "label": ["Reset"],
+                                "ticks": 0,
+                                "color": [205, 92, 92]
+                            }
+                        ]
+                    }                  
+                ]               
+            }		
+		]	
+	}
+}

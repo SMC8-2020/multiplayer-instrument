@@ -1,0 +1,259 @@
+{
+	"section": 
+	{
+		"weight": 1,
+        "grouptype": "ContainerGroup",
+		"name": "Melody",
+		"id": 2,
+		"children": [
+			{
+				"weight": 0.45,
+                "grouptype": "ContainerGroup",
+				"name": "Sequencer",
+				"id": 2,
+				"children": [
+					{
+						"weight": 0.66,
+                        "grouptype": "ControllerGroup", 
+						"name": "Sliders",
+						"id": 2,
+                        "fitAlgo": "RectFill",
+						"controllers": [
+							{
+                                "type": "Slider",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 13,
+                                "color": []
+                            },
+                            {
+                                "type": "Slider",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 13,
+                                "color": []
+                            },
+                            {
+                                "type": "Slider",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 13,
+                                "color": []
+                            },
+                            {
+                                "type": "Slider",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 13,
+                                "color": []
+                            },
+                            {
+                                "type": "Slider",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 13,
+                                "color": []
+                            },
+                            {
+                                "type": "Slider",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 13,
+                                "color": []
+                            },
+                            {
+                                "type": "Slider",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 13,
+                                "color": []
+                            },
+                            {
+                                "type": "Slider",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 13,
+                                "color": []
+                            }
+						]
+					},
+					{
+						"weight": 0.34,
+                        "grouptype": "ControllerGroup",
+						"name": "Instrument",
+						"id": 2,
+                        "fitAlgo": "SquareFill",
+						"controllers": [
+							{
+                                "type": "Knob",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 0,
+                                "label": ["Select Patch"],
+                                "ticks": 3,
+                                "color": []
+                            },
+                            {
+                                "type": "Knob",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 512,
+                                "label": ["Volume"],
+                                "ticks": 0,
+                                "color": []
+                            }
+						]
+					}
+				]
+			},
+			{
+				"weight": 0.275,
+                "grouptype": "ContainerGroup",
+				"name": "LDR",
+				"id": 2,
+				"children": [
+					{
+						"weight": 0.66,
+                        "grouptype": "ControllerGroup",
+						"name": "LDRs",
+						"id": 2,
+                        "fitAlgo": "SquareFill",
+						"controllers": [
+				            {
+                                "type": "Button",
+                                "quantity": 1,
+                                "callback": "ldrActivated",
+                                "status": "online",
+                                "range": [],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 0,
+                                "color": []
+                            },
+                            {
+                                "type": "Button",
+                                "quantity": 1,
+                                "callback": "ldrActivated",
+                                "status": "online",
+                                "range": [],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 0,
+                                "color": []
+                            },
+                            {
+                                "type": "Button",
+                                "quantity": 1,
+                                "callback": "ldrActivated",
+                                "status": "online",
+                                "range": [],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 0,
+                                "color": []
+                            },
+                            {
+                                "type": "Button",
+                                "quantity": 1,
+                                "callback": "ldrActivated",
+                                "status": "online",
+                                "range": [],
+                                "default": 0,
+                                "label": [],
+                                "ticks": 0,
+                                "color": []
+                            }
+						]
+					}				
+				]				
+			},
+			{
+				"weight": 0.275,
+                "grouptype": "ContainerGroup",
+				"name": "Mixed",
+				"id": 2,
+				"children": [
+					{
+						"weight": 0.66,
+                        "grouptype": "ControllerGroup",
+						"name": "Adjust Pitch",
+						"id": 2,
+                        "fitAlgo": "SquareFill",
+						"controllers": [
+                            {
+                                "type": "Knob",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 300,
+                                "label": ["Mode"],
+                                "ticks": 4,
+                                "color": []
+                            },
+                            {
+                                "type": "Knob",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 0,
+                                "label": ["Key"],
+                                "ticks": 12,
+                                "color": []
+                            },
+                            {
+                                "type": "Knob",
+                                "quantity": 1,
+                                "callback": "broadcast",
+                                "status": "online",
+                                "range": [0, 1023],
+                                "default": 512,
+                                "label": ["2nd Voice"],
+                                "ticks": 7,
+                                "color": []
+                            }
+						]
+					}				
+				]			
+			}
+		]
+	}
+}
+
