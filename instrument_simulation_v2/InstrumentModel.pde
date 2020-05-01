@@ -122,10 +122,10 @@ public abstract class InstrumentBroadcastHandler {
   protected OscMessage broadcastRoute;
   protected boolean isBroadcastable = false;
   protected int formatDepth = 2;
-  
+
   final int timeOut = 60000;
   protected OSCRecorder recorder;
-  
+
   public InstrumentBroadcastHandler() {
     this.recorder = new OSCRecorder(timeOut);
   }
@@ -195,8 +195,10 @@ public class InstrumentOscHandler extends InstrumentBroadcastHandler {
         );
       println(dbg);
     }
-    
-    recorder.record(broadcastRoute);
+
+    if (LOG) {
+      recorder.record(broadcastRoute);
+    }
     osc.send(broadcastRoute, remoteLocation);
   }
 }
@@ -228,8 +230,10 @@ public class InstrumentPdHandler extends InstrumentBroadcastHandler {
     for (int i = 0; i < oscfloats.length; i++) {
       oscfloats[i] = (float)oscbytes[i];
     }
-    
-    recorder.record(broadcastRoute);
+
+    if (LOG) {
+      recorder.record(broadcastRoute);
+    }
     pd.sendList(recv, oscfloats);
   }
 }

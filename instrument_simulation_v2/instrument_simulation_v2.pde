@@ -7,8 +7,9 @@ import controlP5.*;
 import oscP5.*;
 import netP5.*;
 
+final boolean LOG         = false;
 final boolean DEBUG       = true;
-final boolean NETWORK     = false;
+final boolean NETWORK     = false;     
 final boolean SECTIONLOCK = false;
 
 

@@ -22,8 +22,8 @@
                             {
                                 "type": "Knob",
                                 "quantity": 1,
-                                "callback": "online",
-                                "status": "local",
+                                "callback": "broadcast",
+                                "status": "online",
                                 "range": [0, 1023],
                                 "default": 512,
                                 "label": ["Release"],
