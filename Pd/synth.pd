@@ -16,21 +16,21 @@
 #X obj 731 475 seq_02_synth.cl;
 #X obj 252 477 seq_03_synth.cl;
 #X obj 1157 471 hsl 128 32 25 3000 0 0 empty empty Release 6 -8 0 10
--204786 -1 -1 6290 1;
+-204786 -1 -1 6303 1;
 #X obj 1194 409 loadbang;
 #X obj 1154 533 s release;
 #X obj 1370 476 hsl 128 32 25 6000 0 0 empty empty Cutoff 6 -8 0 10
--204786 -1 -1 4218 1;
+-204786 -1 -1 2817 1;
 #X obj 1404 412 loadbang;
 #X obj 1549 477 hsl 128 32 1 8 0 0 empty empty Resonance 6 -8 0 10
--204786 -1 -1 0 1;
+-204786 -1 -1 9662 1;
 #X obj 1592 415 loadbang;
 #X msg 1592 441 1;
 #X obj 1710 479 hsl 128 32 1 16 0 0 empty empty Harmonic_content 6
--8 0 10 -204786 -1 -1 2540 1;
+-8 0 10 -204786 -1 -1 6997 1;
 #X obj 1760 417 loadbang;
 #X obj 1866 479 hsl 128 32 1 8 0 0 empty empty Modulation 6 -8 0 10
--204786 -1 -1 0 1;
+-204786 -1 -1 5611 1;
 #X obj 1937 405 loadbang;
 #X msg 1937 444 1;
 #X msg 1194 434 1500;
@@ -125,10 +125,6 @@
 #X obj 490 167 -~;
 #X floatatom 584 165 5 0 0 0 - - -;
 #X floatatom 1326 536 5 0 0 0 - - -;
-#X msg 1151 254 \; pd dsp 1 \; metro 1;
-#X obj 1151 232 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 1151 206 loadbang;
 #X obj 489 125 sig~;
 #X obj 489 85 nbx 6 20 0 100000 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 1 256;
@@ -248,8 +244,6 @@
 #X connect 96 0 5 0;
 #X connect 97 0 5 1;
 #X connect 98 0 96 1;
+#X connect 101 0 98 0;
 #X connect 102 0 101 0;
 #X connect 103 0 102 0;
-#X connect 104 0 98 0;
-#X connect 105 0 104 0;
-#X connect 106 0 105 0;

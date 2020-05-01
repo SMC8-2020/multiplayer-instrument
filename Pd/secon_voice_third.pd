@@ -246,15 +246,15 @@
 #X text 767 327 activate;
 #X obj 724 456 spigot;
 #X floatatom 724 484 5 0 0 0 - - -;
-#X obj 763 428 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 763 428 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 271 177 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 395 176 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 395 176 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 513 176 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 631 177 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 631 177 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 787 157 receive step;
 #X floatatom 787 191 5 0 0 0 - - -;
@@ -280,11 +280,11 @@
 #X obj 989 189 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 1113 188 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 1231 188 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 1349 189 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #N canvas 989 127 898 354 major_l_third 0;
 #X obj 339 98 route 1 2 3 4 5 6 7 8 9 10 11 12;
 #X obj 152 183 nbx 4 20 0 1023 0 1 empty empty empty 0 -8 0 10 -262144
