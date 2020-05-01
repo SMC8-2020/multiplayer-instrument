@@ -19,6 +19,8 @@ String disconnectPattern = "/smc8/disconnect";
 
 PFont monoHeader, mono, monoBig, monoExtra;
 
+
+
 String IP;
 
 StringList clients = new StringList();
@@ -27,16 +29,8 @@ final int DECAY = 8;
 
 Panel pServer, pIP, pPorts, pClients, pRecorder, pLog, pInfo;
 
-// Recorder
-
-final int INACTIVITY = 60000;
-final int LOGLINES = 25;
-
-PrintWriter output;
-String filename;
-int epoch, prevEvent, currentEvent, eventCounter;
-String[] lines = new String[LOGLINES];
-
+OSCRecorder recorder;
+boolean forceIntValues = true;
 
 void setup() {
 
@@ -51,9 +45,7 @@ void setup() {
   oscP5 = new OscP5(this, listeningPort);
   IP = oscP5.ip();
 
-  epoch = -1;
-  initBuffer();
-  filename="";
+  recorder = new OSCRecorder(60000);
 
   pServer = new Panel(Panel.marginhor, Panel.marginver, width/2-Panel.marginhor*2, 155, BACK3, "SERVER");
   pServer.toScreenBottom();
@@ -115,13 +107,13 @@ void draw() {
 
   textFont(mono);  
   origin = pLog.canvasOrigin();
-  for (int f=0; f<lines.length; f++) {
+  for (int f=0; f<OSCRecorder.logitems; f++) {
     float dy = origin.y+f*12-5;
-    text(lines[f], origin.x, dy);
+    text(recorder.lines[f], origin.x, dy);
   }
 
   origin = pInfo.canvasOrigin();
-  text("File: " + filename + "   Events: " + eventCounter, origin.x, origin.y-4);
+  text("File: " + recorder.filename + "   Events: " + recorder.counter, origin.x, origin.y-4);
 
   if (currentDecay > 0) {
     currentDecay--;
@@ -149,68 +141,17 @@ void oscEvent(OscMessage msg) {
   }
 
   //Broadcast the message
-  oscP5.send(msg, sendTo);
+   if (forceIntValues && msg.typetag().equals("f")) {
+    OscMessage intMsg = new OscMessage(msg.addrPattern());
+    intMsg.add((int)msg.get(0).floatValue());
+    oscP5.send(intMsg, sendTo);
+  } else {
+    oscP5.send(msg, sendTo);
+  }
   currentDecay = DECAY;
 
   //Record the message
-  currentEvent = millis();
-  if (currentEvent-prevEvent >= INACTIVITY) {
-    if (epoch >= 0) {
-      output.close();
-    }
-    epoch = -1;
-  }
-
-  if (epoch < 0) {
-    epoch = currentEvent;
-    prevEvent = currentEvent;
-    filename = "data/" + getFilename();
-    output = createWriter(filename);
-    initBuffer();
-  }
-
-  String typetag = msg.typetag();
-
-  String log = String.format("%d,%s,%s", 
-    currentEvent-epoch, 
-    msg.addrPattern(), 
-    typetag);
-
-  //println(typetag);
-  for (int f=0; f<typetag.length(); f++) {
-    switch(typetag.charAt(f)) {
-    case 'i':
-      log += "," + msg.get(f).intValue();
-      break;
-    case 'c':
-      log += ",'" + msg.get(f).charValue()+"'";
-      break;
-    case 's':
-      log += ",'" + msg.get(f).stringValue()+"'";
-      break;
-    case 'f':
-      log += "," + msg.get(f).floatValue();
-      break;
-    case 'T':
-      log += ",true";
-      break;    
-    case 'F':
-      log += ",false";
-      break;
-    default:
-      println("Unknown element " + typetag.charAt(f));
-      break;
-    }
-  }
-
-  output.println(log); 
-  output.flush();
-
-  arrayCopy(lines, 1, lines, 0, LOGLINES-1);
-  lines[lines.length-1] = log;
-  eventCounter++;
-
-  prevEvent = currentEvent;
+  recorder.record(msg);
 }
 
 
@@ -244,21 +185,11 @@ private void disconnect(String ip) {
 
 
 
-String getFilename() {
-  return String.format("%02d%02d%02d_%02d%02d%02d.csv", 
-    year(), month(), day(), hour(), minute(), second()
-    );
-}
 
-void initBuffer() {
-  eventCounter = 0;
-  for (int f=0; f<LOGLINES; f++) {
-    lines[f]="";
-  }
-}
+
 
 void keyPressed() {
   if (key=='R' ) {
-    prevEvent = -INACTIVITY;
+    recorder.startNewRecording();
   }
 }
