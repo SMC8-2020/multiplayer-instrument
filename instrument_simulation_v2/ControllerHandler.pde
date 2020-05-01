@@ -107,6 +107,4 @@ public class ControllerHandler {
     model.broadcastOsc(event.getController().getName(), RNGVALUE);
   }
 
-  public void updateContinousEvents() {
-  }
 }

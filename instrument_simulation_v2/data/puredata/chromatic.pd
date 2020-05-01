@@ -1,0 +1,10 @@
+#N canvas 0 50 450 300 12;
+#X obj 93 36 inlet;
+#X obj 93 60 route 0;
+#X obj 116 168 outlet;
+#X obj 70 108 nbx 4 20 -1 1023 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 -1 256;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 1 2 0;
+#X connect 3 0 2 0;

@@ -1,5 +1,2544 @@
+ControlP5 2.2.5 infos, comments, questions at http://www.sojamo.de/libraries/controlP5
+broadcast is disabled
+broadcast is disabled
+broadcast is disabled
+broadcast is disabled
+broadcast is disabled
+broadcast is disabled
+broadcast is disabled
+broadcast is disabled
 pd 0.50.2
 bonk version 1.5
 fiddle version 1.1 TEST4
 pique 0.1 for PD version 23
 sigmund~ version 0.07
+error: stack overflow
+verbose(4): ... you might be able to track this down from the Find menu.
+error: stack overflow
+error: stack overflow
+error: stack overflow
+error: stack overflow
+error: stack overflow
+error: stack overflow
+error: stack overflow
+error: stack overflow
+broadcast is disabled
+broadcast is disabled
+broadcast is disabled
+broadcast is disabled
+broadcast is disabled
+broadcast is disabled
+setting broadcast: On
+print: smc8 Melody1 Sequencer1 Slider0 85
+print: smc8 Melody1 Sequencer1 Slider0 170
+print: smc8 Melody1 Sequencer1 Slider0 255
+print: smc8 Melody1 Sequencer1 Slider0 341
+print: smc8 Melody1 Sequencer1 Slider5 0
+print: smc8 Melody1 Sequencer1 Slider5 85
+print: smc8 Melody1 Sequencer1 Slider5 170
+print: smc8 Melody1 Sequencer1 Slider5 255
+print: smc8 Melody1 Sequencer1 Slider5 341
+print: smc8 Melody1 Sequencer1 Slider5 85
+print: smc8 Melody1 Sequencer1 Slider5 170
+print: smc8 Melody1 Sequencer1 Slider3 0
+print: smc8 Melody1 Sequencer1 Slider3 85
+print: smc8 Melody1 Sequencer1 Slider3 170
+print: smc8 Melody1 Sequencer1 Slider3 255
+print: smc8 Melody1 Sequencer1 Slider3 341
+print: smc8 Melody1 Sequencer1 Slider2 0
+print: smc8 Melody1 Sequencer1 Slider2 85
+print: smc8 Melody1 Sequencer1 Slider2 170
+print: smc8 Melody1 Sequencer1 Slider2 255
+print: smc8 Melody1 Sequencer1 Slider2 341
+print: smc8 Melody1 Sequencer1 Slider7 85
+print: smc8 Melody1 Sequencer1 Slider7 170
+print: smc8 Melody1 Sequencer1 Slider7 255
+print: smc8 Melody1 Sequencer1 Slider7 341
+print: smc8 Melody1 Sequencer1 Slider7 426
+print: smc8 Melody1 Sequencer1 Slider7 511
+print: smc8 Melody1 Sequencer1 Slider7 596
+print: smc8 Console0 Broadcast0 Knob1 517
+print: smc8 Console0 Broadcast0 Knob1 537
+print: smc8 Console0 Broadcast0 Knob1 563
+print: smc8 Console0 Broadcast0 Knob1 604
+print: smc8 Console0 Broadcast0 Knob1 644
+print: smc8 Console0 Broadcast0 Knob1 670
+print: smc8 Console0 Broadcast0 Knob1 680
+print: smc8 Console0 Broadcast0 Knob1 685
+print: smc8 Console0 Broadcast0 Knob1 691
+print: smc8 Console0 Broadcast0 Knob1 696
+print: smc8 Console0 Broadcast0 Knob1 701
+print: smc8 Console0 Broadcast0 Knob1 706
+print: smc8 Console0 Broadcast0 Knob1 716
+print: smc8 Console0 Broadcast0 Knob1 726
+print: smc8 Console0 Broadcast0 Knob1 752
+print: smc8 Console0 Broadcast0 Knob1 767
+print: smc8 Console0 Broadcast0 Knob1 783
+print: smc8 Console0 Broadcast0 Knob1 793
+print: smc8 Console0 Broadcast0 Knob1 803
+print: smc8 Console0 Broadcast0 Knob1 808
+print: smc8 Console0 Broadcast0 Knob1 824
+print: smc8 Console0 Broadcast0 Knob1 834
+print: smc8 Console0 Broadcast0 Knob1 844
+print: smc8 Console0 Broadcast0 Knob1 849
+print: smc8 Console0 Broadcast0 Knob1 854
+print: smc8 Console0 Broadcast0 Knob1 859
+print: smc8 Console0 Broadcast0 Knob1 863
+print: smc8 Console0 Broadcast0 Knob1 879
+print: smc8 Console0 Broadcast0 Knob1 915
+print: smc8 Console0 Broadcast0 Knob1 935
+print: smc8 Console0 Broadcast0 Knob1 981
+print: smc8 Console0 Broadcast0 Knob1 991
+print: smc8 Console0 Broadcast0 Knob1 1002
+print: smc8 Console0 Broadcast0 Knob1 1007
+print: smc8 Console0 Broadcast0 Knob1 1012
+print: smc8 Console0 Broadcast0 Knob1 1017
+print: smc8 Console0 Broadcast0 Knob1 1022
+print: smc8 Console0 Broadcast0 Knob1 1023
+print: smc8 Console0 Broadcast0 Knob1 1012
+print: smc8 Console0 Broadcast0 Knob1 982
+print: smc8 Console0 Broadcast0 Knob1 946
+print: smc8 Console0 Broadcast0 Knob1 884
+print: smc8 Console0 Broadcast0 Knob1 813
+print: smc8 Console0 Broadcast0 Knob1 731
+print: smc8 Console0 Broadcast0 Knob1 670
+print: smc8 Console0 Broadcast0 Knob1 629
+print: smc8 Console0 Broadcast0 Knob1 588
+print: smc8 Console0 Broadcast0 Knob1 537
+print: smc8 Console0 Broadcast0 Knob1 521
+print: smc8 Console0 Broadcast0 Knob1 506
+print: smc8 Console0 Broadcast0 Knob1 496
+print: smc8 Console0 Broadcast0 Knob1 485
+print: smc8 Console0 Broadcast0 Knob1 480
+print: smc8 Console0 Broadcast0 Knob1 475
+print: smc8 Console0 Broadcast0 Knob1 465
+print: smc8 Console0 Broadcast0 Knob1 460
+print: smc8 Console0 Broadcast0 Knob1 450
+print: smc8 Console0 Broadcast0 Knob1 434
+print: smc8 Console0 Broadcast0 Knob1 419
+print: smc8 Console0 Broadcast0 Knob1 378
+print: smc8 Console0 Broadcast0 Knob1 358
+print: smc8 Console0 Broadcast0 Knob1 347
+print: smc8 Console0 Broadcast0 Knob1 332
+print: smc8 Console0 Broadcast0 Knob1 327
+print: smc8 Console0 Broadcast0 Knob1 317
+print: smc8 Console0 Broadcast0 Knob1 312
+print: smc8 Console0 Broadcast0 Knob1 301
+print: smc8 Console0 Broadcast0 Knob1 291
+print: smc8 Console0 Broadcast0 Knob1 281
+print: smc8 Console0 Broadcast0 Knob1 265
+print: smc8 Console0 Broadcast0 Knob1 260
+print: smc8 Console0 Broadcast0 Knob1 245
+print: smc8 Console0 Broadcast0 Knob1 240
+print: smc8 Console0 Broadcast0 Knob1 230
+print: smc8 Console0 Broadcast0 Knob1 219
+print: smc8 Console0 Broadcast0 Knob1 209
+print: smc8 Console0 Broadcast0 Knob1 204
+print: smc8 Console0 Broadcast0 Knob1 199
+print: smc8 Console0 Broadcast0 Knob1 194
+print: smc8 Console0 Broadcast0 Knob1 189
+print: smc8 Console0 Broadcast0 Knob1 184
+print: smc8 Console0 Broadcast0 Knob1 179
+print: smc8 Console0 Broadcast0 Knob1 173
+print: smc8 Console0 Broadcast0 Knob1 168
+print: smc8 Console0 Broadcast0 Knob1 163
+print: smc8 Console0 Broadcast0 Knob1 158
+print: smc8 Console0 Broadcast0 Knob1 153
+print: smc8 Console0 Broadcast0 Knob1 148
+print: smc8 Console0 Broadcast0 Knob1 143
+print: smc8 Console0 Broadcast0 Knob1 138
+print: smc8 Console0 Broadcast0 Knob1 173
+print: smc8 Console0 Broadcast0 Knob1 230
+print: smc8 Console0 Broadcast0 Knob1 317
+print: smc8 Console0 Broadcast0 Knob1 388
+print: smc8 Console0 Broadcast0 Knob1 460
+print: smc8 Console0 Broadcast0 Knob1 506
+print: smc8 Console0 Broadcast0 Knob1 542
+print: smc8 Console0 Broadcast0 Knob1 567
+print: smc8 Console0 Broadcast0 Knob1 572
+print: smc8 Console0 Broadcast0 Knob1 583
+print: smc8 Console0 Broadcast0 Knob1 603
+print: smc8 Console0 Broadcast0 Knob1 618
+print: smc8 Console0 Broadcast0 Knob1 644
+print: smc8 Console0 Broadcast0 Knob1 659
+print: smc8 Console0 Broadcast0 Knob1 675
+print: smc8 Console0 Broadcast0 Knob1 695
+print: smc8 Console0 Broadcast0 Knob1 705
+print: smc8 Console0 Broadcast0 Knob1 710
+print: smc8 Console0 Broadcast0 Knob1 716
+print: smc8 Console0 Broadcast0 Knob1 710
+print: smc8 Console0 Broadcast0 Knob1 716
+print: smc8 Console0 Broadcast0 Knob1 721
+print: smc8 Console0 Broadcast0 Knob1 731
+print: smc8 Console0 Broadcast0 Knob1 751
+print: smc8 Console0 Broadcast0 Knob1 767
+print: smc8 Console0 Broadcast0 Knob1 777
+print: smc8 Console0 Broadcast0 Knob1 782
+print: smc8 Console0 Broadcast0 Knob1 787
+print: smc8 Console0 Broadcast0 Knob1 792
+print: smc8 Console0 Broadcast0 Knob1 797
+print: smc8 Console0 Broadcast0 Knob1 808
+print: smc8 Console0 Broadcast0 Knob1 828
+print: smc8 Console0 Broadcast0 Knob1 843
+print: smc8 Console0 Broadcast0 Knob1 854
+print: smc8 Console0 Broadcast0 Knob1 869
+print: smc8 Console0 Broadcast0 Knob1 874
+print: smc8 Console0 Broadcast0 Knob1 879
+print: smc8 Console0 Broadcast0 Knob0 589
+print: smc8 Console0 Broadcast0 Knob0 579
+print: smc8 Console0 Broadcast0 Knob0 563
+print: smc8 Console0 Broadcast0 Knob0 548
+print: smc8 Console0 Broadcast0 Knob0 497
+print: smc8 Console0 Broadcast0 Knob0 466
+print: smc8 Console0 Broadcast0 Knob0 451
+print: smc8 Console0 Broadcast0 Knob0 430
+print: smc8 Console0 Broadcast0 Knob0 420
+print: smc8 Console0 Broadcast0 Knob0 410
+print: smc8 Console0 Broadcast0 Knob0 400
+print: smc8 Console0 Broadcast0 Knob0 395
+print: smc8 Console0 Broadcast0 Knob0 384
+print: smc8 Console0 Broadcast0 Knob0 374
+print: smc8 Console0 Broadcast0 Knob0 359
+print: smc8 Console0 Broadcast0 Knob0 343
+print: smc8 Console0 Broadcast0 Knob0 328
+print: smc8 Console0 Broadcast0 Knob0 318
+print: smc8 Console0 Broadcast0 Knob0 313
+print: smc8 Console0 Broadcast0 Knob0 308
+print: smc8 Console0 Broadcast0 Knob0 302
+print: smc8 Console0 Broadcast0 Knob0 297
+print: smc8 Console0 Broadcast0 Knob0 292
+print: smc8 Console0 Broadcast0 Knob0 287
+print: smc8 Console0 Broadcast0 Knob0 282
+print: smc8 Console0 Broadcast0 Knob0 277
+print: smc8 Console0 Broadcast0 Knob0 272
+print: smc8 Console0 Broadcast0 Knob0 267
+print: smc8 Console0 Broadcast0 Knob0 262
+print: smc8 Console0 Broadcast0 Knob0 256
+print: smc8 Console0 Broadcast0 Knob0 251
+print: smc8 Console0 Broadcast0 Knob0 246
+print: smc8 Console0 Broadcast0 Knob0 241
+print: smc8 Console0 Broadcast0 Knob0 236
+print: smc8 Console0 Broadcast0 Knob0 231
+print: smc8 Console0 Broadcast0 Knob0 226
+print: smc8 Console0 Broadcast0 Knob0 221
+print: smc8 Console0 Broadcast0 Knob0 215
+print: smc8 Console0 Broadcast0 Knob2 49
+print: smc8 Console0 Broadcast0 Knob2 54
+print: smc8 Console0 Broadcast0 Knob2 85
+print: smc8 Console0 Broadcast0 Knob2 115
+print: smc8 Console0 Broadcast0 Knob2 146
+print: smc8 Console0 Broadcast0 Knob2 182
+print: smc8 Console0 Broadcast0 Knob2 197
+print: smc8 Console0 Broadcast0 Knob2 212
+print: smc8 Console0 Broadcast0 Knob2 218
+print: smc8 Console0 Broadcast0 Knob2 223
+print: smc8 Console0 Broadcast0 Knob2 228
+print: smc8 Console0 Broadcast0 Knob2 238
+print: smc8 Console0 Broadcast0 Knob2 248
+print: smc8 Console0 Broadcast0 Knob2 258
+print: smc8 Console0 Broadcast0 Knob2 274
+print: smc8 Console0 Broadcast0 Knob2 284
+print: smc8 Console0 Broadcast0 Knob2 299
+print: smc8 Console0 Broadcast0 Knob2 310
+print: smc8 Console0 Broadcast0 Knob2 315
+print: smc8 Console0 Broadcast0 Knob2 325
+print: smc8 Console0 Broadcast0 Knob2 330
+print: smc8 Console0 Broadcast0 Knob2 340
+print: smc8 Console0 Broadcast0 Knob2 371
+print: smc8 Console0 Broadcast0 Knob2 427
+print: smc8 Console0 Broadcast0 Knob2 489
+print: smc8 Console0 Broadcast0 Knob2 535
+print: smc8 Console0 Broadcast0 Knob2 555
+print: smc8 Console0 Broadcast0 Knob2 570
+print: smc8 Console0 Broadcast0 Knob2 586
+print: smc8 Console0 Broadcast0 Knob2 601
+print: smc8 Console0 Broadcast0 Knob2 622
+print: smc8 Console0 Broadcast0 Knob2 637
+print: smc8 Console0 Broadcast0 Knob2 663
+print: smc8 Console0 Broadcast0 Knob2 688
+print: smc8 Console0 Broadcast0 Knob2 719
+print: smc8 Console0 Broadcast0 Knob2 734
+print: smc8 Console0 Broadcast0 Knob2 739
+print: smc8 Console0 Broadcast0 Knob2 760
+print: smc8 Console0 Broadcast0 Knob2 770
+print: smc8 Console0 Broadcast0 Knob2 790
+print: smc8 Console0 Broadcast0 Knob2 801
+print: smc8 Console0 Broadcast0 Knob2 811
+print: smc8 Console0 Broadcast0 Knob2 816
+print: smc8 Console0 Broadcast0 Knob2 821
+print: smc8 Console0 Broadcast0 Knob2 816
+print: smc8 Console0 Broadcast0 Knob2 796
+print: smc8 Console0 Broadcast0 Knob2 760
+print: smc8 Console0 Broadcast0 Knob2 703
+print: smc8 Console0 Broadcast0 Knob2 581
+print: smc8 Console0 Broadcast0 Knob2 432
+print: smc8 Console0 Broadcast0 Knob2 320
+print: smc8 Console0 Broadcast0 Knob2 258
+print: smc8 Console0 Broadcast0 Knob2 212
+print: smc8 Console0 Broadcast0 Knob2 177
+print: smc8 Console0 Broadcast0 Knob2 156
+print: smc8 Console0 Broadcast0 Knob2 131
+print: smc8 Console0 Broadcast0 Knob2 115
+print: smc8 Console0 Broadcast0 Knob2 105
+print: smc8 Console0 Broadcast0 Knob2 90
+print: smc8 Console0 Broadcast0 Knob2 85
+print: smc8 Console0 Broadcast0 Knob2 79
+print: smc8 Console0 Broadcast0 Knob2 69
+print: smc8 Console0 Broadcast0 Knob2 64
+print: smc8 Console0 Broadcast0 Knob2 54
+print: smc8 Console0 Broadcast0 Knob2 49
+print: smc8 Console0 Broadcast0 Knob2 44
+print: smc8 Console0 Broadcast0 Knob2 33
+print: smc8 Console0 Broadcast0 Knob2 23
+print: smc8 Console0 Broadcast0 Knob2 13
+print: smc8 Console0 Broadcast0 Knob2 3
+print: smc8 Console0 Broadcast0 Knob2 0
+print: smc8 Melody1 PerformanceModifiers1 Knob3 511
+print: smc8 Melody1 PerformanceModifiers1 Knob3 341
+print: smc8 Melody1 PerformanceModifiers1 Knob3 170
+print: smc8 Melody1 PerformanceModifiers1 Knob4 576
+print: smc8 Melody1 PerformanceModifiers1 Knob4 581
+print: smc8 Melody1 PerformanceModifiers1 Knob4 586
+print: smc8 Melody1 PerformanceModifiers1 Knob4 591
+print: smc8 Melody1 PerformanceModifiers1 Knob4 601
+print: smc8 Melody1 PerformanceModifiers1 Knob4 612
+print: smc8 Melody1 PerformanceModifiers1 Knob4 627
+print: smc8 Melody1 PerformanceModifiers1 Knob4 642
+print: smc8 Melody1 PerformanceModifiers1 Knob4 653
+print: smc8 Melody1 PerformanceModifiers1 Knob4 668
+print: smc8 Melody1 PerformanceModifiers1 Knob4 678
+print: smc8 Melody1 PerformanceModifiers1 Knob4 683
+print: smc8 Melody1 PerformanceModifiers1 Knob4 693
+print: smc8 Melody1 PerformanceModifiers1 Knob4 699
+print: smc8 Melody1 PerformanceModifiers1 Knob4 704
+print: smc8 Melody1 PerformanceModifiers1 Knob4 709
+print: smc8 Melody1 PerformanceModifiers1 Knob4 714
+print: smc8 Melody1 PerformanceModifiers1 Knob4 719
+print: smc8 Melody1 PerformanceModifiers1 Knob4 724
+print: smc8 Melody1 PerformanceModifiers1 Knob4 734
+print: smc8 Melody1 PerformanceModifiers1 Knob4 739
+print: smc8 Melody1 PerformanceModifiers1 Knob4 755
+print: smc8 Melody1 PerformanceModifiers1 Knob4 765
+print: smc8 Melody1 PerformanceModifiers1 Knob4 775
+print: smc8 Melody1 PerformanceModifiers1 Knob4 786
+print: smc8 Melody1 PerformanceModifiers1 Knob4 791
+print: smc8 Melody1 PerformanceModifiers1 Knob4 806
+print: smc8 Melody1 PerformanceModifiers1 Knob4 811
+print: smc8 Melody1 PerformanceModifiers1 Knob4 821
+print: smc8 Melody1 PerformanceModifiers1 Knob4 826
+print: smc8 Melody1 PerformanceModifiers1 Knob4 832
+print: smc8 Melody1 PerformanceModifiers1 Knob4 837
+print: smc8 Melody1 PerformanceModifiers1 Knob4 842
+print: smc8 Melody1 PerformanceModifiers1 Knob4 847
+print: smc8 Melody1 PerformanceModifiers1 Knob4 842
+print: smc8 Melody1 PerformanceModifiers1 Knob4 832
+print: smc8 Melody1 PerformanceModifiers1 Knob4 821
+print: smc8 Melody1 PerformanceModifiers1 Knob4 796
+print: smc8 Melody1 PerformanceModifiers1 Knob4 780
+print: smc8 Melody1 PerformanceModifiers1 Knob4 755
+print: smc8 Melody1 PerformanceModifiers1 Knob4 724
+print: smc8 Melody1 PerformanceModifiers1 Knob4 673
+print: smc8 Melody1 PerformanceModifiers1 Knob4 637
+print: smc8 Melody1 PerformanceModifiers1 Knob4 601
+print: smc8 Melody1 PerformanceModifiers1 Knob4 581
+print: smc8 Melody1 PerformanceModifiers1 Knob4 560
+print: smc8 Melody1 PerformanceModifiers1 Knob4 555
+print: smc8 Melody1 PerformanceModifiers1 Knob4 545
+print: smc8 Melody1 PerformanceModifiers1 Knob4 540
+print: smc8 Melody1 PerformanceModifiers1 Knob4 535
+print: smc8 Melody1 PerformanceModifiers1 Knob4 530
+print: smc8 Melody1 PerformanceModifiers1 Knob4 525
+print: smc8 Melody1 PerformanceModifiers1 Knob4 520
+print: smc8 Melody1 PerformanceModifiers1 Knob4 514
+print: smc8 Melody1 PerformanceModifiers1 Knob4 504
+print: smc8 Melody1 PerformanceModifiers1 Knob4 499
+print: smc8 Melody1 PerformanceModifiers1 Knob4 494
+print: smc8 Melody1 PerformanceModifiers1 Knob4 489
+print: smc8 Melody1 PerformanceModifiers1 Knob4 484
+print: smc8 Melody1 PerformanceModifiers1 Knob4 479
+print: smc8 Melody1 PerformanceModifiers1 Knob4 474
+print: smc8 Melody1 PerformanceModifiers1 Knob4 468
+print: smc8 Melody1 PerformanceModifiers1 Knob4 463
+print: smc8 Melody1 PerformanceModifiers1 Knob4 458
+print: smc8 Melody1 PerformanceModifiers1 Knob4 453
+print: smc8 Melody1 PerformanceModifiers1 Knob4 448
+print: smc8 Melody1 PerformanceModifiers1 Knob4 438
+print: smc8 Melody1 PerformanceModifiers1 Knob4 427
+print: smc8 Melody1 PerformanceModifiers1 Knob4 412
+print: smc8 Melody1 PerformanceModifiers1 Knob4 407
+print: smc8 Melody1 PerformanceModifiers1 Knob4 397
+print: smc8 Melody1 PerformanceModifiers1 Knob4 392
+print: smc8 Melody1 PerformanceModifiers1 Knob4 387
+print: smc8 Melody1 PerformanceModifiers1 Knob4 381
+print: smc8 Melody1 PerformanceModifiers1 Knob4 376
+print: smc8 Melody1 PerformanceModifiers1 Knob4 371
+print: smc8 Melody1 PerformanceModifiers1 Knob4 366
+print: smc8 Melody1 PerformanceModifiers1 Knob4 361
+print: smc8 Melody1 PerformanceModifiers1 Knob4 356
+print: smc8 Melody1 PerformanceModifiers1 Knob4 351
+print: smc8 Melody1 PerformanceModifiers1 Knob4 346
+print: smc8 Melody1 PerformanceModifiers1 Knob4 341
+print: smc8 Melody1 PerformanceModifiers1 Knob4 335
+print: smc8 Melody1 PerformanceModifiers1 Knob4 330
+print: smc8 Melody1 PerformanceModifiers1 Knob4 325
+print: smc8 Melody1 PerformanceModifiers1 Knob4 320
+print: smc8 Melody1 PerformanceModifiers1 Knob4 315
+print: smc8 Melody1 PerformanceModifiers1 Knob4 310
+print: smc8 Melody1 PerformanceModifiers1 Knob4 305
+print: smc8 Melody1 PerformanceModifiers1 Knob4 300
+print: smc8 Melody1 PerformanceModifiers1 Knob4 294
+print: smc8 Melody1 PerformanceModifiers1 Knob4 289
+print: smc8 Melody1 PerformanceModifiers1 Knob4 284
+print: smc8 Melody1 PerformanceModifiers1 Knob4 279
+print: smc8 Melody1 PerformanceModifiers1 Knob4 274
+print: smc8 Melody1 PerformanceModifiers1 Knob4 264
+print: smc8 Melody1 PerformanceModifiers1 Knob4 259
+print: smc8 Melody1 PerformanceModifiers1 Knob4 254
+print: smc8 Melody1 PerformanceModifiers1 Knob4 248
+print: smc8 Melody1 PerformanceModifiers1 Knob4 259
+print: smc8 Melody1 PerformanceModifiers1 Knob4 279
+print: smc8 Melody1 PerformanceModifiers1 Knob4 310
+print: smc8 Melody1 PerformanceModifiers1 Knob4 341
+print: smc8 Melody1 PerformanceModifiers1 Knob4 376
+print: smc8 Melody1 PerformanceModifiers1 Knob4 397
+print: smc8 Melody1 PerformanceModifiers1 Knob4 412
+print: smc8 Melody1 PerformanceModifiers1 Knob4 417
+print: smc8 Melody1 PerformanceModifiers1 Knob4 427
+print: smc8 Melody1 PerformanceModifiers1 Knob4 438
+print: smc8 Melody1 PerformanceModifiers1 Knob4 448
+print: smc8 Melody1 PerformanceModifiers1 Knob4 453
+print: smc8 Melody1 PerformanceModifiers1 Knob4 463
+print: smc8 Melody1 PerformanceModifiers1 Knob4 468
+print: smc8 Melody1 PerformanceModifiers1 Knob4 474
+print: smc8 Melody1 PerformanceModifiers1 Knob4 479
+print: smc8 Melody1 PerformanceModifiers1 Knob4 484
+print: smc8 Melody1 PerformanceModifiers1 Knob4 489
+print: smc8 Melody1 PerformanceModifiers1 Knob4 494
+print: smc8 Melody1 PerformanceModifiers1 Knob4 499
+print: smc8 Melody1 PerformanceModifiers1 Knob4 509
+print: smc8 Melody1 PerformanceModifiers1 Knob4 514
+print: smc8 Melody1 PerformanceModifiers1 Knob4 509
+print: smc8 Console0 Broadcast0 Knob0 221
+print: smc8 Console0 Broadcast0 Knob0 226
+print: smc8 Console0 Broadcast0 Knob0 241
+print: smc8 Console0 Broadcast0 Knob0 251
+print: smc8 Console0 Broadcast0 Knob0 256
+print: smc8 Console0 Broadcast0 Knob0 267
+print: smc8 Console0 Broadcast0 Knob0 277
+print: smc8 Console0 Broadcast0 Knob0 282
+print: smc8 Console0 Broadcast0 Knob0 287
+print: smc8 Console0 Broadcast0 Knob0 297
+print: smc8 Console0 Broadcast0 Knob0 302
+print: smc8 Console0 Broadcast0 Knob0 308
+print: smc8 Console0 Broadcast0 Knob0 318
+print: smc8 Console0 Broadcast0 Knob0 328
+print: smc8 Console0 Broadcast0 Knob0 338
+print: smc8 Console0 Broadcast0 Knob0 364
+print: smc8 Console0 Broadcast0 Knob0 379
+print: smc8 Console0 Broadcast0 Knob0 425
+print: smc8 Console0 Broadcast0 Knob0 461
+print: smc8 Console0 Broadcast0 Knob0 512
+print: smc8 Console0 Broadcast0 Knob0 533
+print: smc8 Console0 Broadcast0 Knob0 543
+print: smc8 Console0 Broadcast0 Knob0 553
+print: smc8 Console0 Broadcast0 Knob0 558
+print: smc8 Melody1 PerformanceModifiers1 Knob3 170
+print: smc8 Melody1 PerformanceModifiers1 Knob3 341
+print: smc8 Melody1 PerformanceModifiers1 Knob3 511
+print: smc8 Melody1 PerformanceModifiers1 Knob3 682
+print: smc8 Melody1 PerformanceModifiers1 Knob3 852
+print: smc8 Melody1 PerformanceModifiers1 Knob3 682
+print: smc8 Melody1 PerformanceModifiers1 Knob3 852
+print: smc8 Melody1 PerformanceModifiers1 Knob3 1023
+print: smc8 Melody1 PerformanceModifiers1 Knob1 0
+print: smc8 Melody1 PerformanceModifiers1 Knob1 93
+print: smc8 Melody1 PerformanceModifiers1 Knob1 186
+print: smc8 Melody1 PerformanceModifiers1 Knob1 279
+print: smc8 Melody1 PerformanceModifiers1 Knob1 372
+print: smc8 Melody1 PerformanceModifiers1 Knob1 465
+print: smc8 Melody1 PerformanceModifiers1 Knob1 558
+print: smc8 Melody1 PerformanceModifiers1 Knob1 651
+print: smc8 Melody1 PerformanceModifiers1 Knob1 744
+print: smc8 Melody1 PerformanceModifiers1 Knob1 837
+print: smc8 Melody1 PerformanceModifiers1 Knob1 744
+print: smc8 Melody1 PerformanceModifiers1 Knob1 651
+print: smc8 Melody1 PerformanceModifiers1 Knob1 558
+print: smc8 Melody1 PerformanceModifiers1 Knob1 465
+print: smc8 Melody1 PerformanceModifiers1 Knob1 372
+print: smc8 Melody1 PerformanceModifiers1 Knob1 279
+print: smc8 Melody1 PerformanceModifiers1 Knob1 186
+print: smc8 Melody1 PerformanceModifiers1 Knob1 93
+print: smc8 Melody1 PerformanceModifiers1 Knob1 0
+print: smc8 Melody1 PerformanceModifiers1 Knob1 93
+print: smc8 Melody1 PerformanceModifiers1 Knob1 186
+print: smc8 Melody1 PerformanceModifiers1 Knob1 279
+print: smc8 Melody1 PerformanceModifiers1 Knob1 372
+print: smc8 Melody1 PerformanceModifiers1 Knob1 465
+print: smc8 Melody1 PerformanceModifiers1 Knob1 558
+print: smc8 Melody1 PerformanceModifiers1 Knob1 651
+print: smc8 Melody1 PerformanceModifiers1 Knob1 744
+print: smc8 Melody1 PerformanceModifiers1 Knob1 837
+print: smc8 Melody1 PerformanceModifiers1 Knob1 930
+print: smc8 Melody1 PerformanceModifiers1 Knob1 837
+print: smc8 Melody1 PerformanceModifiers1 Knob1 744
+print: smc8 Melody1 SoundModifiers1 Knob0 0
+print: smc8 Melody1 SoundModifiers1 Knob0 341
+print: smc8 Melody1 SoundModifiers1 Knob0 682
+print: smc8 Melody1 SoundModifiers1 Knob0 341
+print: smc8 Melody1 SoundModifiers1 Knob2 506
+print: smc8 Melody1 SoundModifiers1 Knob2 481
+print: smc8 Melody1 SoundModifiers1 Knob2 430
+print: smc8 Melody1 SoundModifiers1 Knob2 404
+print: smc8 Melody1 SoundModifiers1 Knob2 373
+print: smc8 Melody1 SoundModifiers1 Knob2 348
+print: smc8 Melody1 SoundModifiers1 Knob2 332
+print: smc8 Melody1 SoundModifiers1 Knob2 317
+print: smc8 Melody1 SoundModifiers1 Knob2 307
+print: smc8 Melody1 SoundModifiers1 Knob2 297
+print: smc8 Melody1 SoundModifiers1 Knob2 281
+print: smc8 Melody1 SoundModifiers1 Knob2 271
+print: smc8 Melody1 SoundModifiers1 Knob2 266
+print: smc8 Melody1 SoundModifiers1 Knob2 261
+print: smc8 Melody1 SoundModifiers1 Knob2 256
+print: smc8 Melody1 SoundModifiers1 Knob2 251
+print: smc8 Melody1 SoundModifiers1 Knob2 246
+print: smc8 Melody1 SoundModifiers1 Knob2 240
+print: smc8 Melody1 SoundModifiers1 Knob2 235
+print: smc8 Melody1 SoundModifiers1 Knob2 230
+print: smc8 Melody1 SoundModifiers1 Knob2 235
+print: smc8 Melody1 SoundModifiers1 Knob2 240
+print: smc8 Melody1 SoundModifiers1 Knob2 256
+print: smc8 Melody1 SoundModifiers1 Knob2 266
+print: smc8 Melody1 SoundModifiers1 Knob2 276
+print: smc8 Melody1 SoundModifiers1 Knob2 286
+print: smc8 Melody1 SoundModifiers1 Knob2 297
+print: smc8 Melody1 SoundModifiers1 Knob2 307
+print: smc8 Melody1 SoundModifiers1 Knob2 312
+print: smc8 Melody1 SoundModifiers1 Knob2 317
+print: smc8 Melody1 SoundModifiers1 Knob2 322
+print: smc8 Melody1 SoundModifiers1 Knob1 0
+print: smc8 Melody1 SoundModifiers1 Knob1 511
+print: smc8 Melody1 SoundModifiers1 Knob1 0
+print: smc8 Melody1 SoundModifiers1 Toggle2 1
+print: smc8 Melody1 SoundModifiers1 Toggle0 1
+print: smc8 Melody1 SoundModifiers1 Toggle3 1
+print: smc8 Melody1 SoundModifiers1 Toggle3 0
+print: smc8 Melody1 SoundModifiers1 Toggle0 0
+print: smc8 Melody1 SoundModifiers1 Toggle2 0
+print: smc8 Melody1 SoundModifiers1 Toggle1 1
+print: smc8 Melody1 SoundModifiers1 Toggle1 0
+print: smc8 Melody1 SoundModifiers1 Toggle1 1
+print: smc8 Melody1 SoundModifiers1 Toggle1 0
+print: smc8 Melody1 SoundModifiers1 Toggle1 1
+print: smc8 Melody1 SoundModifiers1 Toggle1 0
+print: smc8 Melody1 SoundModifiers1 Toggle1 1
+print: smc8 Melody1 SoundModifiers1 Toggle1 0
+print: smc8 Melody1 SoundModifiers1 Toggle1 1
+print: smc8 Melody1 SoundModifiers1 Toggle1 0
+print: smc8 Melody1 SoundModifiers1 Knob2 294
+print: smc8 Melody1 SoundModifiers1 Knob2 325
+print: smc8 Melody1 SoundModifiers1 Knob2 355
+print: smc8 Melody1 SoundModifiers1 Knob2 396
+print: smc8 Melody1 SoundModifiers1 Knob2 437
+print: smc8 Melody1 SoundModifiers1 Knob2 473
+print: smc8 Melody1 SoundModifiers1 Knob2 488
+print: smc8 Melody1 SoundModifiers1 Knob2 519
+print: smc8 Melody1 SoundModifiers1 Knob2 534
+print: smc8 Melody1 SoundModifiers1 Knob2 545
+print: smc8 Melody1 SoundModifiers1 Knob2 555
+print: smc8 Melody1 SoundModifiers1 Knob2 565
+print: smc8 Melody1 SoundModifiers1 Knob2 580
+print: smc8 Melody1 SoundModifiers1 Knob2 591
+print: smc8 Melody1 SoundModifiers1 Knob2 596
+print: smc8 Melody1 SoundModifiers1 Knob2 611
+print: smc8 Melody1 SoundModifiers1 Knob2 621
+print: smc8 Melody1 SoundModifiers1 Knob2 642
+print: smc8 Melody1 SoundModifiers1 Knob2 657
+print: smc8 Melody1 SoundModifiers1 Knob2 678
+print: smc8 Melody1 SoundModifiers1 Knob2 693
+print: smc8 Melody1 SoundModifiers1 Knob2 703
+print: smc8 Melody1 SoundModifiers1 Knob2 713
+print: smc8 Melody1 SoundModifiers1 Knob2 724
+print: smc8 Melody1 SoundModifiers1 Knob2 729
+print: smc8 Melody1 SoundModifiers1 Knob2 749
+print: smc8 Melody1 SoundModifiers1 Knob2 759
+print: smc8 Melody1 SoundModifiers1 Knob2 770
+print: smc8 Melody1 SoundModifiers1 Knob2 775
+print: smc8 Melody1 SoundModifiers1 Knob2 785
+print: smc8 Melody1 SoundModifiers1 Knob2 800
+print: smc8 Melody1 SoundModifiers1 Knob2 806
+print: smc8 Melody1 SoundModifiers1 Knob2 811
+print: smc8 Melody1 SoundModifiers1 Knob2 816
+print: smc8 Melody1 SoundModifiers1 Knob2 841
+print: smc8 Melody1 SoundModifiers1 Knob2 892
+print: smc8 Melody1 SoundModifiers1 Knob2 964
+print: smc8 Melody1 SoundModifiers1 Knob2 1010
+print: smc8 Melody1 SoundModifiers1 Knob2 1023
+print: smc8 Melody1 SoundModifiers1 Knob2 1017
+print: smc8 Melody1 SoundModifiers1 Knob2 1007
+print: smc8 Melody1 SoundModifiers1 Knob2 956
+print: smc8 Melody1 SoundModifiers1 Knob2 884
+print: smc8 Melody1 SoundModifiers1 Knob2 741
+print: smc8 Melody1 SoundModifiers1 Knob2 649
+print: smc8 Melody1 SoundModifiers1 Knob2 598
+print: smc8 Melody1 SoundModifiers1 Knob2 537
+print: smc8 Melody1 SoundModifiers1 Knob2 496
+print: smc8 Melody1 SoundModifiers1 Knob2 450
+print: smc8 Melody1 SoundModifiers1 Knob2 434
+print: smc8 Melody1 SoundModifiers1 Knob2 419
+print: smc8 Melody1 SoundModifiers1 Knob2 409
+print: smc8 Melody1 SoundModifiers1 Knob2 398
+print: smc8 Melody1 SoundModifiers1 Knob2 388
+print: smc8 Melody1 SoundModifiers1 Knob2 378
+print: smc8 Melody1 SoundModifiers1 Knob2 363
+print: smc8 Melody1 SoundModifiers1 Knob2 347
+print: smc8 Melody1 SoundModifiers1 Knob2 327
+print: smc8 Melody1 SoundModifiers1 Knob2 306
+print: smc8 Melody1 SoundModifiers1 Knob2 291
+print: smc8 Melody1 SoundModifiers1 Knob2 281
+print: smc8 Melody1 SoundModifiers1 Knob2 276
+print: smc8 Melody1 SoundModifiers1 Knob2 286
+print: smc8 Melody1 SoundModifiers1 Knob2 291
+print: smc8 Melody1 SoundModifiers1 Knob2 296
+print: smc8 Melody1 SoundModifiers1 Knob2 301
+print: smc8 Melody1 SoundModifiers1 Knob2 306
+print: smc8 Melody1 SoundModifiers1 Knob2 312
+print: smc8 Melody1 SoundModifiers1 Knob2 317
+print: smc8 Melody1 SoundModifiers1 Knob2 322
+print: smc8 Melody1 SoundModifiers1 Knob2 327
+print: smc8 Melody1 SoundModifiers1 Knob2 332
+print: smc8 Melody1 SoundModifiers1 Knob2 337
+print: smc8 Melody1 SoundModifiers1 Knob2 342
+print: smc8 Melody1 SoundModifiers1 Knob2 347
+print: smc8 Melody1 SoundModifiers1 Knob2 358
+print: smc8 Melody1 SoundModifiers1 Knob2 363
+print: smc8 Melody1 SoundModifiers1 Knob2 378
+print: smc8 Melody1 SoundModifiers1 Knob2 383
+print: smc8 Melody1 SoundModifiers1 Knob2 393
+print: smc8 Melody1 SoundModifiers1 Knob2 404
+print: smc8 Melody1 SoundModifiers1 Knob2 409
+print: smc8 Melody1 SoundModifiers1 Knob2 414
+print: smc8 Melody1 SoundModifiers1 Knob2 419
+print: smc8 Melody1 SoundModifiers1 Knob2 424
+print: smc8 Melody1 SoundModifiers1 Knob2 429
+print: smc8 Melody1 SoundModifiers1 Knob2 434
+print: smc8 Melody1 SoundModifiers1 Knob2 439
+print: smc8 Melody1 SoundModifiers1 Knob2 445
+print: smc8 Console0 Broadcast0 Knob0 548
+print: smc8 Console0 Broadcast0 Knob0 533
+print: smc8 Console0 Broadcast0 Knob0 512
+print: smc8 Console0 Broadcast0 Knob0 492
+print: smc8 Console0 Broadcast0 Knob0 476
+print: smc8 Console0 Broadcast0 Knob0 466
+print: smc8 Console0 Broadcast0 Knob0 461
+print: smc8 Console0 Broadcast0 Knob0 456
+print: smc8 Console0 Broadcast0 Knob0 451
+print: smc8 Console0 Broadcast0 Knob0 446
+print: smc8 Console0 Broadcast0 Knob0 441
+print: smc8 Console0 Broadcast0 Knob0 435
+print: smc8 Console0 Broadcast0 Knob0 425
+print: smc8 Console0 Broadcast0 Knob0 415
+print: smc8 Console0 Broadcast0 Knob0 405
+print: smc8 Console0 Broadcast0 Knob0 389
+print: smc8 Console0 Broadcast0 Knob0 374
+print: smc8 Console0 Broadcast0 Knob0 354
+print: smc8 Console0 Broadcast0 Knob0 333
+print: smc8 Console0 Broadcast0 Knob0 313
+print: smc8 Console0 Broadcast0 Knob0 277
+print: smc8 Console0 Broadcast0 Knob0 256
+print: smc8 Console0 Broadcast0 Knob0 241
+print: smc8 Console0 Broadcast0 Knob0 226
+print: smc8 Console0 Broadcast0 Knob0 215
+print: smc8 Console0 Broadcast0 Knob0 205
+print: smc8 Console0 Broadcast0 Knob0 200
+print: smc8 Console0 Broadcast0 Knob0 195
+print: smc8 Console0 Broadcast0 Knob0 190
+print: smc8 Console0 Broadcast0 Knob0 185
+print: smc8 Console0 Broadcast0 Knob0 180
+print: smc8 Console0 Broadcast0 Knob0 175
+print: smc8 Console0 Broadcast0 Knob0 164
+print: smc8 Console0 Broadcast0 Knob0 159
+print: smc8 Console0 Broadcast0 Knob0 164
+print: smc8 Console0 Broadcast0 Knob0 169
+print: smc8 Console0 Broadcast0 Knob0 185
+print: smc8 Console0 Broadcast0 Knob0 205
+print: smc8 Console0 Broadcast0 Knob0 241
+print: smc8 Console0 Broadcast0 Knob0 313
+print: smc8 Console0 Broadcast0 Knob0 359
+print: smc8 Console0 Broadcast0 Knob0 405
+print: smc8 Console0 Broadcast0 Knob0 451
+print: smc8 Console0 Broadcast0 Knob0 487
+print: smc8 Console0 Broadcast0 Knob0 538
+print: smc8 Console0 Broadcast0 Knob0 568
+print: smc8 Console0 Broadcast0 Knob0 599
+print: smc8 Console0 Broadcast0 Knob0 614
+print: smc8 Console0 Broadcast0 Knob0 630
+print: smc8 Console0 Broadcast0 Knob0 640
+print: smc8 Console0 Broadcast0 Knob0 660
+print: smc8 Console0 Broadcast0 Knob0 676
+print: smc8 Console0 Broadcast0 Knob0 691
+print: smc8 Console0 Broadcast0 Knob0 717
+print: smc8 Console0 Broadcast0 Knob0 742
+print: smc8 Console0 Broadcast0 Knob0 763
+print: smc8 Console0 Broadcast0 Knob0 778
+print: smc8 Console0 Broadcast0 Knob0 783
+print: smc8 Console0 Broadcast0 Knob0 788
+print: smc8 Console0 Broadcast0 Knob0 793
+print: smc8 Melody1 Sequencer1 Slider2 341
+print: smc8 Melody1 Sequencer1 Slider2 426
+print: smc8 Melody1 Sequencer1 Slider2 511
+print: smc8 Melody1 Sequencer1 Slider2 596
+print: smc8 Melody1 Sequencer1 Slider2 682
+print: smc8 Melody1 Sequencer1 Slider2 767
+print: smc8 Melody1 Sequencer1 Slider2 852
+print: smc8 Console0 Broadcast0 Knob1 895
+print: smc8 Console0 Broadcast0 Knob1 956
+print: smc8 Console0 Broadcast0 Knob1 1007
+print: smc8 Console0 Broadcast0 Knob1 1023
+print: smc8 Console0 Broadcast0 Knob1 1017
+print: smc8 Console0 Broadcast0 Knob1 1012
+print: smc8 Console0 Broadcast0 Knob1 1007
+print: smc8 Console0 Broadcast0 Knob1 1002
+print: smc8 Console0 Broadcast0 Knob1 997
+print: smc8 Console0 Broadcast0 Knob1 987
+print: smc8 Console0 Broadcast0 Knob1 976
+print: smc8 Console0 Broadcast0 Knob1 971
+print: smc8 Console0 Broadcast0 Knob1 966
+print: smc8 Console0 Broadcast0 Knob1 961
+print: smc8 Console0 Broadcast0 Knob1 956
+print: smc8 Console0 Broadcast0 Knob1 946
+print: smc8 Console0 Broadcast0 Knob1 920
+print: smc8 Console0 Broadcast0 Knob1 884
+print: smc8 Console0 Broadcast0 Knob1 797
+print: smc8 Console0 Broadcast0 Knob1 751
+print: smc8 Console0 Broadcast0 Knob1 705
+print: smc8 Console0 Broadcast0 Knob1 675
+print: smc8 Console0 Broadcast0 Knob1 654
+print: smc8 Console0 Broadcast0 Knob1 629
+print: smc8 Console0 Broadcast0 Knob1 598
+print: smc8 Console0 Broadcast0 Knob1 562
+print: smc8 Console0 Broadcast0 Knob1 521
+print: smc8 Console0 Broadcast0 Knob1 434
+print: smc8 Console0 Broadcast0 Knob1 378
+print: smc8 Console0 Broadcast0 Knob1 342
+print: smc8 Console0 Broadcast0 Knob1 291
+print: smc8 Console0 Broadcast0 Knob1 276
+print: smc8 Console0 Broadcast0 Knob1 260
+print: smc8 Console0 Broadcast0 Knob1 255
+print: smc8 Melody1 PerformanceModifiers1 Knob4 514
+print: smc8 Melody1 PerformanceModifiers1 Knob4 555
+print: smc8 Melody1 PerformanceModifiers1 Knob4 606
+print: smc8 Melody1 PerformanceModifiers1 Knob4 637
+print: smc8 Melody1 PerformanceModifiers1 Knob4 663
+print: smc8 Melody1 PerformanceModifiers1 Knob4 668
+print: smc8 Melody1 PerformanceModifiers1 Knob4 673
+print: smc8 Melody1 PerformanceModifiers1 Knob4 678
+print: smc8 Melody1 PerformanceModifiers1 Knob4 683
+print: smc8 Melody1 PerformanceModifiers1 Knob4 688
+print: smc8 Melody1 PerformanceModifiers1 Knob4 693
+print: smc8 Melody1 PerformanceModifiers1 Knob4 699
+print: smc8 Melody1 PerformanceModifiers1 Knob4 704
+print: smc8 Melody1 PerformanceModifiers1 Knob4 709
+print: smc8 Melody1 PerformanceModifiers1 Knob4 719
+print: smc8 Melody1 PerformanceModifiers1 Knob4 729
+print: smc8 Melody1 PerformanceModifiers1 Knob4 739
+print: smc8 Melody1 PerformanceModifiers1 Knob4 750
+print: smc8 Melody1 PerformanceModifiers1 Knob4 765
+print: smc8 Melody1 PerformanceModifiers1 Knob4 775
+print: smc8 Melody1 PerformanceModifiers1 Knob4 796
+print: smc8 Melody1 PerformanceModifiers1 Knob4 806
+print: smc8 Melody1 PerformanceModifiers1 Knob4 821
+print: smc8 Melody1 PerformanceModifiers1 Knob4 826
+print: smc8 Melody1 PerformanceModifiers1 Knob4 847
+print: smc8 Melody1 PerformanceModifiers1 Knob4 857
+print: smc8 Melody1 PerformanceModifiers1 Knob4 872
+print: smc8 Melody1 PerformanceModifiers1 Knob4 883
+print: smc8 Melody1 PerformanceModifiers1 Knob4 903
+print: smc8 Melody1 PerformanceModifiers1 Knob4 919
+print: smc8 Melody1 PerformanceModifiers1 Knob4 939
+print: smc8 Melody1 PerformanceModifiers1 Knob4 954
+print: smc8 Melody1 PerformanceModifiers1 Knob4 970
+print: smc8 Melody1 PerformanceModifiers1 Knob4 980
+print: smc8 Melody1 PerformanceModifiers1 Knob4 985
+print: smc8 Melody1 PerformanceModifiers1 Knob4 990
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1000
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1011
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1016
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1021
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1023
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1017
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1012
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1007
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1002
+print: smc8 Melody1 PerformanceModifiers1 Knob4 997
+print: smc8 Melody1 PerformanceModifiers1 Knob4 992
+print: smc8 Melody1 PerformanceModifiers1 Knob4 987
+print: smc8 Melody1 PerformanceModifiers1 Knob4 982
+print: smc8 Melody1 PerformanceModifiers1 Knob4 976
+print: smc8 Melody1 PerformanceModifiers1 Knob4 966
+print: smc8 Melody1 PerformanceModifiers1 Knob4 951
+print: smc8 Melody1 PerformanceModifiers1 Knob4 936
+print: smc8 Melody1 PerformanceModifiers1 Knob4 910
+print: smc8 Melody1 PerformanceModifiers1 Knob4 895
+print: smc8 Melody1 PerformanceModifiers1 Knob4 869
+print: smc8 Melody1 PerformanceModifiers1 Knob4 828
+print: smc8 Melody1 PerformanceModifiers1 Knob4 803
+print: smc8 Melody1 PerformanceModifiers1 Knob4 782
+print: smc8 Melody1 PerformanceModifiers1 Knob4 762
+print: smc8 Melody1 PerformanceModifiers1 Knob4 736
+print: smc8 Melody1 PerformanceModifiers1 Knob4 726
+print: smc8 Melody1 PerformanceModifiers1 Knob4 710
+print: smc8 Melody1 PerformanceModifiers1 Knob4 700
+print: smc8 Melody1 PerformanceModifiers1 Knob4 690
+print: smc8 Melody1 PerformanceModifiers1 Knob4 680
+print: smc8 Melody1 PerformanceModifiers1 Knob4 670
+print: smc8 Melody1 PerformanceModifiers1 Knob4 659
+print: smc8 Melody1 PerformanceModifiers1 Knob4 649
+print: smc8 Melody1 PerformanceModifiers1 Knob4 639
+print: smc8 Melody1 PerformanceModifiers1 Knob4 618
+print: smc8 Melody1 PerformanceModifiers1 Knob4 608
+print: smc8 Melody1 PerformanceModifiers1 Knob4 593
+print: smc8 Melody1 PerformanceModifiers1 Knob4 583
+print: smc8 Melody1 PerformanceModifiers1 Knob4 567
+print: smc8 Melody1 PerformanceModifiers1 Knob4 562
+print: smc8 Melody1 PerformanceModifiers1 Knob4 552
+print: smc8 Melody1 PerformanceModifiers1 Knob4 547
+print: smc8 Melody1 PerformanceModifiers1 Knob4 542
+print: smc8 Melody1 PerformanceModifiers1 Knob4 537
+print: smc8 Melody1 PerformanceModifiers1 Knob4 531
+print: smc8 Melody1 PerformanceModifiers1 Knob4 526
+print: smc8 Melody1 PerformanceModifiers1 Knob4 521
+print: smc8 Melody1 PerformanceModifiers1 Knob4 516
+print: smc8 Melody1 PerformanceModifiers1 Knob4 511
+print: smc8 Melody1 PerformanceModifiers1 Knob4 506
+print: smc8 Melody1 PerformanceModifiers1 Knob4 496
+print: smc8 Melody1 PerformanceModifiers1 Knob4 491
+print: smc8 Melody1 PerformanceModifiers1 Knob4 485
+print: smc8 Melody1 PerformanceModifiers1 Knob4 480
+print: smc8 Melody1 PerformanceModifiers1 Knob4 475
+print: smc8 Melody1 PerformanceModifiers1 Knob4 470
+print: smc8 Melody1 PerformanceModifiers1 Knob4 465
+print: smc8 Melody1 PerformanceModifiers1 Knob4 460
+print: smc8 Melody1 PerformanceModifiers1 Knob4 455
+print: smc8 Melody1 PerformanceModifiers1 Knob4 450
+print: smc8 Melody1 PerformanceModifiers1 Knob4 445
+print: smc8 Melody1 PerformanceModifiers1 Knob4 439
+print: smc8 Melody1 PerformanceModifiers1 Knob4 434
+print: smc8 Melody1 PerformanceModifiers1 Knob4 429
+print: smc8 Melody1 PerformanceModifiers1 Knob4 424
+print: smc8 Melody1 PerformanceModifiers1 Knob4 419
+print: smc8 Melody1 PerformanceModifiers1 Knob4 414
+print: smc8 Melody1 PerformanceModifiers1 Knob4 409
+print: smc8 Melody1 PerformanceModifiers1 Knob4 404
+print: smc8 Melody1 PerformanceModifiers1 Knob4 398
+print: smc8 Melody1 PerformanceModifiers1 Knob4 393
+print: smc8 Melody1 PerformanceModifiers1 Knob4 388
+print: smc8 Melody1 PerformanceModifiers1 Knob4 383
+print: smc8 Melody1 PerformanceModifiers1 Knob4 368
+print: smc8 Melody1 PerformanceModifiers1 Knob4 358
+print: smc8 Melody1 PerformanceModifiers1 Knob4 347
+print: smc8 Melody1 PerformanceModifiers1 Knob4 342
+print: smc8 Melody1 PerformanceModifiers1 Knob4 337
+print: smc8 Melody1 PerformanceModifiers1 Knob4 332
+print: smc8 Melody1 PerformanceModifiers1 Knob4 327
+print: smc8 Melody1 PerformanceModifiers1 Knob4 317
+print: smc8 Melody1 PerformanceModifiers1 Knob4 306
+print: smc8 Melody1 PerformanceModifiers1 Knob4 301
+print: smc8 Melody1 PerformanceModifiers1 Knob4 296
+print: smc8 Melody1 PerformanceModifiers1 Knob4 291
+print: smc8 Melody1 PerformanceModifiers1 Knob4 286
+print: smc8 Melody1 PerformanceModifiers1 Knob4 281
+print: smc8 Melody1 PerformanceModifiers1 Knob4 276
+print: smc8 Melody1 PerformanceModifiers1 Knob4 271
+print: smc8 Melody1 PerformanceModifiers1 Knob4 265
+print: smc8 Melody1 PerformanceModifiers1 Knob4 260
+print: smc8 Melody1 PerformanceModifiers1 Knob1 744
+print: smc8 Melody1 PerformanceModifiers1 Knob1 837
+print: smc8 Melody1 PerformanceModifiers1 Knob1 930
+print: smc8 Melody1 PerformanceModifiers1 Knob1 1023
+print: smc8 Melody1 PerformanceModifiers1 Knob1 930
+print: smc8 Melody1 PerformanceModifiers1 Knob1 837
+print: smc8 Melody1 PerformanceModifiers1 Knob1 744
+print: smc8 Melody1 PerformanceModifiers1 Knob1 651
+print: smc8 Melody1 PerformanceModifiers1 Knob1 558
+print: smc8 Melody1 PerformanceModifiers1 Knob1 465
+print: smc8 Melody1 PerformanceModifiers1 Knob1 372
+print: smc8 Melody1 PerformanceModifiers1 Knob1 279
+print: smc8 Melody1 PerformanceModifiers1 Knob1 186
+print: smc8 Melody1 PerformanceModifiers1 Knob1 93
+print: smc8 Melody1 PerformanceModifiers1 Knob0 341
+print: smc8 Melody1 PerformanceModifiers1 Knob0 682
+print: smc8 Melody1 PerformanceModifiers1 Knob0 1023
+print: smc8 Melody1 PerformanceModifiers1 Knob0 682
+print: smc8 Melody1 PerformanceModifiers1 Knob0 341
+print: smc8 Melody1 PerformanceModifiers1 Knob0 0
+print: smc8 Melody1 PerformanceModifiers1 Knob0 341
+print: smc8 Melody1 Sequencer1 Slider0 341
+print: smc8 Melody1 Sequencer1 Slider0 426
+print: smc8 Melody1 Sequencer1 Slider0 511
+print: smc8 Melody1 Sequencer1 Slider0 596
+print: smc8 Melody1 Sequencer1 Slider0 682
+print: smc8 Melody1 Sequencer1 Slider0 767
+print: smc8 Melody1 Sequencer1 Slider0 852
+print: smc8 Melody1 Sequencer1 Slider0 937
+print: smc8 Melody1 Sequencer1 Slider1 511
+print: smc8 Melody1 Sequencer1 Slider1 596
+print: smc8 Melody1 Sequencer1 Slider1 682
+print: smc8 Melody1 Sequencer1 Slider1 767
+print: smc8 Melody1 Sequencer1 Slider1 852
+print: smc8 Melody1 Sequencer1 Slider2 852
+print: smc8 Melody1 Sequencer1 Slider2 767
+print: smc8 Melody1 Sequencer1 Slider3 341
+print: smc8 Melody1 Sequencer1 Slider3 426
+print: smc8 Melody1 Sequencer1 Slider3 511
+print: smc8 Melody1 Sequencer1 Slider3 596
+print: smc8 Melody1 Sequencer1 Slider3 682
+print: smc8 Melody1 Sequencer1 Slider4 0
+print: smc8 Melody1 Sequencer1 Slider4 85
+print: smc8 Melody1 Sequencer1 Slider4 170
+print: smc8 Melody1 Sequencer1 Slider4 255
+print: smc8 Melody1 Sequencer1 Slider4 170
+print: smc8 Melody1 Sequencer1 Slider4 85
+print: smc8 Melody1 Sequencer1 Slider4 0
+print: smc8 Melody1 Sequencer1 Slider5 170
+print: smc8 Melody1 Sequencer1 Slider5 85
+print: smc8 Melody1 Sequencer1 Slider6 85
+print: smc8 Melody1 Sequencer1 Slider6 170
+print: smc8 Melody1 Sequencer1 Slider7 596
+print: smc8 Melody1 Sequencer1 Slider7 511
+print: smc8 Melody1 Sequencer1 Slider7 426
+print: smc8 Melody1 Sequencer1 Slider7 341
+print: smc8 Melody1 Sequencer1 Slider7 255
+print: smc8 Console0 Broadcast0 Knob1 265
+print: smc8 Console0 Broadcast0 Knob1 291
+print: smc8 Console0 Broadcast0 Knob1 317
+print: smc8 Console0 Broadcast0 Knob1 337
+print: smc8 Console0 Broadcast0 Knob1 352
+print: smc8 Console0 Broadcast0 Knob1 363
+print: smc8 Console0 Broadcast0 Knob1 373
+print: smc8 Console0 Broadcast0 Knob1 388
+print: smc8 Console0 Broadcast0 Knob1 409
+print: smc8 Console0 Broadcast0 Knob1 439
+print: smc8 Console0 Broadcast0 Knob1 455
+print: smc8 Console0 Broadcast0 Knob1 480
+print: smc8 Console0 Broadcast0 Knob1 501
+print: smc8 Console0 Broadcast0 Knob1 526
+print: smc8 Console0 Broadcast0 Knob1 542
+print: smc8 Console0 Broadcast0 Knob1 547
+print: smc8 Console0 Broadcast0 Knob1 552
+print: smc8 Console0 Broadcast0 Knob1 572
+print: smc8 Console0 Broadcast0 Knob1 649
+print: smc8 Console0 Broadcast0 Knob1 721
+print: smc8 Console0 Broadcast0 Knob1 782
+print: smc8 Console0 Broadcast0 Knob1 818
+print: smc8 Console0 Broadcast0 Knob1 838
+print: smc8 Console0 Broadcast0 Knob1 854
+print: smc8 Console0 Broadcast0 Knob1 874
+print: smc8 Console0 Broadcast0 Knob1 890
+print: smc8 Console0 Broadcast0 Knob1 920
+print: smc8 Console0 Broadcast0 Knob1 936
+print: smc8 Console0 Broadcast0 Knob1 946
+print: smc8 Console0 Broadcast0 Knob1 951
+print: smc8 Console0 Broadcast0 Knob1 956
+print: smc8 Console0 Broadcast0 Knob1 961
+print: smc8 Console0 Broadcast0 Knob1 966
+print: smc8 Console0 Broadcast0 Knob1 971
+print: smc8 Console0 Broadcast0 Knob1 976
+print: smc8 Console0 Broadcast0 Knob1 982
+print: smc8 Console0 Broadcast0 Knob1 992
+print: smc8 Console0 Broadcast0 Knob1 997
+print: smc8 Console0 Broadcast0 Knob1 1007
+print: smc8 Console0 Broadcast0 Knob1 1017
+print: smc8 Console0 Broadcast0 Knob1 1022
+print: smc8 Console0 Broadcast0 Knob1 1023
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 506
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 496
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 471
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 450
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 430
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 414
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 404
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 399
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 394
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 389
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 384
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 373
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 363
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 358
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 353
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 348
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 343
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 338
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 332
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 327
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 322
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 317
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 307
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 297
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 292
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 286
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 281
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 286
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 297
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 322
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 343
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 368
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 399
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 425
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 440
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 450
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 455
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 460
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 465
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 471
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 476
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 486
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 491
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 501
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 512
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 522
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 532
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 537
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 547
+print: smc8 Melody1 PerformanceModifiers1 Knob3 1023
+print: smc8 Melody1 PerformanceModifiers1 Knob3 852
+print: smc8 Melody1 PerformanceModifiers1 Knob3 682
+print: smc8 Melody1 PerformanceModifiers1 Knob3 852
+print: smc8 Melody1 PerformanceModifiers1 Knob3 1023
+print: smc8 Melody1 PerformanceModifiers1 Knob3 852
+print: smc8 Melody1 PerformanceModifiers1 Knob3 682
+print: smc8 Melody1 PerformanceModifiers1 Knob3 852
+print: smc8 Melody1 PerformanceModifiers1 Knob3 1023
+print: smc8 Melody1 PerformanceModifiers1 Knob3 852
+print: smc8 Melody1 PerformanceModifiers1 Knob4 255
+print: smc8 Melody1 PerformanceModifiers1 Knob4 260
+print: smc8 Melody1 PerformanceModifiers1 Knob4 281
+print: smc8 Melody1 PerformanceModifiers1 Knob4 312
+print: smc8 Melody1 PerformanceModifiers1 Knob4 373
+print: smc8 Melody1 PerformanceModifiers1 Knob4 409
+print: smc8 Melody1 PerformanceModifiers1 Knob4 434
+print: smc8 Melody1 PerformanceModifiers1 Knob4 455
+print: smc8 Melody1 PerformanceModifiers1 Knob4 470
+print: smc8 Melody1 PerformanceModifiers1 Knob4 475
+print: smc8 Melody1 PerformanceModifiers1 Knob4 480
+print: smc8 Melody1 PerformanceModifiers1 Knob4 485
+print: smc8 Melody1 PerformanceModifiers1 Knob4 491
+print: smc8 Melody1 PerformanceModifiers1 Knob4 496
+print: smc8 Melody1 PerformanceModifiers1 Knob4 501
+print: smc8 Melody1 PerformanceModifiers1 Knob4 506
+print: smc8 Melody1 PerformanceModifiers1 Knob4 511
+print: smc8 Melody1 PerformanceModifiers1 Knob4 516
+print: smc8 Melody1 PerformanceModifiers1 Knob4 511
+print: smc8 Melody1 PerformanceModifiers1 Knob4 516
+print: smc8 Melody1 PerformanceModifiers1 Knob4 526
+print: smc8 Melody1 PerformanceModifiers1 Knob4 531
+print: smc8 Melody1 PerformanceModifiers1 Knob4 537
+print: smc8 Melody1 PerformanceModifiers1 Knob4 547
+print: smc8 Melody1 PerformanceModifiers1 Knob4 562
+print: smc8 Melody1 PerformanceModifiers1 Knob4 567
+print: smc8 Melody1 PerformanceModifiers1 Knob4 583
+print: smc8 Melody1 PerformanceModifiers1 Knob4 593
+print: smc8 Melody1 PerformanceModifiers1 Knob4 598
+print: smc8 Melody1 PerformanceModifiers1 Knob4 613
+print: smc8 Melody1 PerformanceModifiers1 Knob4 624
+print: smc8 Melody1 PerformanceModifiers1 Knob4 629
+print: smc8 Melody1 PerformanceModifiers1 Knob4 639
+print: smc8 Melody1 PerformanceModifiers1 Knob4 654
+print: smc8 Melody1 PerformanceModifiers1 Knob4 659
+print: smc8 Melody1 PerformanceModifiers1 Knob4 670
+print: smc8 Melody1 PerformanceModifiers1 Knob4 680
+print: smc8 Melody1 PerformanceModifiers1 Knob4 690
+print: smc8 Melody1 PerformanceModifiers1 Knob4 700
+print: smc8 Melody1 PerformanceModifiers1 Knob4 710
+print: smc8 Melody1 PerformanceModifiers1 Knob4 716
+print: smc8 Melody1 PerformanceModifiers1 Knob4 721
+print: smc8 Melody1 PerformanceModifiers1 Knob4 726
+print: smc8 Melody1 PerformanceModifiers1 Knob4 731
+print: smc8 Melody1 PerformanceModifiers1 Knob4 741
+print: smc8 Melody1 PerformanceModifiers1 Knob4 746
+print: smc8 Melody1 PerformanceModifiers1 Knob4 751
+print: smc8 Melody1 PerformanceModifiers1 Knob4 757
+print: smc8 Melody1 PerformanceModifiers1 Knob4 762
+print: smc8 Melody1 PerformanceModifiers1 Knob4 767
+print: smc8 Melody1 PerformanceModifiers1 Knob4 772
+print: smc8 Melody1 PerformanceModifiers1 Knob4 777
+print: smc8 Melody1 PerformanceModifiers1 Knob4 782
+print: smc8 Melody1 PerformanceModifiers1 Knob4 787
+print: smc8 Melody1 PerformanceModifiers1 Knob4 792
+print: smc8 Melody1 PerformanceModifiers1 Knob4 797
+print: smc8 Melody1 PerformanceModifiers1 Knob4 803
+print: smc8 Melody1 PerformanceModifiers1 Knob4 808
+print: smc8 Melody1 PerformanceModifiers1 Knob4 813
+print: smc8 Melody1 PerformanceModifiers1 Knob4 818
+print: smc8 Melody1 PerformanceModifiers1 Knob4 823
+print: smc8 Melody1 PerformanceModifiers1 Knob4 828
+print: smc8 Melody1 SoundModifiers1 Knob0 341
+print: smc8 Melody1 SoundModifiers1 Knob0 682
+print: smc8 Melody1 SoundModifiers1 Knob0 1023
+print: smc8 Melody1 SoundModifiers1 Knob2 115
+print: smc8 Melody1 SoundModifiers1 Knob2 125
+print: smc8 Melody1 SoundModifiers1 Knob2 145
+print: smc8 Melody1 SoundModifiers1 Knob2 166
+print: smc8 Melody1 SoundModifiers1 Knob2 196
+print: smc8 Melody1 SoundModifiers1 Knob2 227
+print: smc8 Melody1 SoundModifiers1 Knob2 253
+print: smc8 Melody1 SoundModifiers1 Knob2 273
+print: smc8 Melody1 SoundModifiers1 Knob2 294
+print: smc8 Melody1 SoundModifiers1 Knob2 309
+print: smc8 Melody1 SoundModifiers1 Knob2 319
+print: smc8 Melody1 SoundModifiers1 Knob2 329
+print: smc8 Melody1 SoundModifiers1 Knob2 335
+print: smc8 Melody1 SoundModifiers1 Knob2 340
+print: smc8 Melody1 SoundModifiers1 Knob2 350
+print: smc8 Melody1 SoundModifiers1 Knob2 360
+print: smc8 Melody1 SoundModifiers1 Knob2 370
+print: smc8 Melody1 SoundModifiers1 Knob2 391
+print: smc8 Melody1 SoundModifiers1 Knob2 422
+print: smc8 Melody1 SoundModifiers1 Knob2 514
+print: smc8 Melody1 SoundModifiers1 Knob2 621
+print: smc8 Melody1 SoundModifiers1 Knob2 631
+print: smc8 Melody1 SoundModifiers1 Knob2 652
+print: smc8 Melody1 SoundModifiers1 Knob2 682
+print: smc8 Melody1 SoundModifiers1 Knob2 713
+print: smc8 Melody1 SoundModifiers1 Knob2 744
+print: smc8 Melody1 SoundModifiers1 Knob2 759
+print: smc8 Melody1 SoundModifiers1 Knob2 769
+print: smc8 Melody1 SoundModifiers1 Knob2 790
+print: smc8 Melody1 SoundModifiers1 Knob2 810
+print: smc8 Melody1 SoundModifiers1 Knob2 826
+print: smc8 Melody1 SoundModifiers1 Knob2 836
+print: smc8 Melody1 SoundModifiers1 Knob2 841
+print: smc8 Melody1 SoundModifiers1 Knob2 851
+print: smc8 Melody1 SoundModifiers1 Knob2 856
+print: smc8 Melody1 SoundModifiers1 Knob2 861
+print: smc8 Melody1 SoundModifiers1 Knob2 867
+print: smc8 Melody1 SoundModifiers1 Knob2 872
+print: smc8 Melody1 SoundModifiers1 Knob2 877
+print: smc8 Melody1 SoundModifiers1 Knob2 882
+print: smc8 Melody1 SoundModifiers1 Knob2 887
+print: smc8 Melody1 SoundModifiers1 Knob2 892
+print: smc8 Melody1 SoundModifiers1 Knob2 897
+print: smc8 Melody1 SoundModifiers1 Knob2 902
+print: smc8 Melody1 SoundModifiers1 Knob2 907
+print: smc8 Melody1 SoundModifiers1 Knob1 1534
+print: smc8 Melody1 SoundModifiers1 Knob1 1023
+print: smc8 Melody1 SoundModifiers1 Toggle2 1
+print: smc8 Melody1 Sequencer1 Slider1 767
+print: smc8 Melody1 Sequencer1 Slider1 682
+print: smc8 Melody1 Sequencer1 Slider1 596
+print: smc8 Melody1 Sequencer1 Slider1 511
+print: smc8 Melody1 Sequencer1 Slider1 426
+print: smc8 Melody1 Sequencer1 Slider1 341
+print: smc8 Melody1 Sequencer1 Slider0 937
+print: smc8 Melody1 Sequencer1 Slider0 852
+print: smc8 Melody1 Sequencer1 Slider0 767
+print: smc8 Melody1 Sequencer1 Slider0 682
+print: smc8 Melody1 Sequencer1 Slider0 511
+print: smc8 Melody1 Sequencer1 Slider0 426
+print: smc8 Melody1 Sequencer1 Slider0 341
+print: smc8 Melody1 Sequencer1 Slider0 255
+print: smc8 Melody1 Sequencer1 Slider2 767
+print: smc8 Melody1 Sequencer1 Slider2 682
+print: smc8 Melody1 Sequencer1 Slider2 596
+print: smc8 Melody1 Sequencer1 Slider2 511
+print: smc8 Melody1 Sequencer1 Slider2 596
+print: smc8 Melody1 Sequencer1 Slider2 682
+print: smc8 Melody1 Sequencer1 Slider2 767
+print: smc8 Melody1 Sequencer1 Slider2 852
+print: smc8 Melody1 Sequencer1 Slider3 682
+print: smc8 Melody1 Sequencer1 Slider3 596
+print: smc8 Melody1 Sequencer1 Slider3 511
+print: smc8 Melody1 Sequencer1 Slider3 426
+print: smc8 Melody1 Sequencer1 Slider3 341
+print: smc8 Melody1 Sequencer1 Slider4 0
+print: smc8 Melody1 Sequencer1 Slider4 85
+print: smc8 Melody1 Sequencer1 Slider4 170
+print: smc8 Melody1 Sequencer1 Slider4 255
+print: smc8 Melody1 Sequencer1 Slider4 341
+print: smc8 Melody1 Sequencer1 Slider4 426
+print: smc8 Melody1 Sequencer1 Slider4 511
+print: smc8 Melody1 Sequencer1 Slider4 426
+print: smc8 Melody1 Sequencer1 Slider5 170
+print: smc8 Melody1 Sequencer1 Slider5 255
+print: smc8 Melody1 Sequencer1 Slider5 341
+print: smc8 Melody1 Sequencer1 Slider5 426
+print: smc8 Melody1 Sequencer1 Slider5 511
+print: smc8 Melody1 Sequencer1 Slider5 596
+print: smc8 Melody1 Sequencer1 Slider6 170
+print: smc8 Melody1 Sequencer1 Slider6 255
+print: smc8 Melody1 Sequencer1 Slider6 341
+print: smc8 Melody1 Sequencer1 Slider6 426
+print: smc8 Melody1 Sequencer1 Slider7 341
+print: smc8 Melody1 Sequencer1 Slider7 426
+print: smc8 Melody1 Sequencer1 Slider7 511
+print: smc8 Melody1 Sequencer1 Slider7 596
+print: smc8 Melody1 Sequencer1 Slider7 682
+print: smc8 Melody1 Sequencer1 Slider7 767
+print: smc8 Melody1 Sequencer1 Slider2 767
+print: smc8 Melody1 Sequencer1 Slider2 682
+print: smc8 Melody1 Sequencer1 Slider2 596
+print: smc8 Melody1 Sequencer1 Slider0 341
+print: smc8 Melody1 Sequencer1 Slider0 511
+print: smc8 Melody1 Sequencer1 Slider0 596
+print: smc8 Melody1 Sequencer1 Slider0 682
+print: smc8 Melody1 Sequencer1 Slider0 596
+print: smc8 Melody1 Sequencer1 Slider0 682
+print: smc8 Melody1 Sequencer1 Slider0 767
+print: smc8 Melody1 Sequencer1 Slider0 852
+print: smc8 Melody1 Sequencer1 Slider0 937
+print: smc8 Melody1 Sequencer1 Slider0 1023
+print: smc8 Melody1 Sequencer1 Slider1 341
+print: smc8 Melody1 Sequencer1 Slider1 426
+print: smc8 Melody1 Sequencer1 Slider1 511
+print: smc8 Melody1 Sequencer1 Slider1 596
+print: smc8 Melody1 Sequencer1 Slider2 596
+print: smc8 Melody1 Sequencer1 Slider2 511
+print: smc8 Melody1 Sequencer1 Slider2 426
+print: smc8 Melody1 Sequencer1 Slider2 341
+print: smc8 Melody1 Sequencer1 Slider2 255
+print: smc8 Melody1 Sequencer1 Slider3 341
+print: smc8 Melody1 Sequencer1 Slider3 426
+print: smc8 Melody1 Sequencer1 Slider3 511
+print: smc8 Melody1 Sequencer1 Slider3 596
+print: smc8 Melody1 Sequencer1 Slider4 426
+print: smc8 Melody1 Sequencer1 Slider4 341
+print: smc8 Melody1 Sequencer1 Slider4 255
+print: smc8 Melody1 Sequencer1 Slider5 596
+print: smc8 Melody1 Sequencer1 Slider5 682
+print: smc8 Melody1 Sequencer1 Slider6 426
+print: smc8 Melody1 Sequencer1 Slider6 511
+print: smc8 Melody1 Sequencer1 Slider6 596
+print: smc8 Melody1 Sequencer1 Slider6 682
+print: smc8 Melody1 Sequencer1 Slider6 767
+print: smc8 Melody1 Sequencer1 Slider6 852
+print: smc8 Melody1 Sequencer1 Slider6 937
+print: smc8 Melody1 Sequencer1 Slider6 1023
+print: smc8 Melody1 Sequencer1 Slider7 767
+print: smc8 Melody1 Sequencer1 Slider7 682
+print: smc8 Melody1 Sequencer1 Slider7 596
+print: smc8 Melody1 Sequencer1 Slider7 511
+print: smc8 Melody1 Sequencer1 Slider7 426
+print: smc8 Melody1 Sequencer1 Slider7 341
+print: smc8 Melody1 Sequencer1 Slider7 255
+print: smc8 Melody1 Sequencer1 Slider0 937
+print: smc8 Melody1 Sequencer1 Slider0 852
+print: smc8 Melody1 Sequencer1 Slider0 767
+print: smc8 Melody1 Sequencer1 Slider0 682
+print: smc8 Melody1 Sequencer1 Slider0 596
+print: smc8 Melody1 Sequencer1 Slider0 511
+print: smc8 Melody1 Sequencer1 Slider0 426
+print: smc8 Melody1 Sequencer1 Slider0 341
+print: smc8 Melody1 PerformanceModifiers1 Knob1 1302
+print: smc8 Melody1 PerformanceModifiers1 Knob1 1023
+print: smc8 Melody1 PerformanceModifiers1 Knob1 930
+print: smc8 Melody1 PerformanceModifiers1 Knob1 837
+print: smc8 Melody1 PerformanceModifiers1 Knob1 744
+print: smc8 Melody1 PerformanceModifiers1 Knob1 651
+print: smc8 Melody1 PerformanceModifiers1 Knob1 558
+print: smc8 Melody1 Sequencer1 Slider0 341
+print: smc8 Melody1 Sequencer1 Slider0 255
+print: smc8 Melody1 Sequencer1 Slider0 170
+print: smc8 Melody1 Sequencer1 Slider0 85
+print: smc8 Melody1 Sequencer1 Slider0 0
+print: smc8 Melody1 Sequencer1 Slider1 511
+print: smc8 Melody1 Sequencer1 Slider1 426
+print: smc8 Melody1 Sequencer1 Slider1 341
+print: smc8 Melody1 Sequencer1 Slider1 255
+print: smc8 Melody1 Sequencer1 Slider1 170
+print: smc8 Melody1 PerformanceModifiers1 Knob1 558
+print: smc8 Melody1 PerformanceModifiers1 Knob1 465
+print: smc8 Melody1 PerformanceModifiers1 Knob1 372
+print: smc8 Melody1 PerformanceModifiers1 Knob1 279
+print: smc8 Melody1 PerformanceModifiers1 Knob0 341
+print: smc8 Melody1 PerformanceModifiers1 Knob0 0
+print: smc8 Melody1 PerformanceModifiers1 Knob0 341
+print: smc8 Melody1 PerformanceModifiers1 Knob0 682
+print: smc8 Melody1 PerformanceModifiers1 Knob0 1023
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 537
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 522
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 496
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 440
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 414
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 384
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 368
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 358
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 353
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 348
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 343
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 338
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 332
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 322
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 317
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 312
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 302
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 297
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 286
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 281
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 276
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 271
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 266
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 256
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 251
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 240
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 235
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 230
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 225
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 220
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 215
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 210
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 205
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 199
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 205
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 220
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 261
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 312
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 363
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 445
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 486
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 506
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 527
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 532
+print: smc8 Melody1 PerformanceModifiers1 Knob3 852
+print: smc8 Melody1 PerformanceModifiers1 Knob3 682
+print: smc8 Melody1 PerformanceModifiers1 Knob3 511
+print: smc8 Melody1 PerformanceModifiers1 Knob3 341
+print: smc8 Melody1 PerformanceModifiers1 Knob3 511
+print: smc8 Melody1 PerformanceModifiers1 Knob3 341
+print: smc8 Melody1 PerformanceModifiers1 Knob3 170
+print: smc8 Melody1 PerformanceModifiers1 Knob3 341
+print: smc8 Melody1 PerformanceModifiers1 Knob3 170
+print: smc8 Melody1 PerformanceModifiers1 Knob3 0
+print: smc8 Melody1 PerformanceModifiers1 Knob4 823
+print: smc8 Melody1 PerformanceModifiers1 Knob4 808
+print: smc8 Melody1 PerformanceModifiers1 Knob4 782
+print: smc8 Melody1 PerformanceModifiers1 Knob4 736
+print: smc8 Melody1 PerformanceModifiers1 Knob4 695
+print: smc8 Melody1 PerformanceModifiers1 Knob4 664
+print: smc8 Melody1 PerformanceModifiers1 Knob4 629
+print: smc8 Melody1 PerformanceModifiers1 Knob4 598
+print: smc8 Melody1 PerformanceModifiers1 Knob4 588
+print: smc8 Melody1 PerformanceModifiers1 Knob4 583
+print: smc8 Melody1 PerformanceModifiers1 Knob4 577
+print: smc8 Melody1 PerformanceModifiers1 Knob4 567
+print: smc8 Melody1 PerformanceModifiers1 Knob4 562
+print: smc8 Melody1 PerformanceModifiers1 Knob4 552
+print: smc8 Melody1 PerformanceModifiers1 Knob4 542
+print: smc8 Melody1 PerformanceModifiers1 Knob4 537
+print: smc8 Melody1 PerformanceModifiers1 Knob4 526
+print: smc8 Melody1 PerformanceModifiers1 Knob4 516
+print: smc8 Melody1 PerformanceModifiers1 Knob4 501
+print: smc8 Melody1 PerformanceModifiers1 Knob4 491
+print: smc8 Melody1 PerformanceModifiers1 Knob4 475
+print: smc8 Melody1 PerformanceModifiers1 Knob4 460
+print: smc8 Melody1 PerformanceModifiers1 Knob4 450
+print: smc8 Melody1 PerformanceModifiers1 Knob4 445
+print: smc8 Melody1 PerformanceModifiers1 Knob4 439
+print: smc8 Melody1 PerformanceModifiers1 Knob4 429
+print: smc8 Melody1 PerformanceModifiers1 Knob4 424
+print: smc8 Melody1 PerformanceModifiers1 Knob4 414
+print: smc8 Melody1 PerformanceModifiers1 Knob4 404
+print: smc8 Melody1 PerformanceModifiers1 Knob4 393
+print: smc8 Melody1 PerformanceModifiers1 Knob4 378
+print: smc8 Melody1 PerformanceModifiers1 Knob4 363
+print: smc8 Melody1 PerformanceModifiers1 Knob4 352
+print: smc8 Melody1 PerformanceModifiers1 Knob4 347
+print: smc8 Melody1 PerformanceModifiers1 Knob4 342
+print: smc8 Melody1 PerformanceModifiers1 Knob4 332
+print: smc8 Melody1 PerformanceModifiers1 Knob4 327
+print: smc8 Melody1 PerformanceModifiers1 Knob4 317
+print: smc8 Melody1 PerformanceModifiers1 Knob4 306
+print: smc8 Melody1 PerformanceModifiers1 Knob4 301
+print: smc8 Melody1 PerformanceModifiers1 Knob4 291
+print: smc8 Melody1 PerformanceModifiers1 Knob4 286
+print: smc8 Melody1 PerformanceModifiers1 Knob4 271
+print: smc8 Melody1 PerformanceModifiers1 Knob4 260
+print: smc8 Melody1 PerformanceModifiers1 Knob4 255
+print: smc8 Melody1 PerformanceModifiers1 Knob4 245
+print: smc8 Melody1 PerformanceModifiers1 Knob4 240
+print: smc8 Melody1 PerformanceModifiers1 Knob4 235
+print: smc8 Melody1 PerformanceModifiers1 Knob4 230
+print: smc8 Melody1 PerformanceModifiers1 Knob4 225
+print: smc8 Melody1 PerformanceModifiers1 Knob4 219
+print: smc8 Melody1 PerformanceModifiers1 Knob4 235
+print: smc8 Melody1 PerformanceModifiers1 Knob4 245
+print: smc8 Melody1 PerformanceModifiers1 Knob4 255
+print: smc8 Melody1 PerformanceModifiers1 Knob4 265
+print: smc8 Melody1 PerformanceModifiers1 Knob4 271
+print: smc8 Melody1 PerformanceModifiers1 Knob4 276
+print: smc8 Melody1 PerformanceModifiers1 Knob4 281
+print: smc8 Melody1 PerformanceModifiers1 Knob4 286
+print: smc8 Melody1 PerformanceModifiers1 Knob4 291
+print: smc8 Melody1 PerformanceModifiers1 Knob4 301
+print: smc8 Melody1 PerformanceModifiers1 Knob4 306
+print: smc8 Melody1 PerformanceModifiers1 Knob4 312
+print: smc8 Melody1 PerformanceModifiers1 Knob4 317
+print: smc8 Melody1 PerformanceModifiers1 Knob4 327
+print: smc8 Melody1 PerformanceModifiers1 Knob4 337
+print: smc8 Melody1 PerformanceModifiers1 Knob4 342
+print: smc8 Melody1 PerformanceModifiers1 Knob4 347
+print: smc8 Melody1 PerformanceModifiers1 Knob4 352
+print: smc8 Melody1 PerformanceModifiers1 Knob4 358
+print: smc8 Melody1 PerformanceModifiers1 Knob4 363
+print: smc8 Melody1 PerformanceModifiers1 Knob4 368
+print: smc8 Melody1 PerformanceModifiers1 Knob4 373
+print: smc8 Melody1 PerformanceModifiers1 Knob4 378
+print: smc8 Melody1 PerformanceModifiers1 Knob4 383
+print: smc8 Melody1 PerformanceModifiers1 Knob4 388
+print: smc8 Melody1 PerformanceModifiers1 Knob4 393
+print: smc8 Melody1 PerformanceModifiers1 Knob4 398
+print: smc8 Melody1 PerformanceModifiers1 Knob4 404
+print: smc8 Melody1 PerformanceModifiers1 Knob4 414
+print: smc8 Melody1 PerformanceModifiers1 Knob4 419
+print: smc8 Melody1 PerformanceModifiers1 Knob4 429
+print: smc8 Melody1 PerformanceModifiers1 Knob4 439
+print: smc8 Melody1 PerformanceModifiers1 Knob4 450
+print: smc8 Melody1 PerformanceModifiers1 Knob4 455
+print: smc8 Melody1 PerformanceModifiers1 Knob4 470
+print: smc8 Melody1 PerformanceModifiers1 Knob4 475
+print: smc8 Melody1 PerformanceModifiers1 Knob4 480
+print: smc8 Melody1 PerformanceModifiers1 Knob4 491
+print: smc8 Melody1 PerformanceModifiers1 Knob4 501
+print: smc8 Melody1 PerformanceModifiers1 Knob4 506
+print: smc8 Melody1 PerformanceModifiers1 Knob4 511
+print: smc8 Melody1 PerformanceModifiers1 Knob4 516
+print: smc8 Melody1 PerformanceModifiers1 Knob4 521
+print: smc8 Melody1 PerformanceModifiers1 Knob4 526
+print: smc8 Melody1 PerformanceModifiers1 Knob4 531
+print: smc8 Melody1 PerformanceModifiers1 Knob4 537
+print: smc8 Melody1 PerformanceModifiers1 Knob4 542
+print: smc8 Melody1 PerformanceModifiers1 Knob4 537
+print: smc8 Melody1 PerformanceModifiers1 Knob4 531
+print: smc8 Melody1 PerformanceModifiers1 Knob4 526
+print: smc8 Melody1 PerformanceModifiers1 Knob4 521
+print: smc8 Melody1 PerformanceModifiers1 Knob4 516
+print: smc8 Melody1 PerformanceModifiers1 Knob4 506
+print: smc8 Melody1 PerformanceModifiers1 Knob4 501
+print: smc8 Melody1 PerformanceModifiers1 Knob4 506
+print: smc8 Melody1 PerformanceModifiers1 Knob4 521
+print: smc8 Melody1 PerformanceModifiers1 Knob4 526
+print: smc8 Melody1 PerformanceModifiers1 Knob4 542
+print: smc8 Melody1 PerformanceModifiers1 Knob4 557
+print: smc8 Melody1 PerformanceModifiers1 Knob4 577
+print: smc8 Melody1 PerformanceModifiers1 Knob4 613
+print: smc8 Melody1 PerformanceModifiers1 Knob4 634
+print: smc8 Melody1 PerformanceModifiers1 Knob4 659
+print: smc8 Melody1 PerformanceModifiers1 Knob4 695
+print: smc8 Melody1 PerformanceModifiers1 Knob4 710
+print: smc8 Melody1 PerformanceModifiers1 Knob4 741
+print: smc8 Melody1 PerformanceModifiers1 Knob4 762
+print: smc8 Melody1 PerformanceModifiers1 Knob4 782
+print: smc8 Melody1 PerformanceModifiers1 Knob4 797
+print: smc8 Melody1 PerformanceModifiers1 Knob4 828
+print: smc8 Melody1 PerformanceModifiers1 Knob4 859
+print: smc8 Melody1 PerformanceModifiers1 Knob4 890
+print: smc8 Melody1 PerformanceModifiers1 Knob4 920
+print: smc8 Melody1 PerformanceModifiers1 Knob4 946
+print: smc8 Melody1 PerformanceModifiers1 Knob4 971
+print: smc8 Melody1 PerformanceModifiers1 Knob4 997
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1002
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1012
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1017
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1023
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1017
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1012
+print: smc8 Melody1 PerformanceModifiers1 Knob4 987
+print: smc8 Melody1 PerformanceModifiers1 Knob4 941
+print: smc8 Melody1 PerformanceModifiers1 Knob4 895
+print: smc8 Melody1 PerformanceModifiers1 Knob4 823
+print: smc8 Melody1 PerformanceModifiers1 Knob4 762
+print: smc8 Melody1 PerformanceModifiers1 Knob4 700
+print: smc8 Melody1 PerformanceModifiers1 Knob4 649
+print: smc8 Melody1 PerformanceModifiers1 Knob4 603
+print: smc8 Melody1 PerformanceModifiers1 Knob4 567
+print: smc8 Melody1 PerformanceModifiers1 Knob4 531
+print: smc8 Melody1 PerformanceModifiers1 Knob4 501
+print: smc8 Melody1 PerformanceModifiers1 Knob4 434
+print: smc8 Melody1 PerformanceModifiers1 Knob4 388
+print: smc8 Melody1 PerformanceModifiers1 Knob4 312
+print: smc8 Melody1 PerformanceModifiers1 Knob4 250
+print: smc8 Melody1 PerformanceModifiers1 Knob4 173
+print: smc8 Melody1 PerformanceModifiers1 Knob4 102
+print: smc8 Melody1 PerformanceModifiers1 Knob4 0
+print: smc8 Melody1 PerformanceModifiers1 Knob4 5
+print: smc8 Melody1 PerformanceModifiers1 Knob4 15
+print: smc8 Melody1 PerformanceModifiers1 Knob4 61
+print: smc8 Melody1 PerformanceModifiers1 Knob4 148
+print: smc8 Melody1 PerformanceModifiers1 Knob4 286
+print: smc8 Melody1 PerformanceModifiers1 Knob4 542
+print: smc8 Melody1 PerformanceModifiers1 Knob4 705
+print: smc8 Melody1 PerformanceModifiers1 Knob4 884
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1012
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1023
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1017
+print: smc8 Melody1 PerformanceModifiers1 Knob4 1007
+print: smc8 Melody1 PerformanceModifiers1 Knob4 997
+print: smc8 Melody1 PerformanceModifiers1 Knob4 966
+print: smc8 Melody1 PerformanceModifiers1 Knob4 910
+print: smc8 Melody1 PerformanceModifiers1 Knob4 710
+print: smc8 Melody1 PerformanceModifiers1 Knob4 526
+print: smc8 Melody1 PerformanceModifiers1 Knob4 250
+print: smc8 Melody1 PerformanceModifiers1 Knob4 143
+print: smc8 Melody1 PerformanceModifiers1 Knob4 5
+print: smc8 Melody1 PerformanceModifiers1 Knob4 0
+print: smc8 Melody1 PerformanceModifiers1 Knob4 5
+print: smc8 Melody1 PerformanceModifiers1 Knob4 15
+print: smc8 Melody1 PerformanceModifiers1 Knob4 25
+print: smc8 Melody1 PerformanceModifiers1 Knob4 30
+print: smc8 Melody1 PerformanceModifiers1 Knob4 40
+print: smc8 Melody1 PerformanceModifiers1 Knob4 51
+print: smc8 Melody1 PerformanceModifiers1 Knob4 61
+print: smc8 Melody1 PerformanceModifiers1 Knob4 76
+print: smc8 Melody1 PerformanceModifiers1 Knob4 102
+print: smc8 Melody1 PerformanceModifiers1 Knob4 132
+print: smc8 Melody1 PerformanceModifiers1 Knob4 173
+print: smc8 Melody1 PerformanceModifiers1 Knob4 199
+print: smc8 Melody1 PerformanceModifiers1 Knob4 214
+print: smc8 Melody1 PerformanceModifiers1 Knob4 219
+print: smc8 Melody1 PerformanceModifiers1 Knob4 225
+print: smc8 Melody1 PerformanceModifiers1 Knob4 230
+print: smc8 Melody1 PerformanceModifiers1 Knob4 235
+print: smc8 Melody1 PerformanceModifiers1 Knob4 240
+print: smc8 Melody1 PerformanceModifiers1 Knob4 245
+print: smc8 Melody1 PerformanceModifiers1 Knob4 250
+print: smc8 Melody1 PerformanceModifiers1 Knob4 265
+print: smc8 Melody1 PerformanceModifiers1 Knob4 271
+print: smc8 Melody1 PerformanceModifiers1 Knob4 281
+print: smc8 Melody1 PerformanceModifiers1 Knob4 291
+print: smc8 Melody1 PerformanceModifiers1 Knob4 301
+print: smc8 Melody1 PerformanceModifiers1 Knob4 312
+print: smc8 Melody1 PerformanceModifiers1 Knob4 322
+print: smc8 Melody1 PerformanceModifiers1 Knob4 327
+print: smc8 Melody1 PerformanceModifiers1 Knob4 342
+print: smc8 Melody1 PerformanceModifiers1 Knob4 352
+print: smc8 Melody1 PerformanceModifiers1 Knob4 373
+print: smc8 Melody1 PerformanceModifiers1 Knob4 388
+print: smc8 Melody1 PerformanceModifiers1 Knob4 398
+print: smc8 Melody1 PerformanceModifiers1 Knob4 409
+print: smc8 Melody1 PerformanceModifiers1 Knob4 429
+print: smc8 Melody1 PerformanceModifiers1 Knob4 439
+print: smc8 Melody1 PerformanceModifiers1 Knob4 450
+print: smc8 Melody1 PerformanceModifiers1 Knob4 455
+print: smc8 Melody1 PerformanceModifiers1 Knob4 465
+print: smc8 Melody1 PerformanceModifiers1 Knob4 470
+print: smc8 Melody1 PerformanceModifiers1 Knob4 475
+print: smc8 Melody1 PerformanceModifiers1 Knob4 480
+print: smc8 Melody1 PerformanceModifiers1 Knob4 491
+print: smc8 Melody1 PerformanceModifiers1 Knob4 496
+print: smc8 Melody1 PerformanceModifiers1 Knob4 511
+print: smc8 Melody1 PerformanceModifiers1 Knob4 526
+print: smc8 Melody1 PerformanceModifiers1 Knob4 537
+print: smc8 Melody1 PerformanceModifiers1 Knob4 547
+print: smc8 Melody1 PerformanceModifiers1 Knob4 552
+print: smc8 Melody1 PerformanceModifiers1 Knob4 567
+print: smc8 Melody1 PerformanceModifiers1 Knob4 583
+print: smc8 Melody1 PerformanceModifiers1 Knob4 588
+print: smc8 Melody1 PerformanceModifiers1 Knob4 598
+print: smc8 Melody1 PerformanceModifiers1 Knob4 603
+print: smc8 Melody1 PerformanceModifiers1 Knob4 608
+print: smc8 Melody1 PerformanceModifiers1 Knob4 613
+print: smc8 Melody1 PerformanceModifiers1 Knob4 618
+print: smc8 Console0 Broadcast0 Knob0 753
+print: smc8 Console0 Broadcast0 Knob0 671
+print: smc8 Console0 Broadcast0 Knob0 594
+print: smc8 Console0 Broadcast0 Knob0 497
+print: smc8 Console0 Broadcast0 Knob0 400
+print: smc8 Console0 Broadcast0 Knob0 338
+print: smc8 Console0 Broadcast0 Knob0 313
+print: smc8 Console0 Broadcast0 Knob0 297
+print: smc8 Console0 Broadcast0 Knob0 287
+print: smc8 Console0 Broadcast0 Knob0 282
+print: smc8 Console0 Broadcast0 Knob0 277
+print: smc8 Console0 Broadcast0 Knob0 262
+print: smc8 Console0 Broadcast0 Knob0 256
+print: smc8 Console0 Broadcast0 Knob0 241
+print: smc8 Console0 Broadcast0 Knob0 221
+print: smc8 Console0 Broadcast0 Knob0 210
+print: smc8 Console0 Broadcast0 Knob0 200
+print: smc8 Console0 Broadcast0 Knob0 185
+print: smc8 Console0 Broadcast0 Knob0 180
+print: smc8 Console0 Broadcast0 Knob0 175
+print: smc8 Console0 Broadcast0 Knob0 180
+print: smc8 Console0 Broadcast0 Knob0 195
+print: smc8 Console0 Broadcast0 Knob0 221
+print: smc8 Console0 Broadcast0 Knob0 251
+print: smc8 Console0 Broadcast0 Knob0 292
+print: smc8 Console0 Broadcast0 Knob0 343
+print: smc8 Console0 Broadcast0 Knob0 405
+print: smc8 Console0 Broadcast0 Knob0 487
+print: smc8 Console0 Broadcast0 Knob0 558
+print: smc8 Console0 Broadcast0 Knob0 589
+print: smc8 Console0 Broadcast0 Knob0 609
+print: smc8 Console0 Broadcast0 Knob0 620
+print: smc8 Console0 Broadcast0 Knob0 625
+print: smc8 Console0 Broadcast0 Knob0 630
+print: smc8 Console0 Broadcast0 Knob0 635
+print: smc8 Console0 Broadcast0 Knob0 645
+print: smc8 Console0 Broadcast0 Knob0 660
+print: smc8 Console0 Broadcast0 Knob0 676
+print: smc8 Console0 Broadcast0 Knob0 701
+print: smc8 Console0 Broadcast0 Knob0 717
+print: smc8 Console0 Broadcast0 Knob0 742
+print: smc8 Console0 Broadcast0 Knob0 763
+print: smc8 Console0 Broadcast0 Knob0 778
+print: smc8 Console0 Broadcast0 Knob0 799
+print: smc8 Console0 Broadcast0 Knob0 809
+print: smc8 Console0 Broadcast0 Knob0 819
+print: smc8 Console0 Broadcast0 Knob0 824
+print: smc8 Console0 Broadcast0 Knob0 834
+print: smc8 Console0 Broadcast0 Knob0 840
+print: smc8 Console0 Broadcast0 Knob0 845
+print: smc8 Console0 Broadcast0 Knob0 850
+print: smc8 Console0 Broadcast0 Knob0 855
+print: smc8 Console0 Broadcast0 Knob0 860
+print: smc8 Console0 Broadcast0 Knob0 865
+print: smc8 Console0 Broadcast0 Knob1 1017
+print: smc8 Console0 Broadcast0 Knob1 982
+print: smc8 Console0 Broadcast0 Knob1 828
+print: smc8 Console0 Broadcast0 Knob1 757
+print: smc8 Console0 Broadcast0 Knob1 716
+print: smc8 Console0 Broadcast0 Knob1 659
+print: smc8 Console0 Broadcast0 Knob1 629
+print: smc8 Console0 Broadcast0 Knob1 603
+print: smc8 Console0 Broadcast0 Knob1 588
+print: smc8 Console0 Broadcast0 Knob1 572
+print: smc8 Console0 Broadcast0 Knob1 562
+print: smc8 Console0 Broadcast0 Knob1 552
+print: smc8 Console0 Broadcast0 Knob1 547
+print: smc8 Console0 Broadcast0 Knob1 542
+print: smc8 Console0 Broadcast0 Knob1 537
+print: smc8 Console0 Broadcast0 Knob1 531
+print: smc8 Console0 Broadcast0 Knob1 521
+print: smc8 Console0 Broadcast0 Knob1 496
+print: smc8 Console0 Broadcast0 Knob1 465
+print: smc8 Console0 Broadcast0 Knob1 424
+print: smc8 Console0 Broadcast0 Knob1 398
+print: smc8 Console0 Broadcast0 Knob1 352
+print: smc8 Console0 Broadcast0 Knob1 337
+print: smc8 Console0 Broadcast0 Knob1 327
+print: smc8 Console0 Broadcast0 Knob2 5
+print: smc8 Console0 Broadcast0 Knob2 20
+print: smc8 Console0 Broadcast0 Knob2 71
+print: smc8 Console0 Broadcast0 Knob2 107
+print: smc8 Console0 Broadcast0 Knob2 138
+print: smc8 Console0 Broadcast0 Knob2 163
+print: smc8 Console0 Broadcast0 Knob2 184
+print: smc8 Console0 Broadcast0 Knob2 199
+print: smc8 Console0 Broadcast0 Knob2 204
+print: smc8 Console0 Broadcast0 Knob2 214
+print: smc8 Console0 Broadcast0 Knob2 230
+print: smc8 Console0 Broadcast0 Knob2 240
+print: smc8 Console0 Broadcast0 Knob2 255
+print: smc8 Console0 Broadcast0 Knob2 271
+print: smc8 Console0 Broadcast0 Knob2 296
+print: smc8 Console0 Broadcast0 Knob2 373
+print: smc8 Console0 Broadcast0 Knob2 450
+print: smc8 Console0 Broadcast0 Knob2 496
+print: smc8 Console0 Broadcast0 Knob2 577
+print: smc8 Console0 Broadcast0 Knob2 624
+print: smc8 Console0 Broadcast0 Knob2 659
+print: smc8 Console0 Broadcast0 Knob2 685
+print: smc8 Console0 Broadcast0 Knob2 721
+print: smc8 Console0 Broadcast0 Knob2 746
+print: smc8 Console0 Broadcast0 Knob2 762
+print: smc8 Console0 Broadcast0 Knob2 782
+print: smc8 Console0 Broadcast0 Knob2 792
+print: smc8 Console0 Broadcast0 Knob2 803
+print: smc8 Melody1 SoundModifiers1 Toggle2 0
+print: smc8 Melody1 SoundModifiers1 Knob0 1023
+print: smc8 Melody1 SoundModifiers1 Knob0 682
+print: smc8 Melody1 SoundModifiers1 Knob0 341
+print: smc8 Melody1 SoundModifiers1 Knob2 897
+print: smc8 Melody1 SoundModifiers1 Knob2 867
+print: smc8 Melody1 SoundModifiers1 Knob2 820
+print: smc8 Melody1 SoundModifiers1 Knob2 790
+print: smc8 Melody1 SoundModifiers1 Knob2 759
+print: smc8 Melody1 SoundModifiers1 Knob2 739
+print: smc8 Melody1 SoundModifiers1 Knob2 734
+print: smc8 Melody1 SoundModifiers1 Knob2 728
+print: smc8 Melody1 SoundModifiers1 Knob2 734
+print: smc8 Melody1 SoundModifiers1 Knob2 744
+print: smc8 Melody1 SoundModifiers1 Knob2 754
+print: smc8 Melody1 SoundModifiers1 Knob2 790
+print: smc8 Melody1 SoundModifiers1 Knob2 831
+print: smc8 Melody1 SoundModifiers1 Knob2 872
+print: smc8 Melody1 SoundModifiers1 Knob2 948
+print: smc8 Melody1 SoundModifiers1 Knob2 984
+print: smc8 Melody1 SoundModifiers1 Knob2 1015
+print: smc8 Melody1 SoundModifiers1 Knob2 1023
+print: smc8 Console0 Broadcast0 Knob0 870
+print: smc8 Console0 Broadcast0 Knob0 916
+print: smc8 Console0 Broadcast0 Knob0 983
+print: smc8 Console0 Broadcast0 Knob0 1023
+print: smc8 Melody1 Sequencer1 Slider1 170
+print: smc8 Melody1 Sequencer1 Slider1 255
+print: smc8 Melody1 Sequencer1 Slider1 341
+print: smc8 Melody1 Sequencer1 Slider1 511
+print: smc8 Melody1 Sequencer1 Slider1 596
+print: smc8 Melody1 Sequencer1 Slider1 682
+print: smc8 Melody1 Sequencer1 Slider1 767
+print: smc8 Melody1 Sequencer1 Slider0 0
+print: smc8 Melody1 Sequencer1 Slider0 85
+print: smc8 Melody1 Sequencer1 Slider0 170
+print: smc8 Melody1 Sequencer1 Slider0 255
+print: smc8 Melody1 Sequencer1 Slider0 426
+print: smc8 Melody1 Sequencer1 Slider0 511
+print: smc8 Melody1 Sequencer1 Slider0 596
+print: smc8 Melody1 Sequencer1 Slider0 682
+print: smc8 Melody1 Sequencer1 Slider1 767
+print: smc8 Melody1 Sequencer1 Slider1 682
+print: smc8 Melody1 Sequencer1 Slider1 596
+print: smc8 Melody1 Sequencer1 Slider1 511
+print: smc8 Melody1 Sequencer1 Slider2 341
+print: smc8 Melody1 Sequencer1 Slider2 426
+print: smc8 Melody1 Sequencer1 Slider2 511
+print: smc8 Melody1 Sequencer1 Slider2 596
+print: smc8 Melody1 Sequencer1 Slider2 682
+print: smc8 Melody1 Sequencer1 Slider2 767
+print: smc8 Melody1 Sequencer1 Slider2 682
+print: smc8 Melody1 Sequencer1 Slider4 341
+print: smc8 Melody1 Sequencer1 Slider4 426
+print: smc8 Melody1 SoundModifiers1 Knob0 341
+print: smc8 Melody1 SoundModifiers1 Knob0 0
+print: smc8 Melody1 Sequencer1 Slider7 341
+print: smc8 Melody1 Sequencer1 Slider7 426
+print: smc8 Melody1 Sequencer1 Slider7 511
+print: smc8 Console0 Broadcast0 Knob1 286
+print: smc8 Console0 Broadcast0 Knob1 306
+print: smc8 Console0 Broadcast0 Knob1 496
+print: smc8 Console0 Broadcast0 Knob1 623
+print: smc8 Console0 Broadcast0 Knob1 910
+print: smc8 Console0 Broadcast0 Knob1 1022
+print: smc8 Console0 Broadcast0 Knob1 1023
+print: smc8 Melody1 SoundModifiers1 Toggle2 1
+print: smc8 Melody1 SoundModifiers1 Toggle2 0
+print: smc8 Melody1 SoundModifiers1 Toggle3 1
+print: smc8 Melody1 SoundModifiers1 Toggle3 0
+print: smc8 Melody1 SoundModifiers1 Toggle0 1
+print: smc8 Melody1 PerformanceModifiers1 Knob1 186
+print: smc8 Melody1 PerformanceModifiers1 Knob1 279
+print: smc8 Melody1 PerformanceModifiers1 Knob1 372
+print: smc8 Melody1 PerformanceModifiers1 Knob1 279
+print: smc8 Melody1 PerformanceModifiers1 Knob1 372
+print: smc8 Melody1 PerformanceModifiers1 Knob1 465
+print: smc8 Melody1 PerformanceModifiers1 Knob1 558
+print: smc8 Melody1 PerformanceModifiers1 Knob1 651
+print: smc8 Melody1 PerformanceModifiers1 Knob1 744
+print: smc8 Melody1 PerformanceModifiers1 Knob1 837
+print: smc8 Melody1 PerformanceModifiers1 Knob1 744
+print: smc8 Melody1 PerformanceModifiers1 Knob1 837
+print: smc8 Melody1 PerformanceModifiers1 Knob1 930
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 506
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 481
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 435
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 399
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 363
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 327
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 312
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 302
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 297
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 292
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 286
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 281
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 276
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 271
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 261
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 251
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 235
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 225
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 215
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 210
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 199
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 194
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 189
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 184
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 179
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 174
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 164
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 143
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 138
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 118
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 87
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 61
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 46
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 31
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 20
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 10
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 5
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 0
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 5
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 0
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 5
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 0
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 5
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 10
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 15
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 20
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 25
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 30
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 35
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 40
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 46
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 51
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 56
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 61
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 66
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 61
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 56
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 51
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 46
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 40
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 35
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 30
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 57
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 62
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 83
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 108
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 144
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 190
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 221
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 267
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 293
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 313
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 318
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 328
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 339
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 354
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 364
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 374
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 390
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 395
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 400
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 405
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 410
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 415
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 420
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 426
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 431
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 436
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 441
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 446
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 451
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 456
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 461
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 466
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 472
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 477
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 482
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 487
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 492
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 497
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 502
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 507
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 513
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 518
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 523
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 528
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 533
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 538
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 543
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 553
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 559
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 564
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 574
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 579
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 594
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 599
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 605
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 610
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 615
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 620
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 625
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 635
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 646
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 651
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 656
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 661
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 666
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 676
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 681
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 686
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 702
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 717
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 727
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 738
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 748
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 758
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 763
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 768
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 773
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 779
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 784
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 789
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 794
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 799
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 804
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 809
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 814
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 819
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 825
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 830
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 835
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 840
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 845
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 850
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 855
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 860
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 865
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 871
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 876
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 881
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 891
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 896
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 901
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 912
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 917
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 927
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 932
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 937
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 942
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 947
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 952
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 958
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 963
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 968
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 973
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 978
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 988
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 998
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 1009
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 1014
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 1019
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 1023
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 1017
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 1012
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 1007
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 992
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 976
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 956
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 936
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 915
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 884
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 869
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 849
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 833
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 828
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 813
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 808
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 797
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 792
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 787
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 782
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 777
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 772
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 767
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 762
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 751
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 746
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 741
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 731
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 710
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 700
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 690
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 675
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 664
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 649
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 639
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 629
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 618
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 608
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 593
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 577
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 562
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 531
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 511
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 491
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 460
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 445
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 424
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 409
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 393
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 383
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 378
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 368
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 358
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 347
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 342
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 332
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 322
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 317
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 301
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 291
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 286
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 271
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 255
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 245
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 235
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 230
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 219
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 214
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 209
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 204
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 199
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 194
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 189
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 184
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 179
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 173
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 168
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 163
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 158
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 153
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 148
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 143
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 138
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 132
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 127
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 122
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 117
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 112
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 107
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 102
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 97
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 92
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 86
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 81
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 76
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 71
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 66
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 61
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 56
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 61
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 66
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 71
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 81
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 86
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 92
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 97
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 102
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 107
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 117
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 132
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 148
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 153
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 168
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 173
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 184
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 189
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 199
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 209
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 214
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 219
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 230
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 235
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 240
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 250
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 255
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 265
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 271
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 260
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 255
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 245
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 235
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 225
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 204
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 189
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 163
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 148
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 132
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 117
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 107
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 86
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 76
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 56
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 46
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 35
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 25
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 20
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 15
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 10
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 5
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 0
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 5
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 10
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 15
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 25
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 40
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 56
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 71
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 81
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 92
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 102
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 112
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 117
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 122
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 127
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 132
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 138
+print: smc8 Melody1 SoundModifiers1 Knob0 0
+print: smc8 Melody1 SoundModifiers1 Knob0 341
+resetting controllers
+print: smc8 Melody1 PerformanceModifiers1 Knob0 341
+print: smc8 Melody1 PerformanceModifiers1 Knob1 0
+error: stack overflow
+print: smc8 Melody1 PerformanceModifiers1 Knob2 512
+print: smc8 Melody1 PerformanceModifiers1 Knob3 511
+print: smc8 Melody1 PerformanceModifiers1 Knob4 512
+print: smc8 Melody1 Sequencer1 Slider0 0
+print: smc8 Melody1 Sequencer1 Slider1 0
+print: smc8 Melody1 Sequencer1 Slider2 0
+print: smc8 Melody1 Sequencer1 Slider3 0
+print: smc8 Melody1 Sequencer1 Slider4 0
+print: smc8 Melody1 Sequencer1 Slider5 0
+print: smc8 Melody1 Sequencer1 Slider6 0
+print: smc8 Melody1 Sequencer1 Slider7 0
+print: smc8 Melody1 SoundModifiers1 Knob0 0
+print: smc8 Melody1 SoundModifiers1 Knob1 0
+print: smc8 Melody1 SoundModifiers1 Knob2 512
+print: smc8 Melody1 SoundModifiers1 Toggle0 0
+print: smc8 Melody1 SoundModifiers1 Toggle1 0
+print: smc8 Melody1 SoundModifiers1 Toggle2 0
+print: smc8 Melody1 SoundModifiers1 Toggle3 0
+print: smc8 Console0 Broadcast0 Knob0 512
+print: smc8 Console0 Broadcast0 Knob1 512
+print: smc8 Console0 Broadcast0 Knob2 0
+setting broadcast: Off

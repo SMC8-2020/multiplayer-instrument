@@ -1,3 +1,4 @@
+import org.puredata.processing.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Arrays;
@@ -6,18 +7,22 @@ import controlP5.*;
 import oscP5.*;
 import netP5.*;
 
-final boolean DEBUG = true;
+final boolean DEBUG       = true;
+final boolean NETWORK     = false;
 final boolean SECTIONLOCK = false;
 
-//final String HOST = "192.168.1.44";
-final String HOST = "192.168.1.81";
-//final String HOST = "127.0.0.1";
-final int    PORT = 11000;
+
 
 final int ZINWALDBROWN = color(43, 0, 0);
 final int BURLYWOOD    = color(158, 131, 96);
 final int PLATINUM     = color(229, 234, 218);
 final int ONYX         = color(0, 26, 13);
+
+
+
+String HOST;
+String DEFAULTHOST = "127.0.0.1";
+final int    PORT  = 11000;
 
 InstrumentModel model;
 ControllerHandler handler;
@@ -26,51 +31,53 @@ InstrumentSectionView view;
 void setup() 
 {
   size(1020, 595);
-  //size(1200, 700);
-  //size(600, 600);
   //pixelDensity(2);
 
   // SETUP CP5 
   ControlP5 cp5 = new ControlP5(this);
-  //setFont(cp5);
   setColor(cp5);
 
-  // SETUP OSCP5
-  OscP5 oscP5 = new OscP5(this, 12000);
-  NetAddress remoteLocation = new NetAddress(HOST, PORT);
+  // SETUP MODEL
+  if (NETWORK) {
+    setupNetwork();
+  } else {
+    try {
+      setupPd();
+    } catch (Exception e) {
+      e.printStackTrace();
+      setupNetwork();
+    }
+  }
 
   // SETUP VIRTUAL INSTRUMENT
-  model   = new InstrumentModel(oscP5, remoteLocation);
   handler = new ControllerHandler();
   view    = new InstrumentSectionView(cp5);
-  
+
   model.setView(view);
   handler.setModel(model);
   view.setHandler(handler);
-  
+
   model.initView();
 }
 
 void draw() 
 {
   background(ZINWALDBROWN);
-  //handler.updateContinousEvents();
 }
 
-public void setFont(ControlP5 cp5) {
-  String fontName = "";
-  String os = System.getProperty("os.name");
-  if (os.contains("Windows")) {
-    fontName = "Verdana";
-  } else if (os.contains("Mac")) {
-    fontName = "AndaleMono";
-  }
+public void setupNetwork() {
+  OscP5 oscP5 = new OscP5(this, 12000);
+  HOST = oscP5.ip();
+  NetAddress remoteLocation = new NetAddress(HOST, PORT);
+  model = new InstrumentModel(oscP5, remoteLocation);
+}
 
-  if (!fontName.equals("")) {
-    PFont p = createFont(fontName, 9);
-    ControlFont cf = new ControlFont(p, 9);
-    cp5.setFont(cf);
-  }
+public void setupPd() {
+  PureDataProcessing pd = new PureDataProcessing(this, 44100, 0, 2);
+  pd.openPatch("puredata/instrument.pd");
+  pd.start();
+  String recv = "controlmsg";
+  model = new InstrumentModel(pd, recv);
 }
 
 public void setColor(ControlP5 cp5) {
@@ -80,4 +87,8 @@ public void setColor(ControlP5 cp5) {
   col.setActive(PLATINUM);
   col.setCaptionLabel(ONYX);
   cp5.setColor(col);
+}
+
+void pdPrint(String s) {
+  if (DEBUG) println(s);
 }
