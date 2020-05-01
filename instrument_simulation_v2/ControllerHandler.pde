@@ -1,22 +1,39 @@
 public class ControllerHandler {
-  
-  private final int LDRVALUE = 1;
+
   private final int RNGVALUE = 1;
-  
+
   private InstrumentModel model;
-  
+
   private int prevBroadcastValue = -1;
   private Controller prevBroadcastController;
-  
-  private Button currentLdr;
-  private int ldrCount = 0;
-  
+
+  private String prevSection;
+  private boolean setSectionLock = false;
+
+  private Map<String, ControllerList> callbackControllerMap;
+
   public ControllerHandler() {
     prevBroadcastController = null;
+    this.callbackControllerMap = new 
+      HashMap<String, ControllerList>();
   }
 
   public void setModel(InstrumentModel model) {
     this.model = model;
+    this.prevSection = model.MELODYTAG;
+  }
+
+  public void addControllerToCallbackMap(String callback, Controller ctr) {
+    ControllerList li = null;
+    if (!callbackControllerMap.containsKey(callback)) {
+      li = new ControllerList();
+      li.add(ctr);
+      callbackControllerMap.put(callback, li);
+      return;
+    }
+
+    li = callbackControllerMap.get(callback);
+    li.add(ctr);
   }
 
   public void broadcast(ControlEvent event) {
@@ -34,6 +51,41 @@ public class ControllerHandler {
     }
   }
 
+  public void setSection(ControlEvent event) {
+    if (setSectionLock) {
+      return;
+    }
+
+    setSectionLock = true;
+    Toggle ctr = (Toggle)event.getController();
+    String name = ctr.getName();
+    int idx = Integer.parseInt(""+name.charAt(name.length() - 1));
+    
+    String currentSection = model.sectionTags[idx];
+    
+    if (prevSection.equals(currentSection)) {
+      ctr.toggle();
+      setSectionLock = false;
+      return;
+    }
+    
+    model.setSection(currentSection);
+    prevSection = currentSection;
+    
+    ControllerList li 
+      = callbackControllerMap.get("setSection");
+
+    for (ControllerInterface<?> c : li.get()) {
+      Toggle t = (Toggle)c;
+      if (!t.equals(ctr)) {
+        if (t.getBooleanValue())
+          t.toggle();
+      }
+    }
+    
+    setSectionLock = false;
+  }
+
   public void setBroadcast(ControlEvent event) {
     Toggle t = (Toggle) event.getController();
     model.setBroadcast(t.getBooleanValue());
@@ -46,31 +98,15 @@ public class ControllerHandler {
   } 
 
   public void ldrActivated(ControlEvent event) {
-    //println("activated an LDR");
-    //currentLdr = (Toggle)event.getController();
     Toggle t = (Toggle)event.getController();
     model.broadcastOsc(t.getName(), (int)t.getValue());
   }
-  
+
   public void rng(ControlEvent event) {
     println("randomizing a beat!");
     model.broadcastOsc(event.getController().getName(), RNGVALUE);
   }
-  
+
   public void updateContinousEvents() {
-    
-    if (currentLdr != null) {
-      if (currentLdr.getBooleanValue()) {
-        println("ping" + ldrCount);
-        ldrCount++;
-      } else {
-        println("released LDR");
-        currentLdr = null;
-        ldrCount = 0;
-      }
-     
-    }
-    
   }
-  
 }

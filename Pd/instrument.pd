@@ -41,7 +41,7 @@
 #X obj 458 149 route Knob1;
 #X obj 529 733 mod 8;
 #X obj 529 791 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
+-1 -1 0;
 #X text 500 458 BPM;
 #X obj 458 456 nbx 3 20 0 400 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 130 256;
@@ -343,7 +343,7 @@
 #X connect 13 0 4 0;
 #X restore 482 406 pd master_volume;
 #X obj 482 441 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
--1 -1 4817 1;
+-1 -1 7548 1;
 #X msg 482 587 \$1 100;
 #X obj 482 619 line~;
 #X text 425 443 Volume;
