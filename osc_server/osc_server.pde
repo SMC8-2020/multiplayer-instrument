@@ -185,11 +185,8 @@ private void disconnect(String ip) {
 
 
 
-
-
-
 void keyPressed() {
-  if (key=='R' ) {
+  if (key=='R' || key=='r') {
     recorder.startNewRecording();
   }
 }
