@@ -9,7 +9,8 @@ import netP5.*;
 
 final boolean LOG         = false;
 final boolean DEBUG       = true;
-final boolean NETWORK     = false;     
+final boolean NETWORK     = false;
+final boolean RENDERX2    = false;
 final boolean SECTIONLOCK = false;
 
 
@@ -22,18 +23,23 @@ final int ONYX         = color(0, 26, 13);
 
 
 String HOST;
-String DEFAULTHOST = "127.0.0.1";
-final int    PORT  = 11000;
+final String DEFAULTHOST = "127.0.0.1";
+final int    PORT        = 11000;
 
 InstrumentModel model;
 ControllerHandler handler;
 InstrumentSectionView view;
 
+PureDataProcessing pd = null;
+
 void setup() 
 {
   size(1020, 595);
-  //pixelDensity(2);
-
+  
+  if (RENDERX2) {
+    pixelDensity(2);
+  }
+ 
   // SETUP CP5 
   ControlP5 cp5 = new ControlP5(this);
   setColor(cp5);
@@ -59,6 +65,8 @@ void setup()
   view.setHandler(handler);
 
   model.initView();
+  
+  prepareExitHandler();
 }
 
 void draw() 
@@ -74,9 +82,8 @@ public void setupNetwork() {
 }
 
 public void setupPd() {
-  PureDataProcessing pd = new PureDataProcessing(this, 44100, 0, 2);
+  pd = new PureDataProcessing(this, 44100, 0, 2);
   pd.openPatch("puredata/instrument.pd");
-  pd.start();
   String recv = "controlmsg";
   model = new InstrumentModel(pd, recv);
 }
@@ -92,4 +99,19 @@ public void setColor(ControlP5 cp5) {
 
 void pdPrint(String s) {
   if (DEBUG) println(s);
+}
+
+void prepareExitHandler() {
+  Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+    public void run() {
+      System.out.println("Shutting down application " + this);
+      if (model != null) {
+        model.saveRecordToServer();
+      }
+      if (pd != null) {
+        pd.stop();
+      }
+      stop();
+    }
+  }));
 }

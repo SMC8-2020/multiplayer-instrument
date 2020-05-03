@@ -38,7 +38,7 @@ public class OSCRecorder {
     }
   }
 
-  void record(OscMessage m) {
+  public void record(OscMessage m) {
 
     int currTimestamp = millis();
 
@@ -116,7 +116,7 @@ public class OSCRecorder {
       );
   }
 
-  void startNewRecording() {
+  public void startNewRecording() {
 
     prevTimestap = -inactivity;
     

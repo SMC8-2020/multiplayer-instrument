@@ -114,24 +114,32 @@ public class InstrumentModel {
   public void broadcastOsc(String addr, int...values) {
     broadcastHandler.broadcast(addr, values);
   }
+
+  public void saveRecordToServer() {
+    if (LOG) {
+      broadcastHandler.saveRecordToServer();
+    }
+  }
 }
 
 public abstract class InstrumentBroadcastHandler {
 
   protected final String BASEURL = "/smc8";
   protected OscMessage broadcastRoute;
-  protected boolean isBroadcastable = false;
+  protected boolean isBroadcastable = true;
   protected int formatDepth = 2;
 
   final int timeOut = 60000;
   protected OSCRecorder recorder;
+
+  protected Map<String, int[]> unsentBuffer = null;
 
   public InstrumentBroadcastHandler() {
     this.recorder = new OSCRecorder(timeOut);
   }
 
   public abstract void broadcast(String addr, int...values);
-
+  
   protected String formatAddr(String addr) {
     String newAddr = BASEURL;
     String[] tokens = addr.split("/");
@@ -160,8 +168,56 @@ public abstract class InstrumentBroadcastHandler {
     return str;
   } 
 
+  protected void assignLastUnsent(String addr, int...values) {
+    if (unsentBuffer == null) {
+      unsentBuffer = new HashMap<String, int[]>();
+    }
+    unsentBuffer.put(addr, values);
+  }
+
+  protected boolean createOscMessage(String addr, int...values) {
+
+    if (!isBroadcastable) {
+      assignLastUnsent(addr, values);
+      if (DEBUG) println("broadcast is disabled");
+      return false;
+    }
+
+    String oscAddr = formatAddr(addr);
+    broadcastRoute = new OscMessage(oscAddr);
+    assignValues(broadcastRoute, values);
+    return true;
+  }
+  
+  protected void onBroadcastOn() {
+    if (unsentBuffer == null) {
+      return;
+    }
+    
+    for (Map.Entry<String, int[]> entry : unsentBuffer.entrySet()) {
+      broadcast(entry.getKey(), entry.getValue());
+    }
+    
+    unsentBuffer.clear();
+    unsentBuffer = null;
+  }
+  
+  protected void onBroadcastOff() {
+  }
+  
   public void setBroadcast(boolean toggle) {
     isBroadcastable = toggle;
+    
+    if (toggle) {
+      onBroadcastOn();
+    } else {
+      onBroadcastOff();
+    }
+    
+  }
+
+  public void saveRecordToServer() {
+    recorder.startNewRecording();
   }
 }
 
@@ -178,14 +234,9 @@ public class InstrumentOscHandler extends InstrumentBroadcastHandler {
 
   @Override public void broadcast(String addr, int...values) {
 
-    if (!isBroadcastable) {
-      if (DEBUG) println("broadcast is disabled");
+    if (!createOscMessage(addr, values)) {
       return;
     }
-
-    String oscAddr = formatAddr(addr);
-    broadcastRoute = new OscMessage(oscAddr);
-    assignValues(broadcastRoute, values);
 
     if (DEBUG) {
       String dbg = String.format("%s   %s   %s", 
@@ -199,6 +250,7 @@ public class InstrumentOscHandler extends InstrumentBroadcastHandler {
     if (LOG) {
       recorder.record(broadcastRoute);
     }
+    
     osc.send(broadcastRoute, remoteLocation);
   }
 }
@@ -207,33 +259,53 @@ public class InstrumentPdHandler extends InstrumentBroadcastHandler {
 
   private String recv;
   private PureDataProcessing pd;
-
+  
+  private boolean isDsp;
+  
   public InstrumentPdHandler(PureDataProcessing pd, final String recv) {
     super();
     this.pd = pd;
     this.recv = recv;
+    this.isDsp = true;
+    this.pd.start();
   }
 
-  @Override public void broadcast(String addr, int...values) {
-
-    if (!isBroadcastable) {
-      if (DEBUG) println("broadcast is disabled");
-      return;
-    }
-
-    String oscAddr = formatAddr(addr);
-    broadcastRoute = new OscMessage(oscAddr);
-    assignValues(broadcastRoute, values);
-
-    byte[] oscbytes = broadcastRoute.getBytes();
+  private Object[] b2f(OscMessage msg) {
+    byte[] oscbytes = msg.getBytes();
     Object[] oscfloats = new Object[oscbytes.length];
     for (int i = 0; i < oscfloats.length; i++) {
       oscfloats[i] = (float)oscbytes[i];
     }
-
+    return oscfloats;
+  }
+  
+  @Override protected void onBroadcastOn() {
+    super.onBroadcastOn();
+    if (!isDsp) {
+      pd.start();
+      isDsp = !isDsp;
+    }
+  }
+  
+  @Override protected void onBroadcastOff() {
+    super.onBroadcastOff();
+    if (isDsp) {
+      pd.stop();
+      isDsp = !isDsp;
+    }
+  }
+  
+  @Override public void broadcast(String addr, int...values) {
+    
+    if (!createOscMessage(addr, values)) {
+      return;
+    }
+    
     if (LOG) {
       recorder.record(broadcastRoute);
     }
+
+    Object[] oscfloats = b2f(broadcastRoute);
     pd.sendList(recv, oscfloats);
   }
 }

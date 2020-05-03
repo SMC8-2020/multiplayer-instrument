@@ -5,13 +5,13 @@ public interface InstrumentViewInterface {
   static final String BUTTONTAG = "Button";
   static final String TOGGLETAG = "Toggle";
 
-  static final String RECTALGO = "RectFill";
+  static final String RECTALGO   = "RectFill";
   static final String SQUAREALGO = "SquareFill";
 
   static final HashMap<String, Class> CONTROLMAP = new HashMap<String, Class>() {
     {
       put(SLIDERTAG, ISlider.class);
-      put(KNOBTAG, IKnob.class);
+      put(KNOBTAG  , IKnob.class  );
       put(BUTTONTAG, IButton.class);
       put(TOGGLETAG, IToggle.class);
     }
