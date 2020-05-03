@@ -1,6 +1,6 @@
-#N canvas 538 327 1081 926 12;
+#N canvas 952 0 958 966 12;
 #X obj 328 61 inlet;
-#X obj 381 587 outlet~;
+#X obj 382 893 outlet~;
 #X obj 244 456 vcf~ 1;
 #X obj 328 127 mtof;
 #X obj 328 165 expr 1000/$f1;
@@ -36,6 +36,28 @@
 #X obj 856 67 r stopAll;
 #X obj 330 371 r cutoff;
 #X obj 330 406 r resonance;
+#X obj 455 610 r~ chorus;
+#X obj 455 634 vd~ chorus 1000;
+#X obj 454 585 delwrite~ chorus 1000;
+#X obj 455 672 *~;
+#X obj 618 656 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X obj 381 861 *~ 1;
+#X floatatom 615 679 5 0 0 0 - - -;
+#X obj 615 606 loadbang;
+#X obj 135 675 *~;
+#X obj 225 633 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6350 1;
+#X floatatom 222 656 5 0 0 0 - - -;
+#X obj 222 583 loadbang;
+#X obj 87 616 vd~ flanger 200;
+#X obj 134 715 delwrite~ flanger 200;
+#X obj 87 779 *~;
+#X obj 105 750 nbx 4 20 0 1023 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 1 256;
+#X obj 87 592 r~ flanger;
+#X msg 222 607 0.5;
+#X msg 615 630 1;
 #X connect 0 0 3 0;
 #X connect 0 0 9 0;
 #X connect 0 0 15 0;
@@ -66,7 +88,9 @@
 #X connect 20 0 17 0;
 #X connect 21 0 17 1;
 #X connect 22 0 16 0;
-#X connect 23 0 1 0;
+#X connect 23 0 39 0;
+#X connect 23 0 47 0;
+#X connect 23 0 36 0;
 #X connect 24 0 10 0;
 #X connect 26 0 14 0;
 #X connect 28 0 30 0;
@@ -75,3 +99,21 @@
 #X connect 31 0 29 0;
 #X connect 32 0 2 1;
 #X connect 33 0 2 2;
+#X connect 34 0 35 0;
+#X connect 35 0 37 0;
+#X connect 37 0 39 0;
+#X connect 38 0 37 1;
+#X connect 38 0 40 0;
+#X connect 39 0 1 0;
+#X connect 41 0 52 0;
+#X connect 42 0 47 0;
+#X connect 43 0 42 1;
+#X connect 43 0 44 0;
+#X connect 45 0 51 0;
+#X connect 46 0 42 0;
+#X connect 46 0 48 0;
+#X connect 48 0 39 0;
+#X connect 49 0 48 1;
+#X connect 50 0 46 0;
+#X connect 51 0 43 0;
+#X connect 52 0 38 0;
