@@ -1,3 +1,5 @@
+import http.requests.*;
+
 public class OSCRecorder {
 
   private int inactivity;
@@ -11,6 +13,8 @@ public class OSCRecorder {
   private String filename;
   private PrintWriter output;
   private int prevTimestap;
+  
+  private static final String serverURL = "http://neuronasmuertas.com/smc8/";
 
   public OSCRecorder (int inactivity, boolean forceInt) {
     this.inactivity = inactivity;
@@ -18,6 +22,7 @@ public class OSCRecorder {
 
     epoch = -1;
     lines = new String[logitems];
+    //filename = "data/20200414_101803.csv";
     filename = "";
     initBuffer();
   }
@@ -112,6 +117,24 @@ public class OSCRecorder {
   }
 
   void startNewRecording() {
+
     prevTimestap = -inactivity;
+    
+    if (filename.equals("") || counter==0) {
+      return;
+    }
+
+    String[] lines = loadStrings(filename);
+    String file = "";
+    for (int i = 0; i < lines.length; i++) {
+      file += lines[i] + "\n";
+    }
+
+    PostRequest post = new PostRequest(serverURL);
+    post.addData("filename", filename);
+    post.addData("contents", file);
+    post.send();
+    println("Reponse Content: " + post.getContent());
+    println("Reponse Content-Length Header: " + post.getHeader("Content-Length"));
   }
 }
