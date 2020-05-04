@@ -6,7 +6,7 @@
 #X obj 328 165 expr 1000/$f1;
 #X obj 61 242 noise~;
 #X obj 112 279 *~;
-#X obj 167 247 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 167 247 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 135 133 t b b, f 10;
 #X obj 135 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144

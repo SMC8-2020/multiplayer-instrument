@@ -1,5 +1,5 @@
 #N canvas 872 23 863 878 12;
-#X obj 255 830 outlet~;
+#X obj 254 885 outlet~;
 #X obj 163 295 osc~;
 #X obj 223 295 osc~;
 #X obj 420 159 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -20,12 +20,12 @@
 #X obj 285 324 r resonance;
 #X obj 273 76 mtof;
 #X obj 273 14 inlet;
-#X obj 255 716 clip~ -1 1;
-#X obj 511 648 expr 1/$f1;
-#X obj 420 648 expr -1/$f1;
-#X obj 255 774 *~;
-#X obj 595 648 expr 1+($f1-1)/16;
-#X obj 490 609 r fuzz;
+#X obj 254 771 clip~ -1 1;
+#X obj 581 715 expr 1/$f1;
+#X obj 490 715 expr -1/$f1;
+#X obj 254 829 *~;
+#X obj 665 715 expr 1+($f1-1)/16;
+#X obj 560 676 r fuzz;
 #X obj 213 563 osc~;
 #X obj 237 605 *~;
 #X obj 132 501 r ring;
