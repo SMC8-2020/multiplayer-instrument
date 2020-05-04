@@ -149,17 +149,15 @@ public abstract class InstrumentBroadcastHandler {
   protected boolean isBroadcastable = true;
   protected int formatDepth = 2;
 
-  final int timeOut = 60000;
-  protected OSCRecorder recorder;
-
   protected Map<String, int[]> unsentBuffer = null;
   
   private final int IDLEN = 6;
   public String broadcastID;
+  protected OSCRecorder recorder;
 
   public InstrumentBroadcastHandler() {
     this.broadcastID = getRandomHexString(IDLEN);
-    this.recorder = new OSCRecorder(timeOut);
+    this.recorder = new OSCRecorder(this.broadcastID);
   }
 
   public abstract void broadcast(String addr, int...values);
