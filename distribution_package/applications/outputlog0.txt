@@ -4,27 +4,14 @@ bonk version 1.5
 fiddle version 1.1 TEST4
 pique 0.1 for PD version 23
 sigmund~ version 0.07
-print: smc8print: smc8 Melody1 Sequencer1 Slider0 0
-print: smc8 Melody1 Sequencer1 Slider0 85
-print: smc8 Melody1 Sequencer1 Slider0 170
-print: smc8 Melody1 Sequencer1 Slider0 255
-print: smc8 Melody1 Sequencer1 Slider0 341
-print: smc8 Melody1 Sequencer1 Slider0 426
+print: smc8print: smc8 Melody1 Sequencer1 Slider2 0
 print: smc8 Melody1 Sequencer1 Slider2 85
 print: smc8 Melody1 Sequencer1 Slider2 170
-print: smc8 Melody1 Sequencer1 Slider2 255
-print: smc8 Melody1 Sequencer1 Slider2 341
-print: smc8 Melody1 Sequencer1 Slider2 426
-print: smc8 Melody1 Sequencer1 Slider2 511
-print: smc8 Melody1 Sequencer1 Slider2 596
-print: smc8 Melody1 Sequencer1 Slider1 0
-print: smc8 Melody1 Sequencer1 Slider1 85
-print: smc8 Melody1 Sequencer1 Slider1 170
-print: smc8 Melody1 Sequencer1 Slider1 255
-print: smc8 Melody1 Sequencer1 Slider1 341
-print: smc8 Melody1 Sequencer1 Slider6 85
-print: smc8 Melody1 Sequencer1 Slider6 170
-print: smc8 Melody1 Sequencer1 Slider6 255
+print: smc8 Melody1 SoundModifiers1 Knob0 0
+print: smc8 Melody1 SoundModifiers1 Knob0 341
+print: smc8 Melody1 Sequencer1 Slider4 85
+print: smc8 Melody1 Sequencer1 Slider4 255
+print: smc8 Melody1 Sequencer1 Slider4 341
 print: smc8 Rhythm1 Sequencer1 Slider0 0
 print: smc8 Rhythm1 Sequencer1 Slider1 0
 print: smc8 Rhythm1 Sequencer1 Slider2 0
@@ -33,65 +20,28 @@ print: smc8 Rhythm1 Sequencer1 Slider4 0
 print: smc8 Rhythm1 Sequencer1 Slider5 0
 print: smc8 Rhythm1 Sequencer1 Slider6 0
 print: smc8 Rhythm1 Sequencer1 Slider7 0
-print: smc8 Rhythm1 Sequencer1 Slider1 85
+print: smc8 Rhythm1 Sequencer1 Slider3 85
+print: smc8 Rhythm1 Sequencer1 Slider3 170
+print: smc8 Rhythm1 Sequencer1 Slider3 255
+print: smc8 Rhythm1 Sequencer1 Slider3 341
+print: smc8 Rhythm1 Sequencer1 Slider2 0
+print: smc8 Rhythm1 Sequencer1 Slider2 85
+print: smc8 Rhythm1 Sequencer1 Slider2 255
+print: smc8 Rhythm1 Sequencer1 Slider1 0
 print: smc8 Rhythm1 Sequencer1 Slider1 170
+print: smc8 Rhythm1 Sequencer1 Slider1 255
 print: smc8 Rhythm1 Sequencer1 Slider1 341
-print: smc8 Rhythm1 Sequencer1 Slider1 426
-print: smc8 Rhythm1 Sequencer1 Slider1 511
-print: smc8 Rhythm1 Sequencer1 Slider0 0
 print: smc8 Rhythm1 Sequencer1 Slider0 85
-print: smc8 Rhythm1 Sequencer1 Slider0 170
 print: smc8 Rhythm1 Sequencer1 Slider0 255
 print: smc8 Rhythm1 Sequencer1 Slider0 341
-print: smc8 Rhythm1 Sequencer1 Slider4 85
-print: smc8 Rhythm1 Sequencer1 Slider4 170
-print: smc8 Rhythm1 Sequencer1 Slider4 255
-print: smc8 Rhythm1 Sequencer1 Slider2 85
-print: smc8 Rhythm1 Sequencer1 Slider2 170
-print: smc8 Rhythm1 Sequencer1 Slider2 341
-print: smc8 Console0 Broadcast0 Knob1 489
-print: smc8 Console0 Broadcast0 Knob1 505
-print: smc8 Console0 Broadcast0 Knob1 535
-print: smc8 Console0 Broadcast0 Knob1 643
-print: smc8 Console0 Broadcast0 Knob1 699
-print: smc8 Console0 Broadcast0 Knob1 740
-print: smc8 Console0 Broadcast0 Knob1 786
-print: smc8 Console0 Broadcast0 Knob1 812
-print: smc8 Console0 Broadcast0 Knob1 827
-print: smc8 Console0 Broadcast0 Knob1 847
-print: smc8 Console0 Broadcast0 Knob1 853
-print: smc8 Console0 Broadcast0 Knob1 858
-print: smc8 Console0 Broadcast0 Knob1 863
-print: smc8 Console0 Broadcast0 Knob1 868
-resetting controllers
-print: smc8 Melody1 PerformanceModifiers1 Knob0 341
-print: smc8 Melody1 PerformanceModifiers1 Knob3 511
-print: smc8 Melody1 Sequencer1 Slider0 0
-print: smc8 Melody1 Sequencer1 Slider1 0
-print: smc8 Melody1 Sequencer1 Slider2 0
-print: smc8 Melody1 Sequencer1 Slider3 0
-print: smc8 Melody1 Sequencer1 Slider4 0
-print: smc8 Melody1 Sequencer1 Slider5 0
-print: smc8 Melody1 Sequencer1 Slider6 0
-print: smc8 Melody1 Sequencer1 Slider7 0
-print: smc8 Melody1 SoundModifiers1 Toggle0 0
-print: smc8 Melody1 SoundModifiers1 Toggle1 0
-print: smc8 Melody1 SoundModifiers1 Toggle2 0
-print: smc8 Melody1 SoundModifiers1 Toggle3 0
-print: smc8 Console0 Broadcast0 Knob1 512
-print: smc8 Rhythm1 Sequencer1 Slider0 0
-print: smc8 Rhythm1 Sequencer1 Slider1 0
-print: smc8 Rhythm1 Sequencer1 Slider2 0
-print: smc8 Rhythm1 Sequencer1 Slider3 0
-print: smc8 Rhythm1 Sequencer1 Slider4 0
-print: smc8 Rhythm1 Sequencer1 Slider5 0
-print: smc8 Rhythm1 Sequencer1 Slider6 0
-print: smc8 Rhythm1 Sequencer1 Slider7 0
-print: smc8 Rhythm1 SoundModifiers1 Toggle0 0
-print: smc8 Rhythm1 SoundModifiers1 Toggle1 0
-print: smc8 Rhythm1 SoundModifiers1 Toggle2 0
-print: smc8 Rhythm1 SoundModifiers1 Toggle3 0
-Shutting down application instrument_simulation_v2$1@1a20ae52
-Reponse Content: File: data/5CFC59_20200504_153117.csv
+print: smc8 Rhythm1 Sequencer1 Slider0 426
+print: smc8 Rhythm1 Sequencer1 Slider0 511
+print: smc8 Rhythm1 Sequencer1 Slider5 85
+print: smc8 Rhythm1 Sequencer1 Slider5 426
+print: smc8 Rhythm1 Sequencer1 Slider5 596
+randomizing a beat!
+print: smc8 Rhythm1 PerformanceModifiers1 Button1 1
+Shutting down application instrument_simulation_v2$1@44b58597
+Reponse Content: File: data/A06F31_20200504_155135.csv
 
 Reponse Content-Length Header: 38
