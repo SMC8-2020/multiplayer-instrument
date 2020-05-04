@@ -1,24 +1,24 @@
-#N canvas 952 0 958 966 12;
+#N canvas 96 30 1355 800 12;
 #X obj 31 1036 select 0 1 2 3 4 5 6 7;
 #X obj 768 1060 vsl 15 128 0 12 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 5292 1;
+-1 -1 0 1;
 #X obj 800 1061 vsl 15 128 0 12 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 3175 1;
+-1 -1 0 1;
 #X obj 830 1061 vsl 15 128 0 12 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 6350 1;
+-1 -1 0 1;
 #X obj 861 1061 vsl 15 128 0 12 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 4233 1;
+-1 -1 0 1;
 #X obj 892 1061 vsl 15 128 0 12 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 8467 1;
+-1 -1 0 1;
 #X obj 923 1060 vsl 15 128 0 12 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 4233 1;
+-1 -1 0 1;
 #X obj 952 1061 vsl 15 128 0 12 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 7408 1;
+-1 -1 0 1;
 #X obj 982 1062 vsl 15 128 0 12 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 4233 1;
+-1 -1 0 1;
 #X obj 1097 1640 *~;
 #X obj 1507 1394 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
--1 -1 9770 1;
+-1 -1 6350 1;
 #X msg 1507 1535 \$1 100;
 #X obj 1507 1562 line~;
 #X text 1455 1404 Volume;
@@ -102,7 +102,7 @@
 #X obj 1097 1680 outlet~;
 #X obj 1708 131 inlet;
 #X obj 1104 1393 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6356 1;
+-1 -1 6350 1;
 #X obj 1000 1460 *~;
 #X obj 1159 1497 *~;
 #X obj 1176 1462 -~;
@@ -227,7 +227,7 @@
 #X obj 181 608 *~;
 #X obj 301 294 r drumbang;
 #X obj 436 367 hsl 128 32 0 3000 0 0 empty empty Release 6 -8 0 10
--204786 -1 -1 4339 1;
+-204786 -1 -1 6350 1;
 #X obj 433 325 r release_drum;
 #X connect 0 0 2 0;
 #X connect 2 0 37 0;
@@ -343,8 +343,8 @@
 #X text 1733 467 CROSSFADE;
 #X text 1942 465 VOLUME;
 #X text 1485 461 RANDOMIZE;
-#X obj 548 1402 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+#X obj 519 1232 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
 #X floatatom 555 1422 5 0 0 0 - - -;
 #X obj 1590 561 + 1;
 #X connect 0 0 68 0;
@@ -432,7 +432,6 @@
 #X connect 57 0 80 0;
 #X connect 58 0 83 0;
 #X connect 58 0 85 0;
-#X connect 58 0 137 0;
 #X connect 59 0 15 0;
 #X connect 60 0 21 0;
 #X connect 61 0 23 0;
@@ -492,6 +491,7 @@
 #X connect 92 0 95 0;
 #X connect 92 0 99 0;
 #X connect 93 0 58 0;
+#X connect 93 0 137 0;
 #X connect 94 0 78 0;
 #X connect 95 0 101 0;
 #X connect 95 0 102 0;
