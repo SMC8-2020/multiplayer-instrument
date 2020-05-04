@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Random;
 import controlP5.*;
 import oscP5.*;
 import netP5.*;
@@ -18,6 +19,7 @@ final boolean SECTIONLOCK = false;
 final int ZINWALDBROWN = color(43, 0, 0);
 final int BURLYWOOD    = color(158, 131, 96);
 final int PLATINUM     = color(229, 234, 218);
+final int PLATINUM_40  = color(229, 234, 218, 100);
 final int ONYX         = color(0, 26, 13);
 
 
@@ -72,6 +74,7 @@ void setup()
 void draw() 
 {
   background(ZINWALDBROWN);
+  model.renderInstrumentID();
 }
 
 public void setupNetwork() {

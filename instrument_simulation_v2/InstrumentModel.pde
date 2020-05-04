@@ -9,6 +9,7 @@ public class InstrumentModel {
 
   private int secX, secY, secW, secH;
   private int conX, conY, conW, conH;
+  private int iidX, iidY, iidW, iidH;
   private float sectionAlpha = 0.65;
 
   private IGroup currentSection;
@@ -65,9 +66,28 @@ public class InstrumentModel {
     conX = secX;
     conY = secH;
     conH = (int) (height * (1.0 - sectionAlpha));
-    conW = secW;
+    conW = secW - 315;
     consoleRoot = view.createRootGroup(CONSOLEROOTNAME, conX, conY, conW, conH);
     view.parse(CONSOLEPATH, consoleRoot);
+
+    // TEMPORARY CODE
+    iidX = conW + 10;
+    iidY = conY + 9;
+    iidW = 295;
+    iidH = conH - 20;
+  }
+
+  // TEMPORARY FUNCTION
+  public void renderInstrumentID() {
+    fill(PLATINUM_40);
+    rect(iidX, iidY, iidW, iidH);
+
+
+
+    textAlign(CENTER, CENTER);
+    textSize(48);
+    fill(PLATINUM);
+    text(broadcastHandler.broadcastID, iidX + iidW/2, iidY + iidH/2);
   }
 
   public void resetOnlineControllers() {
@@ -133,13 +153,27 @@ public abstract class InstrumentBroadcastHandler {
   protected OSCRecorder recorder;
 
   protected Map<String, int[]> unsentBuffer = null;
+  
+  private final int IDLEN = 6;
+  public String broadcastID;
 
   public InstrumentBroadcastHandler() {
+    this.broadcastID = getRandomHexString(IDLEN);
     this.recorder = new OSCRecorder(timeOut);
   }
 
   public abstract void broadcast(String addr, int...values);
-  
+
+  private String getRandomHexString(int numchars) {
+    Random r = new Random();
+    StringBuffer sb = new StringBuffer();
+    while (sb.length() < numchars) {
+      sb.append(String.format("%08x", r.nextInt()));
+    }
+
+    return sb.toString().substring(0, numchars).toUpperCase();
+  }
+
   protected String formatAddr(String addr) {
     String newAddr = BASEURL;
     String[] tokens = addr.split("/");
@@ -188,32 +222,31 @@ public abstract class InstrumentBroadcastHandler {
     assignValues(broadcastRoute, values);
     return true;
   }
-  
+
   protected void onBroadcastOn() {
     if (unsentBuffer == null) {
       return;
     }
-    
+
     for (Map.Entry<String, int[]> entry : unsentBuffer.entrySet()) {
       broadcast(entry.getKey(), entry.getValue());
     }
-    
+
     unsentBuffer.clear();
     unsentBuffer = null;
   }
-  
+
   protected void onBroadcastOff() {
   }
-  
+
   public void setBroadcast(boolean toggle) {
     isBroadcastable = toggle;
-    
+
     if (toggle) {
       onBroadcastOn();
     } else {
       onBroadcastOff();
     }
-    
   }
 
   public void saveRecordToServer() {
@@ -250,7 +283,7 @@ public class InstrumentOscHandler extends InstrumentBroadcastHandler {
     if (LOG) {
       recorder.record(broadcastRoute);
     }
-    
+
     osc.send(broadcastRoute, remoteLocation);
   }
 }
@@ -259,9 +292,9 @@ public class InstrumentPdHandler extends InstrumentBroadcastHandler {
 
   private String recv;
   private PureDataProcessing pd;
-  
+
   private boolean isDsp;
-  
+
   public InstrumentPdHandler(PureDataProcessing pd, final String recv) {
     super();
     this.pd = pd;
@@ -278,7 +311,7 @@ public class InstrumentPdHandler extends InstrumentBroadcastHandler {
     }
     return oscfloats;
   }
-  
+
   @Override protected void onBroadcastOn() {
     super.onBroadcastOn();
     if (!isDsp) {
@@ -286,7 +319,7 @@ public class InstrumentPdHandler extends InstrumentBroadcastHandler {
       isDsp = !isDsp;
     }
   }
-  
+
   @Override protected void onBroadcastOff() {
     super.onBroadcastOff();
     if (isDsp) {
@@ -294,13 +327,13 @@ public class InstrumentPdHandler extends InstrumentBroadcastHandler {
       isDsp = !isDsp;
     }
   }
-  
+
   @Override public void broadcast(String addr, int...values) {
-    
+
     if (!createOscMessage(addr, values)) {
       return;
     }
-    
+
     if (LOG) {
       recorder.record(broadcastRoute);
     }
