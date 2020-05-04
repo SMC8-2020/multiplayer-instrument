@@ -1,16 +1,16 @@
 #N canvas 968 0 958 966 12;
 #X obj 664 192 t f b;
 #X obj 705 192 s stopAll;
-#X obj 226 147 inlet;
+#X obj 229 93 inlet;
 #X obj 501 810 outlet~;
 #X obj 664 132 inlet;
 #X obj 502 773 +~;
-#X obj 323 225 +;
-#X obj 309 148 inlet;
-#X obj 226 206 f;
-#X floatatom 215 69 5 0 0 0 - - -;
-#X floatatom 275 68 5 0 0 0 - - -;
-#X floatatom 331 68 5 0 0 0 - - -;
+#X obj 342 178 +;
+#X obj 342 95 inlet;
+#X obj 229 127 f;
+#X floatatom 218 15 5 0 0 0 - - -;
+#X floatatom 278 14 5 0 0 0 - - -;
+#X floatatom 323 13 5 0 0 0 - - -;
 #X obj 664 222 sel 0 1 2 3;
 #X obj 731 475 seq_02_synth.cl;
 #X obj 252 477 seq_03_synth.cl;
@@ -91,7 +91,7 @@
 -1 -1;
 #X obj 1129 1015 metro 10;
 #X obj 653 923 hsl 128 32 0 3000 0 0 empty empty Release 6 -8 0 10
--204786 -1 -1 4233 1;
+-204786 -1 -1 3285 1;
 #X obj 687 859 loadbang;
 #X obj 650 825 r release1;
 #X obj 650 983 s release;
@@ -233,7 +233,6 @@
 #X obj 1096 1771 s LFOgain;
 #X connect 0 0 12 0;
 #X connect 0 1 1 0;
-#X connect 2 0 9 0;
 #X connect 2 0 8 0;
 #X connect 4 0 0 0;
 #X connect 5 0 3 0;
@@ -243,12 +242,13 @@
 #X connect 6 0 31 0;
 #X connect 6 0 30 0;
 #X connect 7 0 10 0;
-#X connect 7 0 6 1;
-#X connect 8 0 6 0;
+#X connect 7 0 6 0;
 #X connect 8 0 14 0;
 #X connect 8 0 28 0;
 #X connect 8 0 27 0;
 #X connect 8 0 26 0;
+#X connect 8 0 9 0;
+#X connect 8 0 6 1;
 #X connect 12 0 29 1;
 #X connect 12 0 26 1;
 #X connect 12 1 13 1;
