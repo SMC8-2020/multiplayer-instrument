@@ -45,7 +45,7 @@ void setup() {
   oscP5 = new OscP5(this, listeningPort);
   IP = oscP5.ip();
 
-  recorder = new OSCRecorder(60000);
+  recorder = new OSCRecorder("server");
 
   pServer = new Panel(Panel.marginhor, Panel.marginver, width/2-Panel.marginhor*2, 155, BACK3, "SERVER");
   pServer.toScreenBottom();

@@ -4,6 +4,7 @@ public class OSCRecorder {
 
   private int inactivity;
   private boolean forceInt;
+  private String playerID;
 
   private int epoch;
   private int counter;
@@ -13,10 +14,11 @@ public class OSCRecorder {
   private String filename;
   private PrintWriter output;
   private int prevTimestap;
-  
+
   private static final String serverURL = "http://neuronasmuertas.com/smc8/";
 
-  public OSCRecorder (int inactivity, boolean forceInt) {
+  public OSCRecorder (String playerID, int inactivity, boolean forceInt) {
+    this.playerID = playerID;
     this.inactivity = inactivity;
     this.forceInt = forceInt;
 
@@ -27,8 +29,12 @@ public class OSCRecorder {
     initBuffer();
   }
 
-  public OSCRecorder (int inactivity) {
-    this(inactivity, false);
+  public OSCRecorder (String playerID, int inactivity) {
+    this(playerID, inactivity, false);
+  }
+
+  public OSCRecorder (String playerID) {
+    this(playerID, -1, false);
   }
 
   void initBuffer() {
@@ -38,14 +44,14 @@ public class OSCRecorder {
     }
   }
 
-  void record(OscMessage m) {
+  public void record(OscMessage m) {
 
     int currTimestamp = millis();
 
     //If the user has been inactive for more than inactivity milliseconds and 
     //has already recorded something (epoch >= 0), close the file and set 
     //epoch to -1 to start a new recording.
-    if (currTimestamp-prevTimestap >= inactivity) {
+    if (inactivity>0 && currTimestamp-prevTimestap >= inactivity) {
       if (epoch >= 0) {
         output.close();
       }
@@ -111,15 +117,17 @@ public class OSCRecorder {
 
 
   String getFilename() {
-    return String.format("%02d%02d%02d_%02d%02d%02d.csv", 
+    return String.format("%s_%02d%02d%02d_%02d%02d%02d.csv", playerID, 
       year(), month(), day(), hour(), minute(), second()
       );
   }
 
-  void startNewRecording() {
+  public void startNewRecording() {
 
-    prevTimestap = -inactivity;
-    
+    if (inactivity > 0) {
+      prevTimestap = -inactivity;
+    }
+  
     if (filename.equals("") || counter==0) {
       return;
     }
