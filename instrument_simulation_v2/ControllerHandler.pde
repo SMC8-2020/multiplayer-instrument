@@ -45,6 +45,7 @@ public class ControllerHandler {
     }
 
     int currentValue = (int) ctr.getValue();
+    currentValue = constrain(currentValue, 0, 1023);
     if (currentValue != prevBroadcastValue) {
       model.broadcastOsc(ctr.getName(), currentValue);
       prevBroadcastValue = currentValue;
