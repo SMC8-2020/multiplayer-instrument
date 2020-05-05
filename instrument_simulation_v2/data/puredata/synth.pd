@@ -1,4 +1,4 @@
-#N canvas 968 0 958 966 12;
+#N canvas 563 28 958 966 12;
 #X obj 664 192 t f b;
 #X obj 705 192 s stopAll;
 #X obj 229 93 inlet;
@@ -91,7 +91,7 @@
 -1 -1;
 #X obj 1129 1015 metro 10;
 #X obj 653 923 hsl 128 32 0 3000 0 0 empty empty Release 6 -8 0 10
--204786 -1 -1 3285 1;
+-204786 -1 -1 4233 1;
 #X obj 687 859 loadbang;
 #X obj 650 825 r release1;
 #X obj 650 983 s release;
@@ -231,24 +231,24 @@
 -1 -1 1 256;
 #X floatatom 1167 1749 5 0 0 0 - - -;
 #X obj 1096 1771 s LFOgain;
+#X obj 340 136 t b f;
 #X connect 0 0 12 0;
 #X connect 0 1 1 0;
 #X connect 2 0 8 0;
+#X connect 2 0 6 0;
 #X connect 4 0 0 0;
 #X connect 5 0 3 0;
-#X connect 6 0 11 0;
 #X connect 6 0 29 0;
 #X connect 6 0 13 0;
 #X connect 6 0 31 0;
 #X connect 6 0 30 0;
 #X connect 7 0 10 0;
-#X connect 7 0 6 0;
+#X connect 7 0 179 0;
 #X connect 8 0 14 0;
 #X connect 8 0 28 0;
 #X connect 8 0 27 0;
 #X connect 8 0 26 0;
 #X connect 8 0 9 0;
-#X connect 8 0 6 1;
 #X connect 12 0 29 1;
 #X connect 12 0 26 1;
 #X connect 12 1 13 1;
@@ -428,3 +428,5 @@
 #X connect 174 0 173 0;
 #X connect 175 0 166 0;
 #X connect 176 0 175 0;
+#X connect 179 0 6 0;
+#X connect 179 1 6 1;
