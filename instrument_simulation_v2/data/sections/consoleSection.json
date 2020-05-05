@@ -93,11 +93,11 @@
                                 "color": []
                             },
                             {
-                                "type": "Knob",
+                                "type": "Toggle",
                                 "quantity": 1,
                                 "callback": "broadcast",
                                 "status": "online",
-                                "range": [0, 1023],
+                                "range": [],
                                 "default": 0,
                                 "label": ["Swing"],
                                 "ticks": 0,

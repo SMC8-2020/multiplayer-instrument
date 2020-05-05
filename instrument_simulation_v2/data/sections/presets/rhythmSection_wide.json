@@ -31,10 +31,10 @@
                                 "color": []
                             },
                             {
-                                "type": "Button",
+                                "type": "Toggle",
                                 "quantity": 1,
                                 "callback": "rng",
-                                "status": "local",
+                                "status": "online",
                                 "range": [],
                                 "default": 0,
                                 "label": ["Randomize"],

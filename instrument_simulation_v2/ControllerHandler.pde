@@ -104,7 +104,8 @@ public class ControllerHandler {
 
   public void rng(ControlEvent event) {
     println("randomizing a beat!");
-    model.broadcastOsc(event.getController().getName(), RNGVALUE);
+    Toggle t = (Toggle)event.getController();
+    model.broadcastOsc(t.getName(), (int)t.getValue());
   }
 
 }
