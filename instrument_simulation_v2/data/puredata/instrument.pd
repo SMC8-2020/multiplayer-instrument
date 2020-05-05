@@ -3,7 +3,7 @@
 #X obj 361 330 oscparse;
 #X obj 361 359 list trim;
 #X obj 274 479 seq_with_messages;
-#N canvas 0 23 1280 751 tempo_and_swing 0;
+#N canvas 0 23 1440 800 tempo_and_swing 0;
 #X obj 458 60 route smc8;
 #X obj 485 177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -25,7 +25,7 @@
 #X obj 458 149 route Knob1;
 #X obj 529 733 mod 8;
 #X obj 529 791 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 4;
 #X text 500 458 BPM;
 #X obj 458 456 nbx 3 20 0 400 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 130 256;
@@ -41,7 +41,7 @@
 #X connect 1 0 3 0;
 #X restore 604 537 pd time-signature;
 #X obj 604 494 vradio 15 1 1 2 empty empty empty 0 -8 0 10 -262144
--260097 -1 1;
+-260097 -1 0;
 #X text 623 494 4/4;
 #X floatatom 458 545 5 0 0 0 - - -;
 #X floatatom 515 545 5 0 0 0 - - -;
@@ -79,7 +79,7 @@
 #N canvas 476 430 171 317 12/16 0;
 #X obj 42 41 inlet;
 #X obj 15 275 outlet;
-#X obj 15 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 15 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 15 92 metro;
 #X obj 15 197 +;
@@ -173,7 +173,7 @@
 #X obj 19 251 outlet;
 #X obj 19 143 f;
 #X obj 19 168 + 1;
-#X obj 19 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 19 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 19 118 metro;
 #X floatatom 71 223 5 0 0 0 - - -;
@@ -252,7 +252,7 @@
 #X obj 501 386 loadbang;
 #X msg 501 411 130;
 #X obj 392 495 s bpm;
-#X obj 725 143 route Toggle0;
+#X obj 604 149 route Toggle0;
 #X connect 0 0 13 0;
 #X connect 1 0 7 0;
 #X connect 1 0 8 0;
@@ -2111,8 +2111,8 @@ milliseconds \, based on samplerate.;
 -260097 -1 9000 0;
 #X floatatom 10 875 5 0 0 0 - - -;
 #X floatatom 8 829 5 0 0 0 - - -;
-#X obj 361 251 r controlmsg;
-#X obj 471 391 print;
+#X obj 361 267 r controlmsg;
+#X obj 473 397 print;
 #X connect 0 0 11 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 1;
