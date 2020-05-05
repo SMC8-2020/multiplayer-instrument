@@ -286,11 +286,12 @@ public class InstrumentViewLayoutParser extends InstrumentView {
     JSONObject section = layoutJson.getJSONObject("section");
 
     String name = section.getString("name");
+    String label = section.getString("label");
     int id = section.getInt("id");
     float weight = section.getFloat("weight");
 
     IGroup group = createGroup(root, name + id);
-    group.setLabel(name);
+    group.setLabel(label);
     group.setWeight(weight);
     group.fit(null);
 
@@ -304,11 +305,12 @@ public class InstrumentViewLayoutParser extends InstrumentView {
 
   protected void parseHierarchy(JSONObject child, IGroup parent) {    
     String name  = child.getString("name");
+    String label = child.getString("label");
     int id = child.getInt("id");
     float weight = child.getFloat("weight");
     
     IGroup group = createGroup(parent, parent.getName() + "/" + name + id);
-    group.setLabel(name);
+    group.setLabel(label);
     group.setWeight(weight);
     group.fit(null);
 
