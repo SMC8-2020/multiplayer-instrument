@@ -103,6 +103,10 @@ public void setColor(ControlP5 cp5) {
 void pdPrint(String s) {
   if (DEBUG){
     if (!s.contains("warning")) {
+      if (s.contains("print:")){
+        s = s.substring(7);
+      }
+      s = "from Pd: " + s;
       println(s);
     }
   } 
