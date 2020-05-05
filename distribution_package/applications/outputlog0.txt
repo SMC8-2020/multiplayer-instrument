@@ -1,0 +1,48 @@
+ControlP5 2.2.5 infos, comments, questions at http://www.sojamo.de/libraries/controlP5
+from Pd: pd 0.50.2
+from Pd: bonk version 1.5
+from Pd: fiddle version 1.1 TEST4
+from Pd: pique 0.1 for PD version 23
+from Pd: sigmund~ version 0.07
+from Pd: 0
+from Pd: smc8 Rhythm1 Sequencer1 Slider0 0
+from Pd: smc8 Rhythm1 Sequencer1 Slider1 0
+from Pd: smc8 Rhythm1 Sequencer1 Slider2 0
+from Pd: smc8 Rhythm1 Sequencer1 Slider3 0
+from Pd: smc8 Rhythm1 Sequencer1 Slider4 0
+from Pd: smc8 Rhythm1 Sequencer1 Slider5 0
+from Pd: smc8 Rhythm1 Sequencer1 Slider6 0
+from Pd: smc8 Rhythm1 Sequencer1 Slider7 0
+randomizing a beat!
+from Pd: smc8 Rhythm1 PerformanceModifiers1 Toggle1 1
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 498
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 478
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 422
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 278
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 253
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 222
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 191
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 150
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 104
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 63
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 23
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 2
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 0
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 5
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 15
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 25
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 30
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 1023
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 997
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 987
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 982
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 930
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 414
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 296
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 230
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 35
+from Pd: smc8 Rhythm1 SoundModifiers1 Knob1 0
+Shutting down application instrument_simulation_v2$1@65487fe4
+Reponse Content: File: data/2D6C77_20200505_153108.csv
+
+Reponse Content-Length Header: 38
