@@ -10,12 +10,19 @@ void setup() {
   textFont(mono);
   textAlign(CENTER, CENTER);
 
-  String filename = "5CAFF6_20200508_230236.csv";
-  h = new Heatmap(filename);
-  h.analyze();
-  h.saveData();
-  h.draw();
-  save("output/" + filename.substring(0,22) + ".png");
+  File folder = new File(sketchPath() + "/data");
+  String names[] = folder.list();
+  for (String filename : names) {
+    if (filename.endsWith(".csv")) {
+      printArray(filename);
+      
+      h = new Heatmap(filename);
+      h.analyze();
+      h.saveData();
+      h.draw();
+      save("output/" + filename.substring(0, 22) + ".png");
+    }
+  }
 
   noLoop();
 }
