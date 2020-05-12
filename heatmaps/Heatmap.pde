@@ -157,7 +157,7 @@ public class Heatmap {
   }
 
   void saveData() {
-    PrintWriter output = createWriter(filename.substring(0, 22) + ".txt"); 
+    PrintWriter output = createWriter("output/" + filename.substring(0, 22) + ".txt"); 
 
     for ( String key : hm.keySet() ) {
       output.println(key + "," + hm.get(key));
