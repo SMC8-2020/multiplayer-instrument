@@ -6,3 +6,5 @@ osc_server/*.csv
 osc_recorder/*.csv
 WiFiCredentials.h
 background.psd
+heatmaps/data
+heatmaps/output
