@@ -28,7 +28,7 @@
                                 "callback": "broadcast",
                                 "status": "online",
                                 "range": [0, 1023],
-                                "default": 300,
+                                "default": 0,
                                 "label": ["Mode"],
                                 "ticks": 4,
                                 "color": []

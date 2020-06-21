@@ -144,19 +144,29 @@ public class InstrumentModel {
 
 public abstract class InstrumentBroadcastHandler {
 
+  private final String broadcastIDPath = "data/config/instrumentID.txt";
+  private final int IDLEN = 6;
+
   protected final String BASEURL = "/smc8";
+
   protected OscMessage broadcastRoute;
   protected boolean isBroadcastable = true;
   protected int formatDepth = 2;
 
   protected Map<String, int[]> unsentBuffer = null;
-  
-  private final int IDLEN = 6;
+
   public String broadcastID;
   protected OSCRecorder recorder;
 
   public InstrumentBroadcastHandler() {
-    this.broadcastID = getRandomHexString(IDLEN);
+    
+    String tmpID = parseInstrumentID();
+    if (tmpID == null || (tmpID.length() != IDLEN)) {
+      tmpID = getRandomHexString(IDLEN);
+      writeInstrumentID(tmpID);
+    } 
+    
+    this.broadcastID = tmpID;
     this.recorder = new OSCRecorder(this.broadcastID);
   }
 
@@ -172,6 +182,35 @@ public abstract class InstrumentBroadcastHandler {
     return sb.toString().substring(0, numchars).toUpperCase();
   }
 
+  private String parseInstrumentID() {
+    BufferedReader reader = createReader(broadcastIDPath);
+    String[] pieces = new String[0];
+    String line = null;
+    try {
+      while ((line = reader.readLine()) != null) {
+        pieces = append(pieces, line);
+      }
+      reader.close();
+    } 
+    catch (IOException e) {
+      e.printStackTrace();
+      return null;
+    }
+    return pieces.length == 1 ? pieces[0] : null;
+  } 
+  
+  private void writeInstrumentID(String id) {
+    PrintWriter output = createWriter(broadcastIDPath);
+    try {
+      output.println(id);
+      output.flush();
+      output.close();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    output = null;
+  }
+  
   protected String formatAddr(String addr) {
     String newAddr = BASEURL;
     String[] tokens = addr.split("/");

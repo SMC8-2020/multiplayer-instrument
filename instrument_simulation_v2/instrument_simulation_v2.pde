@@ -8,7 +8,7 @@ import controlP5.*;
 import oscP5.*;
 import netP5.*;
 
-final boolean LOG         = true;
+final boolean LOG         = false;
 final boolean DEBUG       = true;
 final boolean NETWORK     = false;
 final boolean RENDERX2    = false;

@@ -29,12 +29,12 @@
 #define MAX_STATE   9
 
 #define MIN_HZ      0.1
-#define MAX_HZ      9.0
+#define MAX_HZ     10.0
 
 
 //Network things
-OSCMessage msg("/smc8/Melody1/LDR1/LDRS1");
-const unsigned int outPort = 11000;          // remote port
+OSCMessage msg("/smc8/Melody1/SoundModifiers1/LDR4");
+const unsigned int outPort = 10000;          // remote port
 const unsigned int localPort = 12000;        // local port
 WiFiUDP Udp;
 
@@ -56,6 +56,7 @@ Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRBW + NEO_KHZ800);
 int state;
 boolean buttonPressed;
 float current_hz;
+int skipCounter;
 
 #ifdef ROTARY_MODEL
 int pin_a_last;
@@ -73,6 +74,7 @@ void setup() {
   state = 0;
   buttonPressed = false;
   current_hz = MIN_HZ;
+  skipCounter = 0;
 
 }
 
@@ -174,22 +176,24 @@ void loop() {
     //Serial.println(value);
     strip.fill(strip.Color(value >> 2, value >> 2, value >> 2));
 
-    if (state != 8) {
+    if (state != 8 && skipCounter % 5 == 0) {
       msg.add(value);
-      msg.add(0);
-      msg.add(0);
-      msg.add(0);
       Udp.beginPacket(outIp, outPort);
       msg.send(Udp);
       Udp.endPacket();
       msg.empty();
     }
 
+    skipCounter++;
+    if (skipCounter >= 5) {
+      skipCounter = 0;
+    }
+
   }
 
   strip.show();
 
-  delay(50);
+  delay(10);
 }
 
 
